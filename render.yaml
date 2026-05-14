@@ -2,7 +2,7 @@ services:
   - type: web
     name: shynliapartmentcleaning
     runtime: static
-    buildCommand: npm ci && npm run build
+    buildCommand: npm ci && npm run seo:sitemap && npm run build
     staticPublishPath: ./dist
     routes:
       - type: rewrite
