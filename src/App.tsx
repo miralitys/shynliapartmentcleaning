@@ -44,6 +44,12 @@ import {
 
 const quoteUrl = "https://shynlicleaningservice.com/quote"
 
+function cityServiceAreaHref(cityName: string) {
+  const city = cities.find((item) => item.name === cityName)
+
+  return city ? `/service-areas/${city.slug}/` : "/service-areas/"
+}
+
 const serviceTypes = [
   {
     id: "standard",
@@ -761,8 +767,15 @@ function Coverage() {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {group.cities.map((zone) => (
-                    <Badge key={zone} variant="outline" className="rounded-full border-[#bdd0d2] bg-white px-3 py-1.5 text-xs font-bold sm:text-sm">
-                      {zone}
+                    <Badge
+                      key={zone}
+                      asChild
+                      variant="outline"
+                      className="rounded-full border-[#bdd0d2] bg-white px-3 py-1.5 text-xs font-bold transition-colors hover:border-[#62ffd5] hover:bg-[#eefafa] focus-visible:ring-[#00a885]/40 sm:text-sm"
+                    >
+                      <a href={cityServiceAreaHref(zone)} aria-label={`Open apartment cleaning in ${zone}`}>
+                        {zone}
+                      </a>
                     </Badge>
                   ))}
                 </div>
