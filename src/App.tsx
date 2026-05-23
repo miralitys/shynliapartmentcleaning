@@ -503,7 +503,7 @@ function Hero({
         <div className="reveal-up delay-2 w-full justify-self-end rounded-[1.65rem] border border-white/24 bg-[#fbfdfd]/96 p-4 text-[#142027] shadow-2xl shadow-black/28 backdrop-blur md:max-w-[520px] md:p-5">
           <div className="flex items-center justify-between gap-4">
             <div>
-              <p className="text-xs font-black uppercase tracking-[0.18em] text-[#ff6b57]">Instant apartment quote</p>
+              <p className="text-xs font-black uppercase tracking-[0.18em] text-[#a53625]">Instant apartment quote</p>
               <h2 className="mt-1 text-2xl font-black tracking-normal">Build your clean</h2>
             </div>
             <div className="rounded-full bg-[#142027] px-4 py-2 text-sm font-black text-white">${estimate}+</div>
@@ -526,7 +526,7 @@ function Hero({
               </div>
             ))}
           </div>
-          <Button asChild className="mt-5 h-12 w-full rounded-2xl bg-[#142027] text-base font-black text-white hover:bg-[#ff6b57]">
+          <Button asChild className="mt-5 h-12 w-full rounded-2xl bg-[#142027] text-base font-black text-white hover:bg-[#a53625]">
             <a href={quoteUrl}>
               Continue to times
               <ChevronRight className="size-5" />
@@ -587,7 +587,7 @@ function ServiceTabs() {
               ].map(([value, label]) => (
                 <div key={label}>
                   <p className="text-lg font-black text-[#62ffd5]">{value}</p>
-                  <p className="mt-1 text-[0.68rem] font-black uppercase tracking-[0.12em] text-white/45">{label}</p>
+                  <p className="mt-1 text-[0.68rem] font-black uppercase tracking-[0.12em] text-white/72">{label}</p>
                 </div>
               ))}
             </div>
@@ -640,10 +640,10 @@ function ServiceTabs() {
             className="mt-6 grid overflow-hidden rounded-[2rem] border border-[#d8e5e6] bg-white shadow-xl shadow-[#16343a]/5 transition-shadow hover:shadow-2xl hover:shadow-[#16343a]/10 lg:grid-cols-[0.92fr_1.08fr]"
           >
             <div className="apartment-grid p-6 sm:p-9">
-              <p className="text-sm font-black uppercase tracking-[0.2em] text-[#ff6b57]">{activeType.time}</p>
+              <p className="text-sm font-black uppercase tracking-[0.2em] text-[#a53625]">{activeType.time}</p>
               <h3 className="mt-3 text-5xl font-black tracking-normal">{activeType.price}</h3>
               <p className="mt-4 max-w-md text-lg leading-8 text-[#53616a]">{activeType.text}</p>
-              <Button asChild className="mt-7 rounded-full bg-[#142027] px-6 font-black text-white hover:bg-[#ff6b57]">
+              <Button asChild className="mt-7 rounded-full bg-[#142027] px-6 font-black text-white hover:bg-[#a53625]">
                 <a href={quoteUrl}>
                   Check availability
                   <ArrowRight className="size-4" />
@@ -728,7 +728,7 @@ function Process() {
                   <span className="flex size-12 items-center justify-center rounded-full bg-[#142027] text-white">
                     <step.icon className="size-6" />
                   </span>
-                  <span className="text-sm font-black text-[#ff6b57]">0{index + 1}</span>
+                  <span className="text-sm font-black text-[#a53625]">0{index + 1}</span>
                 </div>
                 <h3 className="mt-6 text-2xl font-black">{step.title}</h3>
                 <p className="mt-3 leading-7 text-[#52616b]">{step.text}</p>
@@ -1113,7 +1113,7 @@ function PricingPage() {
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {services.slice(0, 4).map((service) => (
               <a key={service.slug} href={`/${service.slug}/`} className="rounded-[1.4rem] border border-[#dce7e8] bg-[#fbfdfd] p-6 transition-all hover:-translate-y-1 hover:border-[#62ffd5] hover:bg-white">
-                <p className="text-sm font-black uppercase tracking-[0.14em] text-[#ff6b57]">{service.time}</p>
+                <p className="text-sm font-black uppercase tracking-[0.14em] text-[#a53625]">{service.time}</p>
                 <h2 className="mt-3 text-2xl font-black">{service.name}</h2>
                 <p className="mt-4 text-4xl font-black">{service.price}</p>
                 <p className="mt-4 text-sm font-semibold leading-6 text-[#52616b]">{service.fit}</p>
@@ -1591,7 +1591,7 @@ function Footer() {
         <FooterColumn title="Service areas" items={footerServiceAreas} />
 
         <div>
-          <h3 className="text-sm font-black uppercase tracking-[0.18em] text-white/45">Contact</h3>
+          <h3 className="text-sm font-black uppercase tracking-[0.18em] text-white/72">Contact</h3>
           <div className="mt-5 grid gap-3 text-sm font-semibold text-white/72">
             <a href="tel:+16305550142" className="flex items-center gap-3 transition-colors hover:text-[#62ffd5]">
               <Phone className="size-4" />
@@ -1615,7 +1615,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-white/10 pt-6 text-xs font-semibold text-white/42 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-white/10 pt-6 text-xs font-semibold text-white/72 sm:flex-row sm:items-center sm:justify-between">
         <p>© 2026 Shynli Apartment Cleaning. All rights reserved.</p>
         <div className="flex gap-5">
           <a href="/privacy-policy/" className="hover:text-white">Privacy</a>
@@ -1631,7 +1631,7 @@ function Footer() {
 function FooterColumn({ title, items }: { title: string; items: Array<string | { label: string; href: string } | string[]> }) {
   return (
     <div>
-      <h3 className="text-sm font-black uppercase tracking-[0.18em] text-white/45">{title}</h3>
+      <h3 className="text-sm font-black uppercase tracking-[0.18em] text-white/72">{title}</h3>
       <ul className="mt-5 grid gap-3 text-sm font-semibold text-white/72">
         {items.map((item) => {
           const label = Array.isArray(item) ? item[0] : typeof item === "string" ? item : item.label
