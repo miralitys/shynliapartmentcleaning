@@ -417,11 +417,26 @@ function Hero({
 }) {
   return (
     <section id="estimate" className="relative min-h-[88svh] overflow-hidden bg-[#101820] text-white">
-      <img
-        src="/apartment-hero-new.jpg"
-        alt="Bright clean apartment living room after professional cleaning"
-        className="absolute inset-0 h-full w-full object-cover object-center"
-      />
+      <picture>
+        <source
+          type="image/avif"
+          srcSet="/apartment-hero-1200.avif 1200w, /apartment-hero-1800.avif 1800w"
+          sizes="100vw"
+        />
+        <source
+          type="image/webp"
+          srcSet="/apartment-hero-1200.webp 1200w, /apartment-hero-1800.webp 1800w"
+          sizes="100vw"
+        />
+        <img
+          src="/apartment-hero-new.jpg"
+          alt="Bright clean apartment living room after professional cleaning"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+        />
+      </picture>
       <div className="hero-noise absolute inset-0" />
       <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8">
         <a href="/" className="flex items-center gap-3" aria-label="Shynli Apartment Cleaning home">
