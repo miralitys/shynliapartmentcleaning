@@ -402,6 +402,17 @@ function App({ initialPath }: AppProps = {}) {
   )
 }
 
+function CheckDot({ className = "" }: { className?: string }) {
+  return (
+    <span
+      aria-hidden="true"
+      className={`inline-flex shrink-0 items-center justify-center rounded-full bg-[#62ffd5] text-sm font-black leading-none text-[#142027] ${className}`}
+    >
+      ✓
+    </span>
+  )
+}
+
 function Hero({
   estimate,
   bedrooms,
@@ -484,7 +495,7 @@ function Hero({
           <div className="reveal-up delay-3 mt-7 hidden max-w-xl grid-cols-3 gap-3 border-t border-white/14 pt-5 text-sm font-bold text-white/72 sm:grid">
             {["Supplies included", "Insured cleaners", "24 hr support"].map((item) => (
               <div key={item} className="flex items-center gap-2">
-                <Check className="size-4 shrink-0 text-[#62ffd5]" />
+                <CheckDot className="size-4 text-[0.65rem]" />
                 <span>{item}</span>
               </div>
             ))}
@@ -512,7 +523,7 @@ function Hero({
           <div className="mt-4 grid gap-2 text-sm font-semibold text-[#40505a]">
             {["Vetted and insured cleaners", "Supplies and equipment included", "Re-clean support if anything is missed"].map((item) => (
               <div key={item} className="flex items-center gap-2 rounded-2xl bg-[#eefafa] px-3 py-2 transition-transform hover:-translate-y-0.5">
-                <Check className="size-4 text-[#00a885]" />
+                <CheckDot className="size-4 bg-white text-[0.65rem] text-[#00a885]" />
                 {item}
               </div>
             ))}
@@ -592,9 +603,7 @@ function ServiceTabs() {
               <div key={title} className="group flex items-center justify-between gap-5 rounded-[1.5rem] border border-[#dce7e8] bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-[#62ffd5]/80 hover:shadow-xl hover:shadow-[#16343a]/5">
                 <div className="min-w-0">
                   <div className="flex items-center gap-3">
-                    <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#eefafa] text-[#00a885] transition-colors group-hover:bg-[#62ffd5] group-hover:text-[#142027]">
-                      <Check className="size-5" />
-                    </span>
+                    <CheckDot className="size-9 bg-[#eefafa] text-[#00a885] transition-colors group-hover:bg-[#62ffd5] group-hover:text-[#142027]" />
                     <h3 className="text-xl font-black tracking-normal">{title}</h3>
                   </div>
                   <p className="mt-3 max-w-xl text-sm font-semibold leading-6 text-[#52616b]">{text}</p>
@@ -646,9 +655,7 @@ function ServiceTabs() {
             <div className="grid gap-3 p-6 sm:p-9">
               {activeType.bullets.map((bullet) => (
                 <div key={bullet} className="flex items-center gap-3 rounded-2xl border border-[#dbe7e8] bg-[#fbfdfd] p-4 text-base font-bold transition-transform hover:-translate-y-0.5">
-                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#62ffd5]">
-                    <Check className="size-5" />
-                  </span>
+                  <CheckDot className="size-9" />
                   {bullet}
                 </div>
               ))}
@@ -688,7 +695,7 @@ function Checklist() {
                 <ul className="mt-5 grid gap-3 text-sm font-semibold text-white/72">
                   {room.items.map((item) => (
                     <li key={item} className="flex gap-2">
-                      <Check className="mt-0.5 size-4 shrink-0 text-[#62ffd5]" />
+                      <CheckDot className="mt-0.5 size-4 text-[0.65rem]" />
                       {item}
                     </li>
                   ))}
@@ -757,7 +764,6 @@ function Coverage() {
                 <div className="flex flex-wrap gap-2">
                   {group.cities.map((zone) => (
                     <Badge key={zone} variant="outline" className="rounded-full border-[#bdd0d2] bg-white px-3 py-1.5 text-xs font-bold sm:text-sm">
-                      <MapPin className="size-3.5" />
                       {zone}
                     </Badge>
                   ))}
@@ -808,7 +814,7 @@ function Guarantee() {
             />
             {["No hidden apartment fees", "Supplies included", "Recurring discounts", "Move-out add-ons"].map((item) => (
               <div key={item} className="flex items-center gap-3 rounded-[1.35rem] border border-[#dce7e8] bg-[#fbfdfd] p-5 font-black transition-colors hover:border-[#62ffd5] hover:bg-[#eefafa]">
-                <Check className="size-5 text-[#00a885]" />
+                <CheckDot className="size-5 bg-[#e9f5f4] text-xs text-[#00a885]" />
                 {item}
               </div>
             ))}
