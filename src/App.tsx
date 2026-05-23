@@ -492,8 +492,10 @@ function Hero({
                 <ArrowRight className="size-5" />
               </a>
             </Button>
-            <Button size="lg" variant="outline" className="h-13 rounded-full border-white/35 bg-white/10 px-7 text-base font-bold text-white hover:bg-white hover:text-[#101820]">
-              View checklist
+            <Button asChild size="lg" variant="outline" className="h-13 rounded-full border-white/35 bg-white/10 px-7 text-base font-bold text-white hover:bg-white hover:text-[#101820]">
+              <a href="#checklist">
+                View checklist
+              </a>
             </Button>
           </div>
           <div className="reveal-up delay-3 mt-7 hidden max-w-xl grid-cols-3 gap-3 border-t border-white/14 pt-5 text-sm font-bold text-white/72 sm:grid">
