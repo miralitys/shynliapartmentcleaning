@@ -1328,6 +1328,17 @@ function FaqPage() {
   )
 }
 
+const seoHeroImages: Record<string, { avif: string; webp: string }> = {
+  "/apartment-hero-new.jpg": {
+    avif: "/apartment-hero-1200.avif 1200w, /apartment-hero-1800.avif 1800w",
+    webp: "/apartment-hero-1200.webp 1200w, /apartment-hero-1800.webp 1800w",
+  },
+  "/apartment-detail-new.jpg": {
+    avif: "/apartment-detail-1200.avif 1200w, /apartment-detail-1800.avif 1800w",
+    webp: "/apartment-detail-1200.webp 1200w, /apartment-detail-1800.webp 1800w",
+  },
+}
+
 function SeoHero({
   badge,
   title,
@@ -1343,9 +1354,33 @@ function SeoHero({
   primaryHref: string
   secondaryHref: string
 }) {
+  const optimizedImage = seoHeroImages[image]
+
   return (
     <section className="relative overflow-hidden bg-[#101820] px-5 py-20 text-white sm:px-8 sm:py-28">
-      <img src={image} alt="" className="absolute inset-0 h-full w-full object-cover opacity-34" />
+      {optimizedImage ? (
+        <picture>
+          <source type="image/avif" srcSet={optimizedImage.avif} sizes="100vw" />
+          <source type="image/webp" srcSet={optimizedImage.webp} sizes="100vw" />
+          <img
+            src={image}
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover opacity-34"
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
+          />
+        </picture>
+      ) : (
+        <img
+          src={image}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover opacity-34"
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+        />
+      )}
       <div className="absolute inset-0 bg-gradient-to-r from-[#101820] via-[#101820]/88 to-[#101820]/45" />
       <div className="relative mx-auto max-w-7xl">
         <Badge className="rounded-full border-white/20 bg-white/10 px-4 py-2 text-white hover:bg-white/10">{badge}</Badge>
