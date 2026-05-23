@@ -26,7 +26,6 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {
   cities,
   cityGroups,
@@ -521,6 +520,9 @@ function TrustStrip() {
 }
 
 function ServiceTabs() {
+  const [activeTypeId, setActiveTypeId] = useState<(typeof serviceTypes)[number]["id"]>("standard")
+  const activeType = serviceTypes.find((type) => type.id === activeTypeId) ?? serviceTypes[0]
+
   return (
     <section id="services" className="bg-[#fbfdfd] py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
@@ -568,46 +570,60 @@ function ServiceTabs() {
           </div>
         </div>
 
-        <Tabs defaultValue="standard" className="mt-8">
-          <TabsList className="grid !h-auto w-full grid-cols-1 gap-2 rounded-[1.5rem] bg-[#e9f5f4] p-2 sm:grid-cols-3">
+        <div className="mt-8">
+          <div className="grid w-full grid-cols-1 gap-2 rounded-[1.5rem] bg-[#e9f5f4] p-2 sm:grid-cols-3" role="tablist" aria-label="Apartment cleaning package type">
             {serviceTypes.map((type) => (
-              <TabsTrigger key={type.id} value={type.id} className="min-h-14 rounded-[1.15rem] py-4 text-base font-black data-[state=active]:bg-white">
+              <button
+                key={type.id}
+                id={`package-tab-${type.id}`}
+                type="button"
+                role="tab"
+                aria-selected={activeTypeId === type.id}
+                aria-controls={`package-panel-${type.id}`}
+                onClick={() => setActiveTypeId(type.id)}
+                className={`min-h-14 rounded-[1.15rem] px-4 py-4 text-base font-black transition-colors ${
+                  activeTypeId === type.id
+                    ? "bg-white text-[#142027] shadow-sm"
+                    : "text-[#52616b] hover:bg-white/70 hover:text-[#142027]"
+                }`}
+              >
                 {type.label}
-              </TabsTrigger>
+              </button>
             ))}
-          </TabsList>
-          {serviceTypes.map((type) => (
-            <TabsContent key={type.id} value={type.id}>
-              <div className="mt-6 grid overflow-hidden rounded-[2rem] border border-[#d8e5e6] bg-white shadow-xl shadow-[#16343a]/5 transition-shadow hover:shadow-2xl hover:shadow-[#16343a]/10 lg:grid-cols-[0.92fr_1.08fr]">
-                <div className="apartment-grid p-6 sm:p-9">
-                  <p className="text-sm font-black uppercase tracking-[0.2em] text-[#ff6b57]">{type.time}</p>
-                  <h3 className="mt-3 text-5xl font-black tracking-normal">{type.price}</h3>
-                  <p className="mt-4 max-w-md text-lg leading-8 text-[#53616a]">{type.text}</p>
-                  <Button asChild className="mt-7 rounded-full bg-[#142027] px-6 font-black text-white hover:bg-[#ff6b57]">
-                    <a href={quoteUrl}>
-                      Check availability
-                      <ArrowRight className="size-4" />
-                    </a>
-                  </Button>
+          </div>
+          <div
+            id={`package-panel-${activeType.id}`}
+            role="tabpanel"
+            aria-labelledby={`package-tab-${activeType.id}`}
+            className="mt-6 grid overflow-hidden rounded-[2rem] border border-[#d8e5e6] bg-white shadow-xl shadow-[#16343a]/5 transition-shadow hover:shadow-2xl hover:shadow-[#16343a]/10 lg:grid-cols-[0.92fr_1.08fr]"
+          >
+            <div className="apartment-grid p-6 sm:p-9">
+              <p className="text-sm font-black uppercase tracking-[0.2em] text-[#ff6b57]">{activeType.time}</p>
+              <h3 className="mt-3 text-5xl font-black tracking-normal">{activeType.price}</h3>
+              <p className="mt-4 max-w-md text-lg leading-8 text-[#53616a]">{activeType.text}</p>
+              <Button asChild className="mt-7 rounded-full bg-[#142027] px-6 font-black text-white hover:bg-[#ff6b57]">
+                <a href={quoteUrl}>
+                  Check availability
+                  <ArrowRight className="size-4" />
+                </a>
+              </Button>
+            </div>
+            <div className="grid gap-3 p-6 sm:p-9">
+              {activeType.bullets.map((bullet) => (
+                <div key={bullet} className="flex items-center gap-3 rounded-2xl border border-[#dbe7e8] bg-[#fbfdfd] p-4 text-base font-bold transition-transform hover:-translate-y-0.5">
+                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#62ffd5]">
+                    <Check className="size-5" />
+                  </span>
+                  {bullet}
                 </div>
-                <div className="grid gap-3 p-6 sm:p-9">
-                  {type.bullets.map((bullet) => (
-                    <div key={bullet} className="flex items-center gap-3 rounded-2xl border border-[#dbe7e8] bg-[#fbfdfd] p-4 text-base font-bold transition-transform hover:-translate-y-0.5">
-                      <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#62ffd5]">
-                        <Check className="size-5" />
-                      </span>
-                      {bullet}
-                    </div>
-                  ))}
-                  <div className="rounded-2xl bg-[#142027] p-5 text-white">
-                    <p className="text-sm font-bold text-white/70">Best for</p>
-                    <p className="mt-1 text-xl font-black leading-snug">Renters, condo owners, busy professionals, pet homes, and apartment turnovers.</p>
-                  </div>
-                </div>
+              ))}
+              <div className="rounded-2xl bg-[#142027] p-5 text-white">
+                <p className="text-sm font-bold text-white/70">Best for</p>
+                <p className="mt-1 text-xl font-black leading-snug">Renters, condo owners, busy professionals, pet homes, and apartment turnovers.</p>
               </div>
-            </TabsContent>
-          ))}
-        </Tabs>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )
