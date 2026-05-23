@@ -20,7 +20,6 @@ import {
   Star,
   Utensils,
 } from "lucide-react"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -414,6 +413,24 @@ function CheckDot({ className = "" }: { className?: string }) {
     >
       ✓
     </span>
+  )
+}
+
+function NativeFaqList({ items, variant = "light" }: { items: Array<{ q: string; a: string }>; variant?: "light" | "white" }) {
+  const panelClass = variant === "white" ? "bg-white" : "bg-[#fbfdfd]"
+
+  return (
+    <div className={`rounded-[2rem] border border-[#dce7e8] ${panelClass} px-4 sm:px-6`}>
+      {items.map((item) => (
+        <details key={item.q} className="group border-b border-[#dce7e8] last:border-b-0">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-6 text-left text-lg font-black marker:hidden [&::-webkit-details-marker]:hidden">
+            <span>{item.q}</span>
+            <span className="shrink-0 text-[#00a885] transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <p className="pb-6 text-base leading-7 text-[#52616b]">{item.a}</p>
+        </details>
+      ))}
+    </div>
   )
 }
 
@@ -853,14 +870,7 @@ function Faq() {
             Questions renters ask before they book.
           </h2>
         </div>
-        <Accordion type="single" collapsible className="rounded-[2rem] border border-[#dce7e8] bg-white px-4 sm:px-6">
-          {faqs.map((faq, index) => (
-            <AccordionItem key={faq.q} value={`item-${index}`}>
-              <AccordionTrigger className="py-6 text-left text-lg font-black">{faq.q}</AccordionTrigger>
-              <AccordionContent className="pb-6 text-base leading-7 text-[#52616b]">{faq.a}</AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <NativeFaqList items={faqs} variant="white" />
       </div>
     </section>
   )
@@ -1502,14 +1512,7 @@ function SeoFaq({ items }: { items: Array<{ q: string; a: string }> }) {
           <Badge className="rounded-full bg-[#142027] px-4 py-2 text-white">Before you book</Badge>
           <h2 className="font-display mt-5 text-4xl font-black leading-tight tracking-normal sm:text-5xl">Good answers before a cleaner shows up.</h2>
         </div>
-        <Accordion type="single" collapsible className="rounded-[2rem] border border-[#dce7e8] bg-[#fbfdfd] px-4 sm:px-6">
-          {items.map((item, index) => (
-            <AccordionItem key={item.q} value={`seo-faq-${index}`}>
-              <AccordionTrigger className="py-6 text-left text-lg font-black">{item.q}</AccordionTrigger>
-              <AccordionContent className="pb-6 text-base leading-7 text-[#52616b]">{item.a}</AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <NativeFaqList items={items} />
       </div>
     </section>
   )

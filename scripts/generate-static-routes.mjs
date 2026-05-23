@@ -46,7 +46,7 @@ function withDeferredClientScript(html) {
   if (!moduleScriptMatch) return html
 
   const scriptSrc = moduleScriptMatch[1]
-  const loader = `<script data-deferred-app-js>(()=>{let loaded=false;const load=()=>{if(loaded)return;loaded=true;cleanup();const s=document.createElement("script");s.type="module";s.src="${scriptSrc}";document.head.appendChild(s)};const events=["pointerdown","keydown","focusin","touchstart"];const cleanup=()=>events.forEach((event)=>window.removeEventListener(event,load,true));events.forEach((event)=>window.addEventListener(event,load,{once:true,passive:true,capture:true}))})();</script>`
+  const loader = `<script data-deferred-app-js>(()=>{let loaded=false;const shouldLoad=(event)=>{const target=event.target;if(!(target instanceof Element))return false;return !!target.closest("button,input,select,textarea,[data-hydrate-app]")};const load=(event)=>{if(loaded||!shouldLoad(event))return;loaded=true;cleanup();const s=document.createElement("script");s.type="module";s.src="${scriptSrc}";document.head.appendChild(s)};const events=["pointerdown","keydown","focusin","touchstart"];const cleanup=()=>events.forEach((event)=>window.removeEventListener(event,load,true));events.forEach((event)=>window.addEventListener(event,load,{passive:true,capture:true}))})();</script>`
   return html.replace("</body>", `${loader}</body>`)
 }
 
