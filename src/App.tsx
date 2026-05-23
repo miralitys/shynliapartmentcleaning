@@ -600,11 +600,16 @@ function ServiceTabs() {
           </div>
           <div className="grid gap-3">
             {[
-              ["Standard", "For normal weekly, bi-weekly, or one-time upkeep.", "$129+"],
-              ["Deep", "For first visits, buildup, guests, pets, and neglected corners.", "$219+"],
-              ["Move-in/out", "For empty units, deposit checks, cabinets, and appliances.", "$279+"],
-            ].map(([title, text, price]) => (
-              <div key={title} className="group flex items-center justify-between gap-5 rounded-[1.5rem] border border-[#dce7e8] bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-[#62ffd5]/80 hover:shadow-xl hover:shadow-[#16343a]/5">
+              ["Standard", "For normal weekly, bi-weekly, or one-time upkeep.", "$129+", "/apartment-cleaning/"],
+              ["Deep", "For first visits, buildup, guests, pets, and neglected corners.", "$219+", "/deep-apartment-cleaning/"],
+              ["Move-in/out", "For empty units, deposit checks, cabinets, and appliances.", "$279+", "/move-out-apartment-cleaning/"],
+            ].map(([title, text, price, href]) => (
+              <a
+                key={title}
+                href={href}
+                className="group flex items-center justify-between gap-5 rounded-[1.5rem] border border-[#dce7e8] bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-[#62ffd5]/80 hover:shadow-xl hover:shadow-[#16343a]/5 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#62ffd5]/45"
+                aria-label={`Open ${title} apartment cleaning details`}
+              >
                 <div className="min-w-0">
                   <div className="flex items-center gap-3">
                     <CheckDot className="size-9 bg-[#eefafa] text-[#00a885] transition-colors group-hover:bg-[#62ffd5] group-hover:text-[#142027]" />
@@ -613,7 +618,7 @@ function ServiceTabs() {
                   <p className="mt-3 max-w-xl text-sm font-semibold leading-6 text-[#52616b]">{text}</p>
                 </div>
                 <div className="shrink-0 rounded-full bg-[#142027] px-4 py-2 text-sm font-black text-white">{price}</div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
