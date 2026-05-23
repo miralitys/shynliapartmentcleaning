@@ -8,7 +8,6 @@ import {
   Check,
   ChevronRight,
   ClipboardCheck,
-  Clock,
   DoorOpen,
   Home,
   KeyRound,
@@ -386,7 +385,7 @@ function App({ initialPath }: AppProps = {}) {
   }
 
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#fbfdfd] pb-24 text-[#142027] md:pb-0">
+    <main className="min-h-screen overflow-x-hidden bg-[#fbfdfd] text-[#142027]">
       <Hero estimate={estimate} bedrooms={bedrooms} bathrooms={bathrooms} setBedrooms={setBedrooms} setBathrooms={setBathrooms} />
       <TrustStrip />
       <ServiceTabs />
@@ -397,7 +396,6 @@ function App({ initialPath }: AppProps = {}) {
       <Faq />
       <FinalCta />
       <Footer />
-      <MobileBookBar estimate={estimate} />
     </main>
   )
 }
@@ -1647,25 +1645,6 @@ function FooterColumn({ title, items }: { title: string; items: Array<string | {
           )
         })}
       </ul>
-    </div>
-  )
-}
-
-function MobileBookBar({ estimate }: { estimate: number }) {
-  return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[#dce7e8] bg-white/95 p-3 shadow-2xl backdrop-blur md:hidden">
-      <div className="flex items-center gap-3">
-        <div className="min-w-0 flex-1">
-          <p className="text-xs font-bold text-[#66747d]">Estimate</p>
-          <p className="text-lg font-black">${estimate}+ apartment clean</p>
-        </div>
-        <Button asChild className="rounded-full bg-[#142027] px-5 font-black text-white">
-          <a href={quoteUrl}>
-            Book
-            <Clock className="size-4" />
-          </a>
-        </Button>
-      </div>
     </div>
   )
 }
