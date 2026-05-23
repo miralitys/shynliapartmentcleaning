@@ -493,16 +493,16 @@ function Hero({
 
       <div className="relative z-10 mx-auto grid min-h-[calc(88svh-84px)] max-w-7xl items-center gap-8 px-5 pb-28 pt-8 sm:px-8 sm:pb-10 sm:pt-10 lg:grid-cols-[0.95fr_0.82fr] lg:gap-14 lg:pb-14">
         <div className="max-w-3xl">
-          <Badge className="reveal-up mb-5 rounded-full border-white/18 bg-white/10 px-4 py-2 text-white shadow-lg shadow-black/10 hover:bg-white/10">
+          <Badge className="mb-5 rounded-full border-white/18 bg-white/10 px-4 py-2 text-white shadow-lg shadow-black/10 hover:bg-white/10">
             Apartment-first cleaning in 60 seconds
           </Badge>
-          <h1 className="reveal-up delay-1 font-display max-w-4xl text-4xl font-black leading-[0.96] tracking-normal sm:text-6xl lg:text-7xl xl:text-8xl">
+          <h1 className="font-display max-w-4xl text-4xl font-black leading-[0.96] tracking-normal sm:text-6xl lg:text-7xl xl:text-8xl">
             Your apartment, reset in one visit.
           </h1>
-          <p className="reveal-up delay-2 mt-5 max-w-2xl text-base font-semibold leading-7 text-white/78 sm:mt-6 sm:text-xl sm:leading-8">
+          <p className="mt-5 max-w-2xl text-base font-semibold leading-7 text-white/78 sm:mt-6 sm:text-xl sm:leading-8">
             Get a transparent apartment cleaning estimate, choose your time, and leave the kitchen, bath, floors, pet hair, and move-out details to vetted pros.
           </p>
-          <div className="reveal-up delay-3 mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center">
+          <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center">
             <Button asChild size="lg" className="h-13 rounded-full bg-[#62ffd5] px-7 text-base font-black text-[#101820] shadow-xl shadow-[#62ffd5]/20 hover:bg-white">
               <a href={quoteUrl}>
                 See instant estimate
@@ -515,7 +515,7 @@ function Hero({
               </a>
             </Button>
           </div>
-          <div className="reveal-up delay-3 mt-7 hidden max-w-xl grid-cols-3 gap-3 border-t border-white/14 pt-5 text-sm font-bold text-white/72 sm:grid">
+          <div className="mt-7 hidden max-w-xl grid-cols-3 gap-3 border-t border-white/14 pt-5 text-sm font-bold text-white/72 sm:grid">
             {["Supplies included", "Insured cleaners", "24 hr support"].map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <CheckDot className="size-4 text-[0.65rem]" />
@@ -525,7 +525,7 @@ function Hero({
           </div>
         </div>
 
-        <div className="reveal-up delay-2 w-full justify-self-end rounded-[1.65rem] border border-white/24 bg-[#fbfdfd]/96 p-4 text-[#142027] shadow-2xl shadow-black/28 backdrop-blur md:max-w-[520px] md:p-5">
+        <div className="w-full justify-self-end rounded-[1.65rem] border border-white/24 bg-[#fbfdfd]/96 p-4 text-[#142027] shadow-2xl shadow-black/28 backdrop-blur md:max-w-[520px] md:p-5">
           <div className="flex items-center justify-between gap-4">
             <div>
               <p className="text-xs font-black uppercase tracking-[0.18em] text-[#a53625]">Instant apartment quote</p>
