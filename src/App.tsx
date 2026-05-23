@@ -337,10 +337,30 @@ function localBusinessSchema(pathname: string) {
   }
 }
 
-function App() {
+type AppProps = {
+  initialPath?: string
+}
+
+export function getPageHead(pathname: string) {
+  const currentPath = normalizePath(pathname)
+  const legalPage =
+    legalPages[pathname as keyof typeof legalPages] ||
+    legalPages[currentPath.slice(0, -1) as keyof typeof legalPages]
+  const seoRoute = resolveSeoRoute(currentPath)
+
+  return {
+    title: pageTitle(seoRoute, legalPage),
+    description: pageDescription(seoRoute, legalPage),
+    canonical: `${siteUrl}${currentPath}`,
+    schema: localBusinessSchema(currentPath),
+  }
+}
+
+function App({ initialPath }: AppProps = {}) {
   const [bedrooms, setBedrooms] = useState("1")
   const [bathrooms, setBathrooms] = useState("1")
-  const currentPath = normalizePath(window.location.pathname)
+  const pathname = initialPath ?? (typeof window === "undefined" ? "/" : window.location.pathname)
+  const currentPath = normalizePath(pathname)
 
   const estimate = useMemo(() => {
     const rooms = Number(bedrooms || 1)
@@ -349,7 +369,7 @@ function App() {
   }, [bedrooms, bathrooms])
 
   const legalPage =
-    legalPages[window.location.pathname as keyof typeof legalPages] ||
+    legalPages[pathname as keyof typeof legalPages] ||
     legalPages[currentPath.slice(0, -1) as keyof typeof legalPages]
   const seoRoute = resolveSeoRoute(currentPath)
 

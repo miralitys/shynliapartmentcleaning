@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "seo:sitemap": "node scripts/generate-sitemap.mjs",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && vite build --ssr src/entry-server.tsx --outDir dist/server --emptyOutDir false",
     "postbuild": "node scripts/generate-static-routes.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
