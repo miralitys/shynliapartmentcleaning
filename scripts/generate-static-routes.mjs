@@ -46,7 +46,7 @@ function withDeferredClientScript(html) {
   if (!moduleScriptMatch) return html
 
   const scriptSrc = moduleScriptMatch[1]
-  const loader = `<script data-deferred-app-js>(()=>{const load=()=>{const s=document.createElement("script");s.type="module";s.src="${scriptSrc}";document.head.appendChild(s)};const schedule=()=>{"requestIdleCallback"in window?requestIdleCallback(load,{timeout:2200}):setTimeout(load,1200)};document.readyState==="complete"?schedule():window.addEventListener("load",schedule,{once:true})})();</script>`
+  const loader = `<script data-deferred-app-js>(()=>{let loaded=false;const load=()=>{if(loaded)return;loaded=true;cleanup();const s=document.createElement("script");s.type="module";s.src="${scriptSrc}";document.head.appendChild(s)};const events=["pointerdown","keydown","focusin","touchstart"];const cleanup=()=>events.forEach((event)=>window.removeEventListener(event,load,true));events.forEach((event)=>window.addEventListener(event,load,{once:true,passive:true,capture:true}))})();</script>`
   return html.replace("</body>", `${loader}</body>`)
 }
 
