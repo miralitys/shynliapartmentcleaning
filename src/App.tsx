@@ -1641,7 +1641,7 @@ function Footer() {
           <a href="/privacy-policy/" className="hover:text-white">Privacy</a>
           <a href="/terms-of-service/" className="hover:text-white">Terms</a>
           <a href="/cancellation-policy/" className="hover:text-white">Cancellation</a>
-          <a href="/#faq" className="hover:text-white">FAQ</a>
+          <a href="/faq/" className="hover:text-white">FAQ</a>
         </div>
       </div>
     </footer>

@@ -504,6 +504,9 @@ export const footerServiceLinks = [
   ["Move-in cleaning", "/move-in-apartment-cleaning/"],
   ["Move-out cleaning", "/move-out-apartment-cleaning/"],
   ["Recurring cleaning", "/recurring-apartment-cleaning/"],
+  ["One-time cleaning", "/one-time-apartment-cleaning/"],
+  ["Condo cleaning", "/condo-cleaning/"],
+  ["Townhouse cleaning", "/townhouse-cleaning/"],
 ]
 
 export const footerServiceAreas = [
