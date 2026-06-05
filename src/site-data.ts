@@ -498,6 +498,399 @@ export const lowIntentPages: LowIntentPage[] = [
   },
 ]
 
+export type BlogArticleSection = {
+  title: string
+  paragraphs?: string[]
+  bullets?: string[]
+}
+
+export type BlogArticle = {
+  slug: string
+  title: string
+  meta: string
+  category: string
+  readTime: string
+  updated: string
+  heroImage: string
+  summary: string
+  answer: string
+  primaryLinks: Array<{ label: string; href: string }>
+  sections: BlogArticleSection[]
+  faqs: Array<{ q: string; a: string }>
+  relatedSlugs: string[]
+}
+
+export const blogArticles: BlogArticle[] = [
+  {
+    slug: "apartment-move-out-cleaning-checklist",
+    title: "Apartment Move-Out Cleaning Checklist: What to Clean Before You Leave",
+    meta: "Use this apartment move-out cleaning checklist to clean the kitchen, bathroom, floors, closets, appliances, and overlooked details before you hand over the keys.",
+    category: "Move-out cleaning",
+    readTime: "8 min read",
+    updated: "June 5, 2026",
+    heroImage: "/apartment-detail-new.jpg",
+    summary: "A practical room-by-room move-out checklist for renters who want the apartment empty, clean, documented, and easier to inspect.",
+    answer: "Before leaving an apartment, clean the kitchen, bathroom, floors, baseboards, windows, closets, appliances, and all storage areas. Remove every item, take photos and video, and check your lease for any required professional cleaning or carpet-cleaning receipt.",
+    primaryLinks: [
+      { label: "Move-out cleaning service", href: "/move-out-apartment-cleaning/" },
+      { label: "Apartment cleaning checklist", href: "/apartment-cleaning-checklist/" },
+      { label: "Apartment cleaning pricing", href: "/apartment-cleaning-pricing/" },
+    ],
+    sections: [
+      {
+        title: "Start with the lease or move-out instructions",
+        paragraphs: [
+          "Moving out is not the same as doing a normal weekly clean. The apartment is empty, the landlord or property manager may look at details you do not notice day to day, and small missed spots can create stress after you have already left.",
+          "Some buildings only ask for broom-clean condition. Others give a detailed checklist or require professional carpet cleaning. Read that first, then use this checklist to catch the areas renters most often miss.",
+        ],
+      },
+      {
+        title: "Kitchen",
+        paragraphs: ["The kitchen is usually the highest-risk room in a move-out inspection because it collects grease, crumbs, odors, and hidden residue."],
+        bullets: [
+          "Inside and outside of the refrigerator and freezer.",
+          "Oven interior, stovetop, microwave interior, and dishwasher edges.",
+          "Sink, faucet, drain, counters, backsplash, cabinet doors, shelves, pantry shelves, and floor edges.",
+          "Every item from the refrigerator, freezer, cabinets, and pantry.",
+        ],
+      },
+      {
+        title: "Bathroom",
+        paragraphs: ["The bathroom should look and smell clean when the door opens. Focus on residue, hair, water spots, and corners."],
+        bullets: [
+          "Toilet bowl, seat, base, and the floor around the toilet.",
+          "Sink, faucet, vanity, mirror, shower walls, tub, ledges, and reachable grout.",
+          "Bathroom cabinets, drawers, exhaust fan cover if dusty, floor corners, and baseboards.",
+        ],
+      },
+      {
+        title: "Floors, baseboards, and corners",
+        paragraphs: [
+          "Once the apartment is empty, floors show everything. Vacuum or sweep first, then mop hard floors. Pay attention to the edges of rooms, under heaters, behind doors, and along baseboards.",
+          "For carpet, check your lease. Some apartments require professional carpet cleaning or a receipt. Others only expect vacuuming unless there are stains.",
+        ],
+      },
+      {
+        title: "Windows, blinds, closets, and storage",
+        paragraphs: ["Window areas and closets are easy to forget because they do not feel like normal weekly cleaning. During move-out, they matter because dust, bugs, and debris collect there."],
+        bullets: [
+          "Window sills, tracks, blinds, shades, sliding door tracks, and reachable glass smudges.",
+          "Closet shelves, closet floors, storage areas, doors, handles, and behind doors.",
+          "Hooks, tape, and removable strips, removed carefully according to building instructions.",
+        ],
+      },
+      {
+        title: "Trash, final walkthrough, and photos",
+        paragraphs: [
+          "The apartment should be completely empty. Remove trash, boxes, cleaning supplies, hangers, shower items, and anything left in cabinets.",
+          "Before handing over keys, take photos and a short video of each room, inside appliances, bathroom fixtures, floors, closets, and any existing damage or stains. This gives you a clear record of how you left the apartment.",
+        ],
+      },
+      {
+        title: "When to hire a move-out cleaner",
+        paragraphs: ["Hiring a cleaner can be worth it if you are moving on a tight schedule, the apartment is already empty, the kitchen or bathroom needs detail work, your lease requires professional cleaning, or you want a receipt for your records."],
+      },
+    ],
+    faqs: [
+      { q: "How clean should an apartment be before move-out?", a: "At minimum, the apartment should be empty, swept or vacuumed, wiped down, and free of trash, food, obvious grime, and personal items. If your lease gives a stricter standard, follow that." },
+      { q: "What do people most often forget during move-out cleaning?", a: "Common missed areas include the oven, inside cabinets, fridge drawers, baseboards, blinds, window tracks, bathroom corners, closet shelves, and behind doors." },
+      { q: "Should I take photos after move-out cleaning?", a: "Yes. Take photos and a short video after the apartment is empty and cleaned. Capture rooms, appliances, bathroom fixtures, closets, floors, and any existing wear." },
+      { q: "Is this legal advice about security deposits?", a: "No. This is practical cleaning guidance. For deposit disputes or lease questions, read your lease and check local tenant rules or speak with a qualified professional." },
+    ],
+    relatedSlugs: ["do-you-need-professional-cleaners-before-moving-out", "move-in-deep-cleaning-checklist", "is-apartment-cleaning-service-worth-it"],
+  },
+  {
+    slug: "do-you-need-professional-cleaners-before-moving-out",
+    title: "Do You Need Professional Cleaners Before Moving Out of an Apartment?",
+    meta: "Learn when professional move-out cleaning is worth it, when a DIY clean may be enough, and what to ask your landlord before hiring cleaners.",
+    category: "Move-out cleaning",
+    readTime: "7 min read",
+    updated: "June 5, 2026",
+    heroImage: "/apartment-supplies-new.jpg",
+    summary: "A decision guide for renters who are not sure whether a DIY move-out clean is enough or whether a professional receipt matters.",
+    answer: "You need professional cleaners before moving out only if your lease requires it, you need a receipt, or the apartment needs more detailed cleaning than you can realistically do. If the lease allows a tenant-cleaned move-out and you have time, a careful DIY clean may be enough.",
+    primaryLinks: [
+      { label: "Move-out cleaning service", href: "/move-out-apartment-cleaning/" },
+      { label: "Pricing guide", href: "/apartment-cleaning-pricing/" },
+      { label: "Cleaning FAQ", href: "/faq/" },
+    ],
+    sections: [
+      {
+        title: "Start with your lease",
+        paragraphs: [
+          "You do not always need professional cleaners before moving out of an apartment. The practical answer is to check your lease first, then decide based on the apartment condition, your timeline, and whether you need a receipt.",
+          "A professional move-out cleaning does not automatically guarantee that a landlord will waive every fee, but it can help you leave the apartment in better condition and create a clearer record of the cleaning.",
+        ],
+        bullets: [
+          "Check whether professional cleaning or carpet cleaning is required.",
+          "Check whether a receipt must be submitted.",
+          "Ask the property manager in writing if tenant-cleaned condition is acceptable.",
+        ],
+      },
+      {
+        title: "When a DIY move-out clean may be enough",
+        paragraphs: ["A do-it-yourself clean may be enough when the lease does not require professional cleaning, the apartment is small and well maintained, and you have enough time after moving your belongings out."],
+        bullets: [
+          "Clean more than visible surfaces.",
+          "Include cabinets, drawers, appliance interiors, baseboards, window tracks, closets, and bathroom corners.",
+          "Take photos after the cleaning.",
+        ],
+      },
+      {
+        title: "When professional cleaning is worth it",
+        paragraphs: ["Many renters underestimate how hard it is to clean after a move. Packing, loading, address changes, utility transfers, and key return all happen at once."],
+        bullets: [
+          "Your lease requires professional cleaning or a receipt.",
+          "You are moving the same day and do not have time.",
+          "The oven, fridge, bathroom, or floors need detailed work.",
+          "You have pets, odor, heavy dust, or inspection anxiety.",
+        ],
+      },
+      {
+        title: "What a cleaner cannot promise",
+        paragraphs: [
+          "A cleaner can make the apartment clean. A cleaner cannot promise that your landlord will return your full deposit, waive all fees, or ignore damage.",
+          "Cleaning and damage are different issues. A cleaner can help with dirt, dust, grease, soap residue, hair, crumbs, and normal cleaning tasks. Broken blinds, damaged flooring, wall holes, paint issues, and missing items are separate problems.",
+        ],
+      },
+      {
+        title: "How to prepare for a move-out cleaner",
+        bullets: [
+          "Remove furniture and belongings if possible.",
+          "Empty the fridge, freezer, cabinets, and closets.",
+          "Remove trash and leave utilities on if water and electricity are needed.",
+          "Share the building move-out checklist and any strict inspection notes.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Does hiring a professional cleaner guarantee I will not be charged?", a: "No. It can help, but it does not guarantee that every fee will be waived. Damage, lease terms, building rules, and inspection standards can still matter." },
+      { q: "Should I clean before the professional cleaner arrives?", a: "Remove belongings, trash, food, and clutter. You do not need to deep clean first, but the apartment should be empty enough for the cleaner to reach surfaces." },
+      { q: "What should I ask before booking a move-out cleaner?", a: "Ask what is included, whether oven and fridge interiors are included, whether they clean blinds or window tracks, whether they provide a receipt, and whether carpet cleaning is separate." },
+      { q: "Is a move-out clean different from regular cleaning?", a: "Yes. Move-out cleaning is usually more detailed because the apartment is empty and the focus is on appliances, cabinets, baseboards, closets, and inspection-ready condition." },
+    ],
+    relatedSlugs: ["apartment-move-out-cleaning-checklist", "is-apartment-cleaning-service-worth-it", "move-in-deep-cleaning-checklist"],
+  },
+  {
+    slug: "move-in-deep-cleaning-checklist",
+    title: "Move-In Deep Cleaning Checklist: What To Clean Before You Unpack",
+    meta: "Before unpacking, use this move-in deep cleaning checklist to reset the kitchen, bathroom, floors, appliances, closets, and high-touch areas.",
+    category: "Move-in cleaning",
+    readTime: "8 min read",
+    updated: "June 5, 2026",
+    heroImage: "/apartment-hero-new.jpg",
+    summary: "A before-you-unpack checklist for renters who want to clean cabinets, bathrooms, floors, appliances, and high-touch areas while the apartment is still empty.",
+    answer: "Before unpacking, deep clean the kitchen, bathroom, floors, closets, appliances, windowsills, baseboards, and high-touch areas. Take photos first, clean top to bottom, and handle anything serious with the property manager in writing.",
+    primaryLinks: [
+      { label: "Move-in cleaning service", href: "/move-in-apartment-cleaning/" },
+      { label: "Deep apartment cleaning", href: "/deep-apartment-cleaning/" },
+      { label: "Apartment cleaning checklist", href: "/apartment-cleaning-checklist/" },
+    ],
+    sections: [
+      {
+        title: "Why clean before you unpack",
+        paragraphs: [
+          "The best time to deep clean an apartment is before furniture, rugs, dishes, and clothing move in. The rooms are empty, floors are open, and cabinets are easy to reach.",
+          "Even when a unit was professionally cleaned, it may still have dust in tracks, residue inside cabinets, hair in bathroom corners, food crumbs in drawers, or stale smells in appliances.",
+        ],
+      },
+      {
+        title: "Start with photos",
+        paragraphs: ["Before cleaning, take photos of anything damaged, stained, broken, or unusually dirty. Send anything serious to the landlord or property manager in writing."],
+        bullets: [
+          "Carpet stains, wall marks, damaged blinds, cracked tiles, dirty grout, water damage, appliance issues, or pest evidence.",
+          "Cleaning is one thing. Documenting condition is another.",
+        ],
+      },
+      {
+        title: "Clean top to bottom",
+        bullets: [
+          "Ceiling corners, vents, light fixtures, tops of cabinets, shelves, window frames, and blinds.",
+          "Baseboards and floors last so you do not clean the same dust twice.",
+        ],
+      },
+      {
+        title: "Kitchen reset",
+        paragraphs: ["The kitchen deserves the most attention before move-in because it touches food, dishes, and daily habits."],
+        bullets: [
+          "Inside cabinets and drawers, cabinet handles, pantry shelves, counters, backsplash, sink, and faucet.",
+          "Inside the refrigerator, freezer drawers, oven if needed, stovetop, microwave, dishwasher edges, and floor edges.",
+          "Use surface-safe products, especially on stainless steel, stone, enamel, painted cabinets, and older finishes.",
+        ],
+      },
+      {
+        title: "Bathroom, floors, closets, and high-touch areas",
+        bullets: [
+          "Toilet, sink, vanity drawers, mirror, shower walls, tub, grout, shower tracks, exhaust fan cover, floor corners, and baseboards.",
+          "Vacuum every room before furniture comes in, then mop with a cleaner safe for the floor type.",
+          "Clean closet floors, shelves, rods, door tracks, linen closets, storage cabinet corners, handles, switches, thermostat, and appliance handles.",
+        ],
+      },
+      {
+        title: "When to hire move-in cleaning",
+        paragraphs: ["Move-in cleaning is worth it when you have a short moving window, the apartment was not cleaned well, the kitchen or bathroom feels neglected, or you want the apartment cleaned before furniture blocks access."],
+      },
+    ],
+    faqs: [
+      { q: "Should I clean before moving into a new apartment?", a: "Yes. Even if the apartment was cleaned, a move-in clean helps remove dust, residue, and hidden grime before your belongings fill the space." },
+      { q: "What should I clean first in a new apartment?", a: "Start with photos, then clean top to bottom. Focus first on the kitchen, bathroom, floors, closets, and high-touch areas." },
+      { q: "Is move-in cleaning different from move-out cleaning?", a: "Yes. Move-in cleaning focuses on making the space safe, fresh, and comfortable for your belongings. Move-out cleaning focuses on leaving the apartment ready for inspection." },
+      { q: "Should I hire a cleaner before or after movers arrive?", a: "Before, if possible. An empty apartment is easier to clean deeply and quickly." },
+    ],
+    relatedSlugs: ["apartment-move-out-cleaning-checklist", "weekly-apartment-cleaning-schedule", "is-apartment-cleaning-service-worth-it"],
+  },
+  {
+    slug: "weekly-apartment-cleaning-schedule",
+    title: "A Realistic Weekly Apartment Cleaning Schedule For Busy Renters",
+    meta: "Use this simple daily, weekly, monthly, and seasonal apartment cleaning schedule to keep your space manageable without spending every weekend cleaning.",
+    category: "Recurring cleaning",
+    readTime: "8 min read",
+    updated: "June 5, 2026",
+    heroImage: "/apartment-detail-new.jpg",
+    summary: "A realistic apartment cleaning rhythm for renters who want the kitchen, bathroom, floors, dust, and clutter under control without losing every weekend.",
+    answer: "A realistic apartment cleaning schedule is daily kitchen and clutter maintenance, a weekly bathroom and floor reset, monthly deep-clean zones, and seasonal bigger tasks. Keep it simple enough that you will actually follow it.",
+    primaryLinks: [
+      { label: "Recurring apartment cleaning", href: "/recurring-apartment-cleaning/" },
+      { label: "Deep apartment cleaning", href: "/deep-apartment-cleaning/" },
+      { label: "One-time apartment cleaning", href: "/one-time-apartment-cleaning/" },
+    ],
+    sections: [
+      {
+        title: "Daily: 5 to 15 minutes",
+        paragraphs: ["Daily cleaning is mostly maintenance. It is the small reset that keeps the apartment from sliding."],
+        bullets: [
+          "Wash dishes or load the dishwasher.",
+          "Wipe kitchen counters and take out trash if it is full or smells.",
+          "Put laundry in a basket, return obvious clutter, and wipe the bathroom sink if needed.",
+          "If you only do one thing daily, reset the kitchen.",
+        ],
+      },
+      {
+        title: "Weekly: the main reset",
+        paragraphs: ["Once a week, do the tasks that keep the apartment healthy and comfortable. For a small apartment, this can often be done in 60 to 90 minutes if clutter is already under control."],
+        bullets: [
+          "Clean the toilet, sink, mirror, shower, or tub.",
+          "Vacuum carpets and rugs, sweep and mop hard floors, and dust main surfaces.",
+          "Change sheets, wash towels, wipe appliance fronts, clean the microwave, and remove old food from the fridge.",
+        ],
+      },
+      {
+        title: "Every two weeks",
+        bullets: [
+          "Dust blinds or window sills, vacuum under couch cushions, mop less-used rooms, and wipe high-traffic baseboards.",
+          "Vacuum furniture if you have pets and clean under the bed if dust collects quickly.",
+        ],
+      },
+      {
+        title: "Monthly: one deep-clean zone",
+        paragraphs: ["Monthly cleaning works best when you do not try to deep clean the entire apartment at once. Pick one or two zones each month."],
+        bullets: [
+          "Clean inside the fridge, oven, cabinets, drawers, and under small appliances.",
+          "Scrub bathroom buildup, clean window tracks, wash the shower liner, dust vents, and vacuum closet floors.",
+          "If you clean one hidden area each week, you rarely need a full-day deep clean.",
+        ],
+      },
+      {
+        title: "A simple weekly plan",
+        bullets: [
+          "Monday: kitchen reset and trash.",
+          "Tuesday: bathroom.",
+          "Wednesday: laundry and sheets.",
+          "Thursday: floors.",
+          "Friday: dusting and quick clutter reset.",
+          "Saturday or Sunday: one monthly deep-clean task.",
+        ],
+      },
+      {
+        title: "When to hire recurring cleaning",
+        paragraphs: ["Recurring cleaning is worth considering if you work long hours, keep falling behind, have pets, dislike bathroom and kitchen cleaning, or want the apartment maintained before it needs a deep clean."],
+      },
+    ],
+    faqs: [
+      { q: "How often should I clean my apartment?", a: "Do light maintenance daily, a main clean weekly, deeper tasks monthly, and larger reset tasks seasonally." },
+      { q: "How often should I deep clean an apartment?", a: "Most renters can deep clean by rotating one or two deeper tasks each month. A full deep clean may be useful every few months or before move-in, move-out, guests, or a major reset." },
+      { q: "What is the most important room to clean weekly?", a: "The bathroom and kitchen usually matter most because they collect moisture, food residue, odors, and germs." },
+      { q: "Is recurring apartment cleaning worth it?", a: "It can be worth it if it protects your time, keeps the kitchen and bathroom under control, and prevents the apartment from becoming overwhelming." },
+    ],
+    relatedSlugs: ["is-apartment-cleaning-service-worth-it", "move-in-deep-cleaning-checklist", "apartment-move-out-cleaning-checklist"],
+  },
+  {
+    slug: "is-apartment-cleaning-service-worth-it",
+    title: "How Much Does Apartment Cleaning Cost, And When Is Hiring A Cleaner Worth It?",
+    meta: "Apartment cleaning cost depends on size, condition, frequency, and service type. Learn when hiring a cleaner is worth it and how to compare quotes.",
+    category: "Pricing",
+    readTime: "8 min read",
+    updated: "June 5, 2026",
+    heroImage: "/apartment-supplies-new.jpg",
+    summary: "A cost and value guide for renters comparing standard, deep, move-in, move-out, one-time, and recurring apartment cleaning.",
+    answer: "Apartment cleaning cost depends on size, condition, service type, and what is included. Hiring a cleaner is worth it when it saves meaningful time, reduces stress, handles a move-in or move-out deadline, or keeps the apartment from falling behind.",
+    primaryLinks: [
+      { label: "Apartment cleaning pricing", href: "/apartment-cleaning-pricing/" },
+      { label: "One-time cleaning", href: "/one-time-apartment-cleaning/" },
+      { label: "Recurring cleaning", href: "/recurring-apartment-cleaning/" },
+    ],
+    sections: [
+      {
+        title: "What affects apartment cleaning cost",
+        paragraphs: ["Apartment cleaning usually costs more than people expect because the price is not only for wiping surfaces. You are paying for time, labor, supplies, travel, insurance, scheduling, detail work, and the ability to hand off a job you may not have time or energy to do well."],
+        bullets: [
+          "Apartment size, bedrooms, bathrooms, condition, and whether the unit is furnished or empty.",
+          "Cleaning frequency and whether the job is standard, deep, move-in, or move-out.",
+          "Oven, fridge, windows, blinds, interior cabinets, pet hair, odor, travel area, and clutter.",
+        ],
+      },
+      {
+        title: "Standard cleaning vs deep cleaning",
+        paragraphs: ["Standard apartment cleaning is for a home that is already maintained. Deep cleaning goes further and may include more detail time for buildup, baseboards, appliance detail, corners, and stuck-on grime."],
+      },
+      {
+        title: "When hiring a cleaner is worth it",
+        bullets: [
+          "You are moving out and need the apartment inspection-ready.",
+          "You are moving in and want a clean reset before unpacking.",
+          "You work long hours and weekends are your only recovery time.",
+          "The apartment has fallen behind, guests are coming, or pet hair builds quickly.",
+          "A recurring clean helps you stay ahead.",
+        ],
+      },
+      {
+        title: "When DIY cleaning makes more sense",
+        paragraphs: ["Doing it yourself may make sense if the apartment is small, the cleaning is light, you have time, you already have supplies, you do not need a receipt, and the task is manageable."],
+      },
+      {
+        title: "One-time cleaning vs recurring cleaning",
+        paragraphs: [
+          "One-time cleaning is best for move-in, move-out, deep reset, guests, post-party cleanup, seasonal cleaning, or catching up after a busy period.",
+          "Recurring cleaning is best when you want the apartment maintained, dust and pet hair return quickly, and you want fewer emergency deep cleans.",
+        ],
+      },
+      {
+        title: "How to compare cleaning quotes",
+        bullets: [
+          "Ask whether the quote is for standard, deep, move-in, or move-out cleaning.",
+          "Ask how long the appointment should take, whether supplies are included, and whether oven, fridge, cabinets, blinds, tracks, or carpet cleaning are included.",
+          "A cheaper quote may be fine for light cleaning, but move-out, move-in, or heavy buildup work needs the right scope.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Why does apartment cleaning cost more for move-out cleaning?", a: "Move-out cleaning usually takes longer because the cleaner focuses on appliances, cabinets, baseboards, closets, bathrooms, floors, and inspection details in an empty apartment." },
+      { q: "Is a recurring cleaner cheaper than one-time cleaning?", a: "Often, yes. Recurring cleaning can be more predictable because the apartment stays maintained, while one-time deep cleaning may require more labor." },
+      { q: "Should I tip an apartment cleaner?", a: "Tipping is optional unless a company has a specific policy. Many customers tip when the cleaner does detailed work, handles a difficult job, or provides excellent service." },
+      { q: "How do I know if a quote is fair?", a: "A fair quote should clearly explain what is included, what costs extra, how long the cleaning should take, and what type of cleaning you are booking." },
+    ],
+    relatedSlugs: ["weekly-apartment-cleaning-schedule", "do-you-need-professional-cleaners-before-moving-out", "move-in-deep-cleaning-checklist"],
+  },
+]
+
+export const footerGuideLinks = [
+  { label: "Apartment cleaning guides", href: "/blog/" },
+  { label: "Move-out checklist", href: "/blog/apartment-move-out-cleaning-checklist/" },
+  { label: "Professional cleaners", href: "/blog/do-you-need-professional-cleaners-before-moving-out/" },
+  { label: "Move-in checklist", href: "/blog/move-in-deep-cleaning-checklist/" },
+  { label: "Weekly schedule", href: "/blog/weekly-apartment-cleaning-schedule/" },
+]
+
 export const footerServiceLinks = [
   ["Apartment cleaning", "/apartment-cleaning/"],
   ["Deep cleaning", "/deep-apartment-cleaning/"],
@@ -559,6 +952,8 @@ export function allSeoPaths() {
     "/privacy-policy/",
     "/terms-of-service/",
     "/cancellation-policy/",
+    "/blog/",
+    ...blogArticles.map((article) => `/blog/${article.slug}/`),
   ]
   const cityHubs = cities.map((city) => `/service-areas/${city.slug}/`)
   const localServices = cities.flatMap((city) => cityServices.map((service) => `/service-areas/${city.slug}/${service.slug}/`))

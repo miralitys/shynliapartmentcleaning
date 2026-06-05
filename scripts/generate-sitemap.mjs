@@ -61,6 +61,14 @@ const lowIntentPages = [
   "apartment-turnover-cleaning",
 ]
 
+const blogPosts = [
+  "apartment-move-out-cleaning-checklist",
+  "do-you-need-professional-cleaners-before-moving-out",
+  "move-in-deep-cleaning-checklist",
+  "weekly-apartment-cleaning-schedule",
+  "is-apartment-cleaning-service-worth-it",
+]
+
 const corePaths = [
   "/",
   "/apartment-cleaning/",
@@ -78,10 +86,12 @@ const corePaths = [
   "/privacy-policy/",
   "/terms-of-service/",
   "/cancellation-policy/",
+  "/blog/",
 ]
 
 const paths = [
   ...corePaths,
+  ...blogPosts.map((post) => `/blog/${post}/`),
   ...cities.map((city) => `/service-areas/${city}/`),
   ...cities.flatMap((city) => coreServices.map((service) => `/service-areas/${city}/${service}/`)),
   ...cities.flatMap((city) => lowIntentPages.map((page) => `/service-areas/${city}/${page}/`)),

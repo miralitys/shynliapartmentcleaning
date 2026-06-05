@@ -3,6 +3,7 @@ import {
   ArrowRight,
   BadgeCheck,
   Bath,
+  BookOpen,
   Building2,
   CalendarDays,
   Check,
@@ -28,6 +29,8 @@ import {
   cities,
   cityGroups,
   cityServices,
+  blogArticles,
+  footerGuideLinks,
   footerServiceAreas,
   footerServiceLinks,
   getCity,
@@ -37,6 +40,7 @@ import {
   normalizePath,
   services,
   siteUrl,
+  type BlogArticle,
   type LowIntentPage,
   type Service,
 } from "@/site-data"
@@ -219,6 +223,8 @@ type SeoRoute =
   | { type: "checklist" }
   | { type: "serviceAreas" }
   | { type: "faq" }
+  | { type: "blogIndex" }
+  | { type: "blogArticle"; article: BlogArticle }
   | { type: "city"; city: (typeof cities)[number] }
   | { type: "cityService"; city: (typeof cities)[number]; service: Service }
   | { type: "lowIntent"; city: (typeof cities)[number]; page: LowIntentPage }
@@ -234,6 +240,13 @@ function resolveSeoRoute(pathname: string): SeoRoute | undefined {
   if (pathname === "/apartment-cleaning-checklist/") return { type: "checklist" }
   if (pathname === "/service-areas/") return { type: "serviceAreas" }
   if (pathname === "/faq/") return { type: "faq" }
+  if (pathname === "/blog/") return { type: "blogIndex" }
+
+  const blogMatch = pathname.match(/^\/blog\/([^/]+)\/$/)
+  if (blogMatch) {
+    const article = blogArticles.find((item) => item.slug === blogMatch[1])
+    if (article) return { type: "blogArticle", article }
+  }
 
   const cityMatch = pathname.match(/^\/service-areas\/([^/]+)\/$/)
   if (cityMatch) {
@@ -260,6 +273,8 @@ function pageTitle(route?: SeoRoute, legalPage?: (typeof legalPages)[keyof typeo
   if (route.type === "city") return `Apartment Cleaners in ${route.city.name} | Shynli Apartment`
   if (route.type === "cityService") return `${route.service.shortName} Cleaning in ${route.city.name} | Shynli Apartment`
   if (route.type === "lowIntent") return route.page.title(route.city.name)
+  if (route.type === "blogIndex") return "Apartment Cleaning Guides | Shynli Apartment Cleaning"
+  if (route.type === "blogArticle") return `${route.article.title} | Shynli Apartment Cleaning`
   if (route.type === "pricing") return "Apartment Cleaning Pricing | Shynli Apartment Cleaning"
   if (route.type === "checklist") return "Apartment Cleaning Checklist | Shynli Apartment Cleaning"
   if (route.type === "serviceAreas") return "Apartment Cleaning Service Areas | Shynli Apartment Cleaning"
@@ -273,6 +288,8 @@ function pageDescription(route?: SeoRoute, legalPage?: (typeof legalPages)[keyof
   if (route.type === "city") return `Apartment cleaning in ${route.city.name} with vetted cleaners, supplies included, clear estimates, recurring, deep, move-in, and move-out options.`
   if (route.type === "cityService") return route.service.meta(route.city.name)
   if (route.type === "lowIntent") return route.page.meta(route.city.name)
+  if (route.type === "blogIndex") return "Read practical apartment cleaning guides for move-out, move-in, weekly cleaning, pricing, and when hiring a cleaner is worth it."
+  if (route.type === "blogArticle") return route.article.meta
   if (route.type === "pricing") return "See apartment cleaning pricing by clean type, apartment size, bathrooms, pets, add-ons, and move-in or move-out needs."
   if (route.type === "checklist") return "Review the apartment cleaning checklist for kitchens, bathrooms, living areas, bedrooms, floors, supplies, and move-out details."
   if (route.type === "serviceAreas") return "See apartment cleaning service areas across Chicagoland suburbs with local city pages, service options, and booking support."
@@ -341,6 +358,73 @@ function localBusinessSchema(pathname: string) {
   }
 }
 
+function pageSchema(pathname: string, route?: SeoRoute) {
+  const localBusiness = localBusinessSchema(pathname)
+
+  if (route?.type !== "blogArticle") return localBusiness
+
+  const article = route.article
+  const articleUrl = `${siteUrl}/blog/${article.slug}/`
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      localBusiness,
+      {
+        "@type": "Article",
+        headline: article.title,
+        description: article.meta,
+        image: `${siteUrl}${article.heroImage}`,
+        datePublished: "2026-06-05",
+        dateModified: "2026-06-05",
+        author: {
+          "@type": "Organization",
+          name: "Shynli Apartment Cleaning",
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Shynli Apartment Cleaning",
+          url: siteUrl,
+        },
+        mainEntityOfPage: articleUrl,
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: siteUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Guides",
+            item: `${siteUrl}/blog/`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: article.title,
+            item: articleUrl,
+          },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: article.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.a,
+          },
+        })),
+      },
+    ],
+  }
+}
+
 type AppProps = {
   initialPath?: string
 }
@@ -356,7 +440,7 @@ export function getPageHead(pathname: string) {
     title: pageTitle(seoRoute, legalPage),
     description: pageDescription(seoRoute, legalPage),
     canonical: `${siteUrl}${currentPath}`,
-    schema: localBusinessSchema(currentPath),
+    schema: pageSchema(currentPath, seoRoute),
   }
 }
 
@@ -378,7 +462,7 @@ function App({ initialPath }: AppProps = {}) {
   const seoRoute = resolveSeoRoute(currentPath)
 
   useEffect(() => {
-    setPageMeta(pageTitle(seoRoute, legalPage), pageDescription(seoRoute, legalPage), currentPath, localBusinessSchema(currentPath))
+    setPageMeta(pageTitle(seoRoute, legalPage), pageDescription(seoRoute, legalPage), currentPath, pageSchema(currentPath, seoRoute))
   }, [currentPath, legalPage, seoRoute])
 
   if (legalPage) {
@@ -399,6 +483,10 @@ function App({ initialPath }: AppProps = {}) {
       <Coverage />
       <Guarantee />
       <Faq />
+      <RelatedGuides
+        title="Apartment cleaning guides for common renter questions."
+        articles={getArticlesBySlugs(["apartment-move-out-cleaning-checklist", "move-in-deep-cleaning-checklist", "weekly-apartment-cleaning-schedule"])}
+      />
       <FinalCta />
       <Footer />
     </main>
@@ -481,6 +569,7 @@ function Hero({
           <a href="#services" className="hover:text-white">Services</a>
           <a href="#checklist" className="hover:text-white">Checklist</a>
           <a href="#coverage" className="hover:text-white">Areas</a>
+          <a href="/blog/" className="hover:text-white">Guides</a>
           <a href="#faq" className="hover:text-white">FAQ</a>
         </nav>
         <Button asChild className="hidden rounded-full bg-white px-5 text-[#101820] hover:bg-[#62ffd5] sm:inline-flex">
@@ -903,6 +992,8 @@ function SeoPage({ route }: { route: SeoRoute }) {
   if (route.type === "city") return <CityHubPage city={route.city} />
   if (route.type === "cityService") return <CityServicePage city={route.city} service={route.service} />
   if (route.type === "lowIntent") return <LowIntentRoutePage city={route.city} page={route.page} />
+  if (route.type === "blogIndex") return <BlogIndexPage />
+  if (route.type === "blogArticle") return <BlogArticlePage article={route.article} />
   if (route.type === "pricing") return <PricingPage />
   if (route.type === "checklist") return <ChecklistPage />
   if (route.type === "serviceAreas") return <ServiceAreasPage />
@@ -933,6 +1024,7 @@ function SimpleHeader() {
           <a href="/apartment-cleaning/" className="hover:text-white">Services</a>
           <a href="/service-areas/" className="hover:text-white">Areas</a>
           <a href="/apartment-cleaning-pricing/" className="hover:text-white">Pricing</a>
+          <a href="/blog/" className="hover:text-white">Guides</a>
           <a href="/faq/" className="hover:text-white">FAQ</a>
         </nav>
         <Button asChild className="rounded-full bg-white px-5 text-[#101820] hover:bg-[#62ffd5]">
@@ -955,6 +1047,10 @@ function ServiceSeoPage({ service }: { service: Service }) {
         secondaryHref="/apartment-cleaning-checklist/"
       />
       <ServiceValueSections service={service} />
+      <RelatedGuides
+        title={`Guides that help you plan ${service.shortName.toLowerCase()} cleaning.`}
+        articles={getArticlesBySlugs(guideSlugsForService(service.slug))}
+      />
       <LocalLinks title={`Book ${service.name.toLowerCase()} near you`} serviceSlug={cityServices.some((item) => item.slug === service.slug) ? service.slug : undefined} />
       <SeoFaq items={service.faqs.map((faq) => ({ q: faq.q(), a: faq.a() }))} />
       <SeoCta title={`Ready to price your ${service.shortName.toLowerCase()} clean?`} />
@@ -1035,6 +1131,10 @@ function CityServicePage({ city, service }: { city: (typeof cities)[number]; ser
         secondaryHref="/apartment-cleaning-checklist/"
       />
       <ServiceValueSections service={service} city={city.name} />
+      <RelatedGuides
+        title={`Planning help before ${service.shortName.toLowerCase()} cleaning in ${city.name}.`}
+        articles={getArticlesBySlugs(guideSlugsForService(service.slug))}
+      />
       <LocalContext city={city} service={service.shortName} />
       <LocalTrust city={city.name} />
       <LocalLinks title={`More apartment cleaning options in ${city.name}`} activeCitySlug={city.slug} />
@@ -1056,6 +1156,14 @@ function LowIntentRoutePage({ city, page }: { city: (typeof cities)[number]; pag
         secondaryHref="/apartment-cleaning-pricing/"
       />
       <LocalContext city={city} service={page.shortName} />
+      <RelatedGuides
+        title={`Guides that support ${page.shortName.toLowerCase()} planning.`}
+        articles={getArticlesBySlugs(page.slug === "tenant-move-out-cleaning"
+          ? ["apartment-move-out-cleaning-checklist", "do-you-need-professional-cleaners-before-moving-out", "is-apartment-cleaning-service-worth-it"]
+          : page.slug === "apartment-cleaning-prices"
+            ? ["is-apartment-cleaning-service-worth-it", "weekly-apartment-cleaning-schedule", "do-you-need-professional-cleaners-before-moving-out"]
+            : ["apartment-move-out-cleaning-checklist", "do-you-need-professional-cleaners-before-moving-out", "move-in-deep-cleaning-checklist"])}
+      />
       <section className="bg-white py-18 sm:py-24">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
@@ -1178,6 +1286,10 @@ function PricingPage() {
           </div>
         </div>
       </section>
+      <RelatedGuides
+        title="Price and value guides before you book."
+        articles={getArticlesBySlugs(["is-apartment-cleaning-service-worth-it", "weekly-apartment-cleaning-schedule", "do-you-need-professional-cleaners-before-moving-out"])}
+      />
       <SeoCta title="Build your apartment cleaning estimate." />
     </SeoShell>
   )
@@ -1222,6 +1334,10 @@ function ChecklistPage() {
           </div>
         </div>
       </section>
+      <RelatedGuides
+        title="Checklist guides for move-in, move-out, and weekly upkeep."
+        articles={getArticlesBySlugs(["apartment-move-out-cleaning-checklist", "move-in-deep-cleaning-checklist", "weekly-apartment-cleaning-schedule"])}
+      />
       <SeoCta title="Choose the checklist that fits your apartment." />
     </SeoShell>
   )
@@ -1323,8 +1439,234 @@ function FaqPage() {
           ))}
         </div>
       </section>
+      <RelatedGuides
+        title="More detailed answers to common apartment cleaning questions."
+        articles={getArticlesBySlugs(["is-apartment-cleaning-service-worth-it", "weekly-apartment-cleaning-schedule", "do-you-need-professional-cleaners-before-moving-out"])}
+      />
       <SeoCta title="Ready to turn the answers into a price?" />
     </SeoShell>
+  )
+}
+
+function BlogIndexPage() {
+  const featured = blogArticles[0]
+  const rest = blogArticles.slice(1)
+
+  return (
+    <SeoShell>
+      <SeoHero
+        badge="Apartment cleaning guides"
+        title="Practical answers before you book, move, or clean."
+        text="Read renter-focused guides about move-out cleaning, move-in deep cleaning, weekly routines, pricing, and when professional apartment cleaning is worth it."
+        image="/apartment-hero-new.jpg"
+        primaryHref={quoteUrl}
+        secondaryHref="/apartment-cleaning-checklist/"
+      />
+      <section className="bg-white py-18 sm:py-24">
+        <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-[0.86fr_1.14fr] lg:items-stretch">
+          <a href={`/blog/${featured.slug}/`} className="group flex min-h-full flex-col justify-between rounded-[1.8rem] bg-[#142027] p-6 text-white transition-transform hover:-translate-y-1 sm:p-8">
+            <div>
+              <Badge className="rounded-full bg-[#62ffd5] px-4 py-2 text-[#142027] hover:bg-[#62ffd5]">{featured.category}</Badge>
+              <h2 className="font-display mt-6 text-4xl font-black leading-tight tracking-normal sm:text-5xl">{featured.title}</h2>
+              <p className="mt-5 text-base font-semibold leading-7 text-white/72">{featured.summary}</p>
+            </div>
+            <span className="mt-8 inline-flex items-center gap-2 text-sm font-black text-[#62ffd5]">
+              Read guide <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+            </span>
+          </a>
+          <div className="grid gap-4">
+            {rest.map((article) => (
+              <ArticleListLink key={article.slug} article={article} />
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="border-y border-[#dce7e8] bg-[#eefafa] py-18 sm:py-24">
+        <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-[0.78fr_1.22fr]">
+          <div>
+            <Badge className="rounded-full bg-white px-4 py-2 text-[#142027]">Where these guides fit</Badge>
+            <h2 className="font-display mt-5 text-4xl font-black leading-tight tracking-normal sm:text-5xl">
+              Guides answer research questions. Service pages handle booking.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-[#52616b]">
+              The articles are placed as a helpful layer around the existing service, pricing, checklist, FAQ, and city pages instead of replacing them.
+            </p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {[
+              ["Moving out", "Move-out checklist and professional-cleaner decision guides point back to the move-out service page."],
+              ["Moving in", "The move-in checklist supports renters before boxes and furniture block the apartment."],
+              ["Staying clean", "The weekly schedule connects naturally to recurring, one-time, and deep cleaning."],
+              ["Price research", "The cost guide sends visitors into the pricing page when they are ready to compare scope."],
+            ].map(([title, text]) => (
+              <div key={title} className="rounded-[1.35rem] border border-[#d2e3e4] bg-white p-6">
+                <BookOpen className="size-5 text-[#00a885]" />
+                <h3 className="mt-4 text-xl font-black">{title}</h3>
+                <p className="mt-3 text-sm font-semibold leading-6 text-[#52616b]">{text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <SeoCta title="Ready to turn the guide into a booked clean?" />
+    </SeoShell>
+  )
+}
+
+function BlogArticlePage({ article }: { article: BlogArticle }) {
+  const relatedArticles = article.relatedSlugs
+    .map((slug) => blogArticles.find((item) => item.slug === slug))
+    .filter((item): item is BlogArticle => Boolean(item))
+
+  return (
+    <SeoShell>
+      <article>
+        <section className="relative overflow-hidden bg-[#101820] px-5 py-18 text-white sm:px-8 sm:py-24">
+          <img
+            src={article.heroImage}
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover opacity-28"
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#101820] via-[#101820]/90 to-[#101820]/50" />
+          <div className="relative mx-auto max-w-5xl">
+            <a href="/blog/" className="inline-flex items-center gap-2 text-sm font-black text-[#62ffd5]">
+              <BookOpen className="size-4" />
+              Apartment cleaning guides
+            </a>
+            <div className="mt-5 flex flex-wrap gap-2">
+              <Badge className="rounded-full border-white/20 bg-white/10 px-4 py-2 text-white hover:bg-white/10">{article.category}</Badge>
+              <Badge className="rounded-full border-white/20 bg-white/10 px-4 py-2 text-white hover:bg-white/10">{article.readTime}</Badge>
+              <Badge className="rounded-full border-white/20 bg-white/10 px-4 py-2 text-white hover:bg-white/10">Updated {article.updated}</Badge>
+            </div>
+            <h1 className="font-display mt-6 text-4xl font-black leading-[1.02] tracking-normal sm:text-6xl lg:text-7xl">{article.title}</h1>
+            <p className="mt-6 max-w-3xl text-lg font-semibold leading-8 text-white/76">{article.summary}</p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              {article.primaryLinks.map((link) => (
+                <Button key={link.href} asChild className="rounded-full bg-white px-5 font-black text-[#101820] hover:bg-[#62ffd5]">
+                  <a href={link.href}>{link.label}</a>
+                </Button>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white py-14 sm:py-20">
+          <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.7fr_1.3fr]">
+            <aside className="lg:sticky lg:top-6 lg:self-start">
+              <div className="rounded-[1.5rem] border border-[#dce7e8] bg-[#fbfdfd] p-6">
+                <p className="text-sm font-black uppercase tracking-[0.18em] text-[#a53625]">Direct answer</p>
+                <p className="mt-4 text-lg font-bold leading-8 text-[#142027]">{article.answer}</p>
+              </div>
+              <div className="mt-4 rounded-[1.5rem] bg-[#142027] p-6 text-white">
+                <h2 className="text-xl font-black">Helpful service pages</h2>
+                <div className="mt-4 grid gap-3">
+                  {article.primaryLinks.map((link) => (
+                    <a key={link.href} href={link.href} className="group flex items-center justify-between gap-3 rounded-2xl bg-white/10 px-4 py-3 text-sm font-bold text-white/78 transition-colors hover:bg-white/15 hover:text-white">
+                      <span>{link.label}</span>
+                      <ArrowRight className="size-4 text-[#62ffd5] transition-transform group-hover:translate-x-1" />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </aside>
+
+            <div className="prose-article">
+              {article.sections.map((section) => (
+                <section key={section.title} className="border-b border-[#dce7e8] py-8 first:pt-0 last:border-b-0">
+                  <h2 className="font-display text-3xl font-black leading-tight tracking-normal text-[#142027] sm:text-4xl">{section.title}</h2>
+                  {section.paragraphs?.map((paragraph) => (
+                    <p key={paragraph} className="mt-4 text-lg leading-8 text-[#52616b]">{paragraph}</p>
+                  ))}
+                  {section.bullets ? (
+                    <ul className="mt-5 grid gap-3">
+                      {section.bullets.map((bullet) => (
+                        <li key={bullet} className="flex gap-3 text-base font-semibold leading-7 text-[#40505a]">
+                          <Check className="mt-1 size-4 shrink-0 text-[#00a885]" />
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </section>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <SeoFaq items={article.faqs} />
+        <RelatedGuides title="Related apartment cleaning guides" articles={relatedArticles} />
+        <SeoCta title="Want the apartment handled by a cleaner?" />
+      </article>
+    </SeoShell>
+  )
+}
+
+function ArticleListLink({ article }: { article: BlogArticle }) {
+  return (
+    <a href={`/blog/${article.slug}/`} className="group rounded-[1.35rem] border border-[#dce7e8] bg-[#fbfdfd] p-6 transition-all hover:-translate-y-1 hover:border-[#62ffd5] hover:bg-white">
+      <div className="flex flex-wrap gap-2">
+        <Badge className="rounded-full bg-[#eefafa] px-3 py-1.5 text-[#142027] hover:bg-[#eefafa]">{article.category}</Badge>
+        <span className="rounded-full bg-white px-3 py-1.5 text-xs font-black text-[#66747d]">{article.readTime}</span>
+      </div>
+      <h3 className="mt-4 text-2xl font-black tracking-normal">{article.title}</h3>
+      <p className="mt-3 text-sm font-semibold leading-6 text-[#52616b]">{article.summary}</p>
+      <span className="mt-5 inline-flex items-center gap-2 text-sm font-black text-[#00a885]">
+        Read guide <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+      </span>
+    </a>
+  )
+}
+
+function getArticlesBySlugs(slugs: string[]) {
+  return slugs
+    .map((slug) => blogArticles.find((article) => article.slug === slug))
+    .filter((article): article is BlogArticle => Boolean(article))
+}
+
+function guideSlugsForService(serviceSlug: string) {
+  if (serviceSlug === "move-out-apartment-cleaning") {
+    return ["apartment-move-out-cleaning-checklist", "do-you-need-professional-cleaners-before-moving-out", "is-apartment-cleaning-service-worth-it"]
+  }
+  if (serviceSlug === "move-in-apartment-cleaning") {
+    return ["move-in-deep-cleaning-checklist", "is-apartment-cleaning-service-worth-it", "weekly-apartment-cleaning-schedule"]
+  }
+  if (serviceSlug === "deep-apartment-cleaning") {
+    return ["move-in-deep-cleaning-checklist", "weekly-apartment-cleaning-schedule", "is-apartment-cleaning-service-worth-it"]
+  }
+  if (serviceSlug === "recurring-apartment-cleaning") {
+    return ["weekly-apartment-cleaning-schedule", "is-apartment-cleaning-service-worth-it", "move-in-deep-cleaning-checklist"]
+  }
+  if (serviceSlug === "one-time-apartment-cleaning") {
+    return ["weekly-apartment-cleaning-schedule", "is-apartment-cleaning-service-worth-it", "move-in-deep-cleaning-checklist"]
+  }
+  return ["is-apartment-cleaning-service-worth-it", "weekly-apartment-cleaning-schedule", "apartment-move-out-cleaning-checklist"]
+}
+
+function RelatedGuides({ title, articles }: { title: string; articles: BlogArticle[] }) {
+  if (articles.length === 0) return null
+
+  return (
+    <section className="bg-[#fbfdfd] py-18 sm:py-24">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <Badge className="rounded-full bg-[#142027] px-4 py-2 text-white">Helpful guides</Badge>
+            <h2 className="font-display mt-5 text-4xl font-black leading-tight tracking-normal sm:text-5xl">{title}</h2>
+          </div>
+          <a href="/blog/" className="inline-flex items-center gap-2 text-sm font-black text-[#00a885]">
+            All guides <ArrowRight className="size-4" />
+          </a>
+        </div>
+        <div className="grid gap-4 md:grid-cols-3">
+          {articles.map((article) => (
+            <ArticleListLink key={article.slug} article={article} />
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }
 
@@ -1625,7 +1967,7 @@ function LegalPage({ page }: { page: (typeof legalPages)[keyof typeof legalPages
 function Footer() {
   return (
     <footer className="border-t border-white/10 bg-[#0b1218] px-5 py-12 text-white sm:px-8 sm:py-16">
-      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.1fr_0.9fr_0.9fr_0.9fr]">
+      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.1fr_0.9fr_0.9fr_0.9fr_0.9fr]">
         <div>
           <a href="/" className="flex items-center gap-3" aria-label="Shynli Apartment Cleaning home">
             <span className="flex size-10 items-center justify-center rounded-full bg-[#62ffd5] text-[#101820]">
@@ -1647,6 +1989,7 @@ function Footer() {
 
         <FooterColumn title="Services" items={footerServiceLinks} />
         <FooterColumn title="Service areas" items={footerServiceAreas} />
+        <FooterColumn title="Guides" items={footerGuideLinks} />
 
         <div>
           <h3 className="text-sm font-black uppercase tracking-[0.18em] text-white/72">Contact</h3>
