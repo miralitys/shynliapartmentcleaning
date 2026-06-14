@@ -53,11 +53,12 @@ function withDeferredClientScript(html) {
 function renderRoute(pathname) {
   const { appHtml, head } = render(pathname)
   const schema = `<script type="application/ld+json" data-seo-schema>${safeJson(head.schema)}</script>`
+  const keywords = head.keywords ? `<meta name="keywords" content="${escapeHtml(head.keywords)}" />` : ""
   return withDeferredClientScript(indexHtml)
     .replace(/<title>.*?<\/title>/, `<title>${escapeHtml(head.title)}</title>`)
     .replace(/<meta\s+name="description"\s+content="[^"]*"\s*\/>/, `<meta name="description" content="${escapeHtml(head.description)}" />`)
     .replace(/<link rel="canonical" href="[^"]+"\s*\/>/, `<link rel="canonical" href="${escapeHtml(head.canonical)}" />`)
-    .replace("</head>", `${schema}</head>`)
+    .replace("</head>", `${keywords}${schema}</head>`)
     .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`)
 }
 

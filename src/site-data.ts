@@ -508,6 +508,7 @@ export type BlogArticle = {
   slug: string
   title: string
   meta: string
+  keywords: string
   category: string
   readTime: string
   updated: string
@@ -525,6 +526,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "apartment-move-out-cleaning-checklist",
     title: "Apartment Move-Out Cleaning Checklist: What to Clean Before You Leave",
     meta: "Use this apartment move-out cleaning checklist to clean the kitchen, bathroom, floors, closets, appliances, and overlooked details before you hand over the keys.",
+    keywords: "apartment move-out cleaning checklist, move-out apartment cleaning, rental cleaning checklist, apartment cleaning before inspection",
     category: "Move-out cleaning",
     readTime: "8 min read",
     updated: "June 5, 2026",
@@ -603,6 +605,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "do-you-need-professional-cleaners-before-moving-out",
     title: "Do You Need Professional Cleaners Before Moving Out of an Apartment?",
     meta: "Learn when professional move-out cleaning is worth it, when a DIY clean may be enough, and what to ask your landlord before hiring cleaners.",
+    keywords: "professional cleaners before moving out, apartment move-out cleaning service, move-out cleaning receipt, rental cleaning service",
     category: "Move-out cleaning",
     readTime: "7 min read",
     updated: "June 5, 2026",
@@ -675,6 +678,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "move-in-deep-cleaning-checklist",
     title: "Move-In Deep Cleaning Checklist: What To Clean Before You Unpack",
     meta: "Before unpacking, use this move-in deep cleaning checklist to reset the kitchen, bathroom, floors, appliances, closets, and high-touch areas.",
+    keywords: "move-in deep cleaning checklist, apartment move-in cleaning, clean apartment before unpacking, deep apartment cleaning",
     category: "Move-in cleaning",
     readTime: "8 min read",
     updated: "June 5, 2026",
@@ -743,6 +747,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "weekly-apartment-cleaning-schedule",
     title: "A Realistic Weekly Apartment Cleaning Schedule For Busy Renters",
     meta: "Use this simple daily, weekly, monthly, and seasonal apartment cleaning schedule to keep your space manageable without spending every weekend cleaning.",
+    keywords: "weekly apartment cleaning schedule, recurring apartment cleaning, apartment cleaning routine, apartment cleaning checklist",
     category: "Recurring cleaning",
     readTime: "8 min read",
     updated: "June 5, 2026",
@@ -818,6 +823,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "is-apartment-cleaning-service-worth-it",
     title: "How Much Does Apartment Cleaning Cost, And When Is Hiring A Cleaner Worth It?",
     meta: "Apartment cleaning cost depends on size, condition, frequency, and service type. Learn when hiring a cleaner is worth it and how to compare quotes.",
+    keywords: "apartment cleaning cost, apartment cleaning service worth it, apartment cleaning pricing, hire apartment cleaner",
     category: "Pricing",
     readTime: "8 min read",
     updated: "June 5, 2026",
@@ -879,16 +885,408 @@ export const blogArticles: BlogArticle[] = [
       { q: "Should I tip an apartment cleaner?", a: "Tipping is optional unless a company has a specific policy. Many customers tip when the cleaner does detailed work, handles a difficult job, or provides excellent service." },
       { q: "How do I know if a quote is fair?", a: "A fair quote should clearly explain what is included, what costs extra, how long the cleaning should take, and what type of cleaning you are booking." },
     ],
-    relatedSlugs: ["weekly-apartment-cleaning-schedule", "do-you-need-professional-cleaners-before-moving-out", "move-in-deep-cleaning-checklist"],
+    relatedSlugs: ["weekly-apartment-cleaning-schedule", "apartment-cleaning-roommates-shared-space", "do-you-need-professional-cleaners-before-moving-out"],
+  },
+  {
+    slug: "landlord-cleaning-fee-after-move-out",
+    title: "What To Do If Your Landlord Charges A Cleaning Fee After You Already Cleaned",
+    meta: "If your landlord charges a cleaning fee after move-out, use this practical guide to review the lease, ask for itemization, gather photos and receipts, and respond calmly.",
+    keywords: "landlord cleaning fee after move out, apartment cleaning fee, move-out cleaning charge, rental cleaning receipt, security deposit cleaning fee",
+    category: "Move-out cleaning",
+    readTime: "7 min read",
+    updated: "June 14, 2026",
+    heroImage: "/apartment-detail-new.jpg",
+    summary: "A practical, non-legal guide for renters who cleaned the apartment but still received a move-out cleaning charge.",
+    answer: "If you are charged a cleaning fee after you already cleaned, first compare the charge with your lease and move-out instructions. Ask for an itemized explanation, gather photos, videos, receipts, and messages, and respond in writing. This is cleaning guidance, not legal advice, but documentation gives you a clearer conversation.",
+    primaryLinks: [
+      { label: "Move-out cleaning service", href: "/move-out-apartment-cleaning/" },
+      { label: "Move-out checklist", href: "/blog/apartment-move-out-cleaning-checklist/" },
+      { label: "Apartment cleaning pricing", href: "/apartment-cleaning-pricing/" },
+    ],
+    sections: [
+      {
+        title: "Do not start by arguing about the whole deposit",
+        paragraphs: [
+          "A surprise cleaning fee feels personal, especially after you spent hours cleaning an empty apartment. The most useful first step is narrower: find out exactly what the fee is for.",
+          "Ask whether the charge is for general cleaning, oven cleaning, refrigerator cleaning, carpet cleaning, trash removal, damage, or a lease-required professional cleaning receipt. Those are different issues, and mixing them together makes the conversation harder.",
+        ],
+      },
+      {
+        title: "Check the lease and move-out instructions",
+        paragraphs: [
+          "Some apartment communities give a basic broom-clean standard. Others give a detailed list or require proof of professional cleaning for specific items. Before you reply, read the signed lease, renewal documents, move-out email, resident portal instructions, and any inspection checklist.",
+        ],
+        bullets: [
+          "Look for required professional cleaning, carpet cleaning, appliance cleaning, trash rules, and key-return timing.",
+          "Check whether the property manager asked for receipts or only a clean apartment.",
+          "Separate cleaning requirements from damage, painting, missing items, or normal wear.",
+        ],
+      },
+      {
+        title: "Ask for itemization in writing",
+        paragraphs: [
+          "A calm written message usually works better than a phone call when you need a record. Keep it simple: ask what areas failed inspection, what work was performed, and whether there are photos or an invoice.",
+          "If the charge is legitimate, itemization helps you understand it. If it seems vague, itemization gives you something specific to respond to.",
+        ],
+        bullets: [
+          "Ask for the cleaning invoice or internal work order if one exists.",
+          "Ask which rooms or items triggered the charge.",
+          "Ask whether the charge is standard, actual cost, or tied to the lease.",
+        ],
+      },
+      {
+        title: "Gather your proof before you reply",
+        paragraphs: [
+          "Use the evidence you already have: move-out photos, a walkthrough video, cleaner receipt, text messages, emails, portal notes, and move-in condition photos. The goal is not to write a dramatic essay. The goal is to show the apartment condition clearly.",
+        ],
+        bullets: [
+          "Photos of the kitchen, bathroom, appliances, floors, closets, cabinets, and trash-free rooms.",
+          "Video taken after belongings were removed and before keys were returned.",
+          "Receipt from a professional cleaner, if you hired one.",
+          "Move-in photos that show pre-existing stains, damaged blinds, old carpet, or dirty areas you inherited.",
+        ],
+      },
+      {
+        title: "How professional move-out cleaning helps",
+        paragraphs: [
+          "A professional move-out clean cannot promise that every fee will disappear. A cleaner cannot fix damage, repaint walls, replace carpet, or override lease terms.",
+          "What it can do is reduce the chance of ordinary cleaning misses and give you a receipt showing that the apartment was handled. That is especially useful in the western Chicago suburbs when your move-out window is tight and you cannot return for another round after the inspection.",
+        ],
+      },
+      {
+        title: "A simple response structure",
+        paragraphs: [
+          "Keep your response short and factual. Reference the itemized charge, attach your strongest photos or receipt, and ask for review. If the issue is legal or deposit-related, check local tenant rules or speak with a qualified professional. This article is only practical cleaning guidance.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Can a professional cleaning receipt prevent every move-out charge?", a: "No. A receipt can help show that cleaning was completed, but damage, lease terms, carpet rules, trash, and inspection standards can still matter." },
+      { q: "What photos should I take after move-out cleaning?", a: "Photograph every room after it is empty, plus inside the refrigerator, oven, cabinets, drawers, closets, bathroom fixtures, floors, baseboards, and any pre-existing damage." },
+      { q: "Should I ask my landlord for an itemized cleaning fee?", a: "Yes. Ask in writing what the fee covers, which areas failed inspection, and whether there are photos, invoices, or work orders." },
+      { q: "Is this legal advice about security deposits?", a: "No. This is practical cleaning and documentation guidance. For legal questions, review your lease and local tenant rules or speak with a qualified professional." },
+    ],
+    relatedSlugs: ["apartment-move-out-cleaning-checklist", "do-you-need-professional-cleaners-before-moving-out", "is-apartment-cleaning-service-worth-it"],
+  },
+  {
+    slug: "apartment-cleaning-roommates-shared-space",
+    title: "Apartment Cleaning With Roommates: How To Split Chores Or A Cleaning Service Without Fighting",
+    meta: "Roommate cleaning works best when common areas, dishes, trash, bathrooms, and paid cleaning are agreed on before resentment builds.",
+    keywords: "apartment cleaning with roommates, roommate cleaning schedule, shared apartment cleaning service, split cleaning service with roommates",
+    category: "Recurring cleaning",
+    readTime: "8 min read",
+    updated: "June 14, 2026",
+    heroImage: "/apartment-supplies-new.jpg",
+    summary: "A practical way to set cleaning expectations in a shared apartment without turning every week into a negotiation.",
+    answer: "Roommate cleaning works when the standard is specific, written, and tied to common areas. Decide who handles dishes, trash, bathroom, floors, and clutter; choose a weekly or biweekly reset; and if you hire a cleaner, split only the shared scope unless everyone agrees to include bedrooms.",
+    primaryLinks: [
+      { label: "Recurring apartment cleaning", href: "/recurring-apartment-cleaning/" },
+      { label: "One-time apartment cleaning", href: "/one-time-apartment-cleaning/" },
+      { label: "Apartment cleaning checklist", href: "/apartment-cleaning-checklist/" },
+    ],
+    sections: [
+      {
+        title: "Start with the shared spaces",
+        paragraphs: [
+          "Most roommate cleaning fights are not really about one dusty shelf. They are about a mismatch in standards. One person thinks dishes can sit overnight. Another thinks the kitchen should be reset before bed. One person notices bathroom hair immediately. Another only notices when guests are coming.",
+          "Do not start by debating who is clean enough. Start with the rooms everyone uses: kitchen, bathroom, living room, entry, hallway, floors, trash area, and laundry space.",
+        ],
+      },
+      {
+        title: "Separate chores from habits",
+        paragraphs: [
+          "Some tasks are chores that can rotate. Others are personal habits that each person must own. A cleaner can help with the apartment reset, but a cleaner should not become the solution for one roommate leaving food, dishes, laundry, or trash everywhere.",
+        ],
+        bullets: [
+          "Personal habit: wash or load your dishes, remove old food, put laundry in your room, take personal trash out.",
+          "Shared chore: vacuum, mop, clean the bathroom, wipe counters, take out common trash, dust shared surfaces.",
+          "Cleaner scope: bathroom, kitchen, floors, dusting, trash removal if bagged, and common-area reset.",
+        ],
+      },
+      {
+        title: "Use a simple weekly rhythm",
+        paragraphs: [
+          "A shared apartment needs a rhythm that people can actually follow. A complicated chore chart usually fails unless everyone already likes systems.",
+        ],
+        bullets: [
+          "Daily: dishes handled, counters cleared, food put away, obvious spills wiped.",
+          "Weekly: bathroom, kitchen surfaces, floors, trash area, shared dusting.",
+          "Monthly: fridge cleanout, baseboards, cabinet fronts, window sills, appliance detail.",
+        ],
+      },
+      {
+        title: "When splitting a cleaning service makes sense",
+        paragraphs: [
+          "A recurring cleaner can be a pressure release valve when roommates are busy, have different standards, or keep falling behind. It is not a magic fix for disrespect, but it can remove the repetitive chores that cause the most conflict.",
+          "For many shared apartments around the Chicago suburbs, a biweekly clean for common areas is easier to split than a full-apartment deep clean. Bedrooms can stay private unless each roommate opts in.",
+        ],
+        bullets: [
+          "Agree on common-area scope before booking.",
+          "Decide whether bedrooms are included or excluded.",
+          "Split the cost based on bedrooms, bathrooms used, or equal shares.",
+          "Make sure everyone picks up personal clutter before the appointment.",
+        ],
+      },
+      {
+        title: "What to do before the cleaner arrives",
+        paragraphs: [
+          "Cleaners clean surfaces; they should not have to mediate roommate clutter. Before the appointment, each person should remove dishes, food containers, laundry, personal items, mail, and bathroom products that block the work.",
+        ],
+      },
+      {
+        title: "Move-out is a different conversation",
+        paragraphs: [
+          "Roommate apartments often get tense at move-out because one person leaves early and another gets stuck with the final clean. Decide before the last week who is responsible for the kitchen, bathroom, trash, fridge, cabinets, and key-return photos. If you hire move-out cleaning, book it after everyone has removed belongings.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Should roommates split the cost of a cleaning service equally?", a: "Equal split is simplest for shared areas. If bedrooms are included or one person uses a private bathroom, agree on the split before booking." },
+      { q: "Can a cleaner wash roommate dishes?", a: "Usually dishes should be handled by the roommates before the visit. If dishwashing is needed, ask whether it is available and whether it changes the appointment time or price." },
+      { q: "How often should a shared apartment be cleaned?", a: "Most shared apartments need daily kitchen habits, a weekly shared reset, and deeper monthly tasks. A biweekly cleaner can help keep common areas manageable." },
+      { q: "What should be excluded from roommate cleaning?", a: "Private bedrooms, personal laundry, personal clutter, and sensitive items should be excluded unless each roommate clearly agrees to include them." },
+    ],
+    relatedSlugs: ["weekly-apartment-cleaning-schedule", "is-apartment-cleaning-service-worth-it", "move-in-deep-cleaning-checklist"],
+  },
+  {
+    slug: "apartment-turnover-cleaning-scope-property-managers",
+    title: "What Should A Property Manager Include In An Apartment Turnover Cleaning Scope?",
+    meta: "A clear apartment turnover cleaning scope helps property managers separate standard cleaning, heavy-soil add-ons, documentation, timing, and final quality checks.",
+    keywords: "apartment turnover cleaning scope, property manager cleaning checklist, apartment turn cleaning, rental unit turnover cleaning",
+    category: "Property management",
+    readTime: "8 min read",
+    updated: "June 14, 2026",
+    heroImage: "/apartment-detail-new.jpg",
+    summary: "A written scope for property managers who need consistent apartment turns without paying for vague or mismatched cleaning work.",
+    answer: "A property manager's apartment turnover scope should define the base clean, add-ons, excluded damage, access rules, photo documentation, timing after maintenance, and re-clean standard. The clearer the scope, the easier it is to compare quotes and avoid paying for the wrong level of cleaning.",
+    primaryLinks: [
+      { label: "Move-out cleaning", href: "/move-out-apartment-cleaning/" },
+      { label: "Deep apartment cleaning", href: "/deep-apartment-cleaning/" },
+      { label: "Service areas", href: "/service-areas/" },
+    ],
+    sections: [
+      {
+        title: "Turnover cleaning needs a written scope",
+        paragraphs: [
+          "Apartment turnover work sits between residential cleaning and property operations. One unit may need a light reset after a careful tenant. Another may need appliance detail, trash removal, pet hair, heavy bathroom buildup, and a second visit after maintenance dust settles.",
+          "A written scope keeps everyone honest: property manager, cleaner, maintenance team, leasing team, and owner. It also makes pricing easier because the vendor is not guessing from the phrase move-ready.",
+        ],
+      },
+      {
+        title: "Start with unit condition",
+        paragraphs: [
+          "Before assigning a cleaning level, document the unit. A quick condition walk can prevent a full deep-clean quote on an already-clean apartment, and it can prevent underpricing a unit that needs heavy work.",
+        ],
+        bullets: [
+          "Vacancy status, furniture or trash left behind, utilities on, water available, and key access.",
+          "Kitchen grease, refrigerator condition, oven condition, cabinet interiors, bathroom buildup, flooring, pet hair, odor, and balcony or patio condition.",
+          "Damage or maintenance issues that cleaning cannot solve.",
+        ],
+      },
+      {
+        title: "Define the standard turnover clean",
+        paragraphs: [
+          "The standard scope should cover the areas most likely to affect a new resident's first impression. Keep the language specific enough that the cleaner and inspector picture the same job.",
+        ],
+        bullets: [
+          "Kitchen counters, sink, faucet, cabinet fronts, appliance exteriors, microwave, stovetop, floor edges, and trash removal if bagged.",
+          "Bathroom toilet, sink, vanity, mirror, tub or shower, fixtures, floors, corners, and cabinet fronts.",
+          "Vacuuming, mopping, reachable dusting, baseboards as needed, doors, switches, handles, closets, shelves, and visible cobwebs.",
+        ],
+      },
+      {
+        title: "List add-ons separately",
+        paragraphs: [
+          "A clean quote gets messy when every difficult task is hidden inside one price. Separate add-ons protect the manager and the cleaner.",
+        ],
+        bullets: [
+          "Inside oven, inside refrigerator, interior cabinets and drawers, blinds, window tracks, heavy baseboards, pet hair, odor, balcony, garage, and laundry area.",
+          "Carpet cleaning, junk removal, wall washing, pest cleanup, biohazard, mold remediation, and repair work should be separate services or excluded unless specifically offered.",
+        ],
+      },
+      {
+        title: "Schedule cleaning after maintenance and paint",
+        paragraphs: [
+          "Cleaning too early creates rework. Maintenance, drywall repair, painting, appliance replacement, and carpet work can all create dust or debris after the cleaner leaves.",
+          "A practical sequence is: trash-out, maintenance, paint or repair, carpet or floor work, turnover clean, final inspection, then a small touch-up if dust settles before move-in.",
+        ],
+      },
+      {
+        title: "Use photos and a re-clean standard",
+        paragraphs: [
+          "For property managers, consistency matters more than one perfect unit. Ask for before-and-after photos on flagged areas, especially ovens, refrigerators, bathrooms, cabinets, and floors. Also define what counts as a missed item versus wear, damage, or maintenance.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "What is the difference between turnover cleaning and move-out cleaning?", a: "Move-out cleaning focuses on leaving a renter's empty apartment clean. Turnover cleaning is operational: it prepares the unit for the next resident and often coordinates with maintenance, paint, floors, and inspection." },
+      { q: "Should appliance interiors be included in every turnover clean?", a: "Not always. Refrigerator and oven interiors should be listed as included or add-on items so pricing matches the actual unit condition." },
+      { q: "How should property managers compare cleaning quotes?", a: "Compare the written scope, add-ons, expected time, documentation, access process, re-clean policy, and what is excluded. The lowest price may not include the same work." },
+      { q: "When should the turnover cleaner come in?", a: "Usually after trash-out, maintenance, paint, and major floor work are complete, with enough time for final inspection before the new tenant receives keys." },
+    ],
+    relatedSlugs: ["post-renovation-apartment-cleaning-before-move-in", "apartment-move-out-cleaning-checklist", "landlord-cleaning-fee-after-move-out"],
+  },
+  {
+    slug: "as-is-apartment-move-in-cleaning-documentation",
+    title: "Moving Into An Apartment As-Is: What To Clean And Document Before You Unpack",
+    meta: "Before unpacking an as-is apartment, document condition, report serious issues, and clean kitchens, bathrooms, cabinets, floors, and high-touch areas in the right order.",
+    keywords: "as-is apartment cleaning, moving into apartment as-is, document apartment condition, move-in cleaning before unpacking",
+    category: "Move-in cleaning",
+    readTime: "8 min read",
+    updated: "June 14, 2026",
+    heroImage: "/apartment-hero-new.jpg",
+    summary: "A move-in guide for renters who receive an apartment that is technically available but not as clean as they expected.",
+    answer: "If you move into an apartment as-is, document the condition before cleaning, send serious issues to the landlord or property manager, then clean high-touch areas, the kitchen, bathroom, cabinets, closets, and floors before unpacking. Do not clean away evidence before you have photos.",
+    primaryLinks: [
+      { label: "Move-in cleaning service", href: "/move-in-apartment-cleaning/" },
+      { label: "Deep apartment cleaning", href: "/deep-apartment-cleaning/" },
+      { label: "Apartment cleaning checklist", href: "/apartment-cleaning-checklist/" },
+    ],
+    sections: [
+      {
+        title: "Document first, clean second",
+        paragraphs: [
+          "When an apartment is handed over as-is, the instinct is to start scrubbing immediately. Pause first. Take photos and video before you move boxes in and before you wipe anything down.",
+          "You want a record of the condition you received, especially if there are stains, damaged blinds, dirty appliances, bugs, water marks, odors, or old residue inside cabinets.",
+        ],
+      },
+      {
+        title: "What to photograph before unpacking",
+        bullets: [
+          "Entry, floors, walls, baseboards, closets, windows, blinds, doors, and any visible damage.",
+          "Inside the refrigerator, freezer, oven, microwave, dishwasher, cabinets, drawers, and pantry.",
+          "Bathroom toilet, tub or shower, sink, vanity, mirror, grout, floor corners, and exhaust fan cover.",
+          "Anything that looks dirty enough to become a future dispute.",
+        ],
+      },
+      {
+        title: "Report serious issues in writing",
+        paragraphs: [
+          "Cleaning is not the same as accepting every condition silently. If something is broken, unsafe, heavily stained, or unusually dirty, send a concise note through the resident portal or email. Attach photos and ask what will be corrected.",
+          "For habitability, pests, mold, leaks, or legal questions, check local tenant rules or speak with a qualified professional. This guide is focused on practical cleaning and documentation.",
+        ],
+      },
+      {
+        title: "Clean the apartment in the right order",
+        paragraphs: [
+          "Once documentation is done, clean top to bottom and dry to wet. Dust and debris fall, so floors should usually be last.",
+        ],
+        bullets: [
+          "Dust reachable vents, ceiling corners, shelves, cabinet tops, blinds, and window sills.",
+          "Wipe cabinet interiors, drawers, handles, switches, doors, thermostat, and appliance handles.",
+          "Clean kitchen surfaces and appliance interiors before dishes or food go inside.",
+          "Clean the bathroom before towels, toiletries, and bath mats move in.",
+          "Vacuum and mop floors last.",
+        ],
+      },
+      {
+        title: "Where a move-in cleaner helps most",
+        paragraphs: [
+          "A move-in cleaner is useful when the apartment is empty but your schedule is full. The best window is before furniture arrives, because cabinets, floors, closets, appliance sides, and bathroom corners are easier to reach.",
+          "In Chicago-area apartments, this is especially helpful when elevator reservations, mover windows, lease start dates, and work schedules all land in the same two days.",
+        ],
+      },
+      {
+        title: "What to leave for management",
+        paragraphs: [
+          "Do not use cleaning to cover damage that management should see. If the issue is a broken drawer, stained carpet, missing screen, cracked tile, old water damage, or appliance problem, document it and leave a clear note. Clean around it as needed, but keep the record.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Should I clean an apartment before documenting it?", a: "No. Take photos and video first so you have a record of the condition you received. Then clean before unpacking." },
+      { q: "What should I clean first in an as-is apartment?", a: "After photos, start with high-touch areas, kitchen cabinets and appliances, bathroom surfaces, closets, and floors." },
+      { q: "Can a cleaner document apartment condition for me?", a: "A cleaner can note obvious cleaning-related issues, but you should personally document lease condition, damage, and management concerns." },
+      { q: "Is this legal advice about accepting an as-is apartment?", a: "No. This is cleaning and documentation guidance. For legal questions, review your lease and local tenant rules or speak with a qualified professional." },
+    ],
+    relatedSlugs: ["move-in-deep-cleaning-checklist", "landlord-cleaning-fee-after-move-out", "post-renovation-apartment-cleaning-before-move-in"],
+  },
+  {
+    slug: "post-renovation-apartment-cleaning-before-move-in",
+    title: "Post-Renovation Apartment Cleaning Before A Tenant Moves In: Dust, Paint, Cabinets, Floors",
+    meta: "Post-renovation apartment cleaning should happen after repairs, paint, and floor work, with extra attention to drywall dust, cabinets, fixtures, vents, and final touch-ups.",
+    keywords: "post-renovation apartment cleaning, apartment cleaning after repairs, turnover cleaning after paint, apartment dust cleaning before move in",
+    category: "Property management",
+    readTime: "7 min read",
+    updated: "June 14, 2026",
+    heroImage: "/apartment-supplies-new.jpg",
+    summary: "A turnover guide for landlords and property managers preparing a repaired, painted, or refreshed apartment for the next tenant.",
+    answer: "Post-renovation apartment cleaning should be scheduled after maintenance, paint, and floor work are finished, with time for a final dust touch-up before keys are released. Focus on drywall dust, paint specks, cabinet interiors, appliance surfaces, vents, fixtures, bathrooms, and floors.",
+    primaryLinks: [
+      { label: "Deep apartment cleaning", href: "/deep-apartment-cleaning/" },
+      { label: "Move-in cleaning", href: "/move-in-apartment-cleaning/" },
+      { label: "Apartment turnover scope", href: "/blog/apartment-turnover-cleaning-scope-property-managers/" },
+    ],
+    sections: [
+      {
+        title: "Renovation dust behaves differently",
+        paragraphs: [
+          "A renovated or repaired apartment can look clean from the doorway and still feel dusty once a tenant opens cabinets, touches counters, or walks barefoot. Drywall dust, sanding dust, sawdust, paint specks, and installation debris settle in layers.",
+          "That is why post-renovation apartment cleaning needs a different plan than a normal resident clean. The job is less about clutter and more about fine dust, edges, fixtures, and surfaces that will be used immediately.",
+        ],
+      },
+      {
+        title: "Wait until the messy work is done",
+        paragraphs: [
+          "Cleaning before maintenance finishes usually creates rework. Schedule the main clean after repairs, paint, appliance work, cabinet work, and floor work are complete. If contractors still need to return, plan a final touch-up before move-in.",
+        ],
+        bullets: [
+          "Trash-out and maintenance first.",
+          "Painting, patching, sanding, appliance work, and flooring before the main clean.",
+          "Main clean after work is complete.",
+          "Final inspection and dust touch-up before keys or move-in.",
+        ],
+      },
+      {
+        title: "Priority areas for post-renovation cleaning",
+        bullets: [
+          "Cabinet interiors, drawers, shelves, closet shelves, and pantry areas where dust settles.",
+          "Counters, backsplashes, sinks, faucets, appliance fronts, handles, switches, doors, trim, and baseboards.",
+          "Bathroom fixtures, tub or shower ledges, vanity, mirror, floor corners, and exhaust fan cover.",
+          "Vents, window sills, tracks, blinds, light fixtures, and reachable ledges.",
+          "Floors vacuumed carefully before mopping so dust does not turn into residue.",
+        ],
+      },
+      {
+        title: "Paint specks and construction residue need clear expectations",
+        paragraphs: [
+          "Light paint specks and dust are cleaning issues. Heavy overspray, adhesive, grout haze, caulk mistakes, scratched floors, damaged finishes, or debris embedded in surfaces may need contractor correction, not standard cleaning.",
+          "Property managers should flag these items before the cleaning appointment so the cleaner knows what is expected and what is excluded.",
+        ],
+      },
+      {
+        title: "Plan for dust to settle again",
+        paragraphs: [
+          "Fine dust can resettle after the first clean, especially if HVAC runs, doors open, or contractors return. When timing matters, schedule the main clean with enough buffer for a small final wipe before tenant move-in.",
+        ],
+      },
+      {
+        title: "What tenants notice first",
+        paragraphs: [
+          "The next resident may not inspect every baseboard, but they will notice dusty cabinets, gritty floors, bathroom residue, dirty appliance handles, paint flakes in drawers, and dust on window sills. Those first-touch areas should be clean before anyone starts unpacking.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "When should post-renovation apartment cleaning be scheduled?", a: "Schedule it after maintenance, paint, and floor work are complete, with time for final inspection and a touch-up if dust settles again." },
+      { q: "Is post-renovation cleaning the same as deep cleaning?", a: "It overlaps with deep cleaning, but it focuses more on fine dust, paint specks, cabinet interiors, fixtures, vents, trim, and floors after repairs or renovation." },
+      { q: "Should cleaners remove paint overspray or adhesive?", a: "Only if that is agreed in the scope and safe for the surface. Heavy overspray, adhesive, grout haze, or damaged finishes may require contractor correction." },
+      { q: "Can this help property managers reduce move-in complaints?", a: "Yes. A clean handoff reduces complaints about dusty cabinets, gritty floors, bathroom residue, and construction dust before the new tenant settles in." },
+    ],
+    relatedSlugs: ["apartment-turnover-cleaning-scope-property-managers", "move-in-deep-cleaning-checklist", "as-is-apartment-move-in-cleaning-documentation"],
   },
 ]
 
 export const footerGuideLinks = [
   { label: "Apartment cleaning guides", href: "/blog/" },
   { label: "Move-out checklist", href: "/blog/apartment-move-out-cleaning-checklist/" },
+  { label: "Cleaning fee help", href: "/blog/landlord-cleaning-fee-after-move-out/" },
   { label: "Professional cleaners", href: "/blog/do-you-need-professional-cleaners-before-moving-out/" },
   { label: "Move-in checklist", href: "/blog/move-in-deep-cleaning-checklist/" },
+  { label: "As-is move-in", href: "/blog/as-is-apartment-move-in-cleaning-documentation/" },
   { label: "Weekly schedule", href: "/blog/weekly-apartment-cleaning-schedule/" },
+  { label: "Roommate cleaning", href: "/blog/apartment-cleaning-roommates-shared-space/" },
+  { label: "Turnover scope", href: "/blog/apartment-turnover-cleaning-scope-property-managers/" },
 ]
 
 export const footerServiceLinks = [

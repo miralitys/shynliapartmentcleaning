@@ -67,6 +67,11 @@ const blogPosts = [
   "move-in-deep-cleaning-checklist",
   "weekly-apartment-cleaning-schedule",
   "is-apartment-cleaning-service-worth-it",
+  "landlord-cleaning-fee-after-move-out",
+  "apartment-cleaning-roommates-shared-space",
+  "apartment-turnover-cleaning-scope-property-managers",
+  "as-is-apartment-move-in-cleaning-documentation",
+  "post-renovation-apartment-cleaning-before-move-in",
 ]
 
 const corePaths = [

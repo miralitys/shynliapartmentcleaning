@@ -296,9 +296,16 @@ function pageDescription(route?: SeoRoute, legalPage?: (typeof legalPages)[keyof
   return "Answers to apartment cleaning questions about pricing, supplies, access, recurring service, move-in, move-out, and re-clean support."
 }
 
-function setPageMeta(title: string, description: string, pathname: string, schema?: Record<string, unknown>) {
+function pageKeywords(route?: SeoRoute) {
+  if (route?.type === "blogArticle") return route.article.keywords
+  if (route?.type === "blogIndex") return "apartment cleaning guides, apartment cleaning articles, move-out cleaning, move-in cleaning, recurring apartment cleaning"
+  return undefined
+}
+
+function setPageMeta(title: string, description: string, pathname: string, schema?: Record<string, unknown>, keywords?: string) {
   document.title = title
   setMeta("description", description)
+  if (keywords) setMeta("keywords", keywords)
   setCanonical(`${siteUrl}${pathname}`)
 
   document.querySelectorAll("script[data-seo-schema]").forEach((node) => node.remove())
@@ -374,8 +381,8 @@ function pageSchema(pathname: string, route?: SeoRoute) {
         headline: article.title,
         description: article.meta,
         image: `${siteUrl}${article.heroImage}`,
-        datePublished: "2026-06-05",
-        dateModified: "2026-06-05",
+        datePublished: article.updated === "June 5, 2026" ? "2026-06-05" : "2026-06-14",
+        dateModified: article.updated === "June 5, 2026" ? "2026-06-05" : "2026-06-14",
         author: {
           "@type": "Organization",
           name: "Shynli Apartment Cleaning",
@@ -439,6 +446,7 @@ export function getPageHead(pathname: string) {
   return {
     title: pageTitle(seoRoute, legalPage),
     description: pageDescription(seoRoute, legalPage),
+    keywords: pageKeywords(seoRoute),
     canonical: `${siteUrl}${currentPath}`,
     schema: pageSchema(currentPath, seoRoute),
   }
@@ -462,7 +470,7 @@ function App({ initialPath }: AppProps = {}) {
   const seoRoute = resolveSeoRoute(currentPath)
 
   useEffect(() => {
-    setPageMeta(pageTitle(seoRoute, legalPage), pageDescription(seoRoute, legalPage), currentPath, pageSchema(currentPath, seoRoute))
+    setPageMeta(pageTitle(seoRoute, legalPage), pageDescription(seoRoute, legalPage), currentPath, pageSchema(currentPath, seoRoute), pageKeywords(seoRoute))
   }, [currentPath, legalPage, seoRoute])
 
   if (legalPage) {
@@ -485,7 +493,7 @@ function App({ initialPath }: AppProps = {}) {
       <Faq />
       <RelatedGuides
         title="Apartment cleaning guides for common renter questions."
-        articles={getArticlesBySlugs(["apartment-move-out-cleaning-checklist", "move-in-deep-cleaning-checklist", "weekly-apartment-cleaning-schedule"])}
+        articles={getArticlesBySlugs(["landlord-cleaning-fee-after-move-out", "as-is-apartment-move-in-cleaning-documentation", "apartment-cleaning-roommates-shared-space"])}
       />
       <FinalCta />
       <Footer />
@@ -1159,10 +1167,10 @@ function LowIntentRoutePage({ city, page }: { city: (typeof cities)[number]; pag
       <RelatedGuides
         title={`Guides that support ${page.shortName.toLowerCase()} planning.`}
         articles={getArticlesBySlugs(page.slug === "tenant-move-out-cleaning"
-          ? ["apartment-move-out-cleaning-checklist", "do-you-need-professional-cleaners-before-moving-out", "is-apartment-cleaning-service-worth-it"]
+          ? ["landlord-cleaning-fee-after-move-out", "apartment-move-out-cleaning-checklist", "do-you-need-professional-cleaners-before-moving-out"]
           : page.slug === "apartment-cleaning-prices"
-            ? ["is-apartment-cleaning-service-worth-it", "weekly-apartment-cleaning-schedule", "do-you-need-professional-cleaners-before-moving-out"]
-            : ["apartment-move-out-cleaning-checklist", "do-you-need-professional-cleaners-before-moving-out", "move-in-deep-cleaning-checklist"])}
+            ? ["is-apartment-cleaning-service-worth-it", "apartment-cleaning-roommates-shared-space", "do-you-need-professional-cleaners-before-moving-out"]
+            : ["apartment-turnover-cleaning-scope-property-managers", "post-renovation-apartment-cleaning-before-move-in", "apartment-move-out-cleaning-checklist"])}
       />
       <section className="bg-white py-18 sm:py-24">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr]">
@@ -1288,7 +1296,7 @@ function PricingPage() {
       </section>
       <RelatedGuides
         title="Price and value guides before you book."
-        articles={getArticlesBySlugs(["is-apartment-cleaning-service-worth-it", "weekly-apartment-cleaning-schedule", "do-you-need-professional-cleaners-before-moving-out"])}
+        articles={getArticlesBySlugs(["is-apartment-cleaning-service-worth-it", "apartment-cleaning-roommates-shared-space", "landlord-cleaning-fee-after-move-out"])}
       />
       <SeoCta title="Build your apartment cleaning estimate." />
     </SeoShell>
@@ -1336,7 +1344,7 @@ function ChecklistPage() {
       </section>
       <RelatedGuides
         title="Checklist guides for move-in, move-out, and weekly upkeep."
-        articles={getArticlesBySlugs(["apartment-move-out-cleaning-checklist", "move-in-deep-cleaning-checklist", "weekly-apartment-cleaning-schedule"])}
+        articles={getArticlesBySlugs(["apartment-move-out-cleaning-checklist", "as-is-apartment-move-in-cleaning-documentation", "post-renovation-apartment-cleaning-before-move-in"])}
       />
       <SeoCta title="Choose the checklist that fits your apartment." />
     </SeoShell>
@@ -1441,7 +1449,7 @@ function FaqPage() {
       </section>
       <RelatedGuides
         title="More detailed answers to common apartment cleaning questions."
-        articles={getArticlesBySlugs(["is-apartment-cleaning-service-worth-it", "weekly-apartment-cleaning-schedule", "do-you-need-professional-cleaners-before-moving-out"])}
+        articles={getArticlesBySlugs(["landlord-cleaning-fee-after-move-out", "apartment-cleaning-roommates-shared-space", "is-apartment-cleaning-service-worth-it"])}
       />
       <SeoCta title="Ready to turn the answers into a price?" />
     </SeoShell>
@@ -1484,20 +1492,20 @@ function BlogIndexPage() {
       <section className="border-y border-[#dce7e8] bg-[#eefafa] py-18 sm:py-24">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-[0.78fr_1.22fr]">
           <div>
-            <Badge className="rounded-full bg-white px-4 py-2 text-[#142027]">Where these guides fit</Badge>
+            <Badge className="rounded-full bg-white px-4 py-2 text-[#142027]">Helpful before you book</Badge>
             <h2 className="font-display mt-5 text-4xl font-black leading-tight tracking-normal sm:text-5xl">
-              Guides answer research questions. Service pages handle booking.
+              Clear answers for the messy parts of apartment cleaning.
             </h2>
             <p className="mt-5 text-lg leading-8 text-[#52616b]">
-              The articles are placed as a helpful layer around the existing service, pricing, checklist, FAQ, and city pages instead of replacing them.
+              Use these guides when you are moving, splitting chores with roommates, dealing with a cleaning fee, or preparing an apartment for the next resident.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {[
-              ["Moving out", "Move-out checklist and professional-cleaner decision guides point back to the move-out service page."],
-              ["Moving in", "The move-in checklist supports renters before boxes and furniture block the apartment."],
-              ["Staying clean", "The weekly schedule connects naturally to recurring, one-time, and deep cleaning."],
-              ["Price research", "The cost guide sends visitors into the pricing page when they are ready to compare scope."],
+              ["Moving out", "Know what to clean, what to document, and what to do if a cleaning fee shows up later."],
+              ["Moving in", "Clean and document the apartment before boxes, furniture, and dishes make everything harder to reach."],
+              ["Shared apartments", "Set a realistic plan for roommates, common areas, and optional recurring cleaning."],
+              ["Turnovers", "Give landlords and property managers a clearer scope before the next tenant gets keys."],
             ].map(([title, text]) => (
               <div key={title} className="rounded-[1.35rem] border border-[#d2e3e4] bg-white p-6">
                 <BookOpen className="size-5 text-[#00a885]" />
@@ -1628,21 +1636,21 @@ function getArticlesBySlugs(slugs: string[]) {
 
 function guideSlugsForService(serviceSlug: string) {
   if (serviceSlug === "move-out-apartment-cleaning") {
-    return ["apartment-move-out-cleaning-checklist", "do-you-need-professional-cleaners-before-moving-out", "is-apartment-cleaning-service-worth-it"]
+    return ["landlord-cleaning-fee-after-move-out", "apartment-move-out-cleaning-checklist", "do-you-need-professional-cleaners-before-moving-out"]
   }
   if (serviceSlug === "move-in-apartment-cleaning") {
-    return ["move-in-deep-cleaning-checklist", "is-apartment-cleaning-service-worth-it", "weekly-apartment-cleaning-schedule"]
+    return ["as-is-apartment-move-in-cleaning-documentation", "move-in-deep-cleaning-checklist", "post-renovation-apartment-cleaning-before-move-in"]
   }
   if (serviceSlug === "deep-apartment-cleaning") {
-    return ["move-in-deep-cleaning-checklist", "weekly-apartment-cleaning-schedule", "is-apartment-cleaning-service-worth-it"]
+    return ["post-renovation-apartment-cleaning-before-move-in", "move-in-deep-cleaning-checklist", "as-is-apartment-move-in-cleaning-documentation"]
   }
   if (serviceSlug === "recurring-apartment-cleaning") {
-    return ["weekly-apartment-cleaning-schedule", "is-apartment-cleaning-service-worth-it", "move-in-deep-cleaning-checklist"]
+    return ["apartment-cleaning-roommates-shared-space", "weekly-apartment-cleaning-schedule", "is-apartment-cleaning-service-worth-it"]
   }
   if (serviceSlug === "one-time-apartment-cleaning") {
-    return ["weekly-apartment-cleaning-schedule", "is-apartment-cleaning-service-worth-it", "move-in-deep-cleaning-checklist"]
+    return ["as-is-apartment-move-in-cleaning-documentation", "post-renovation-apartment-cleaning-before-move-in", "is-apartment-cleaning-service-worth-it"]
   }
-  return ["is-apartment-cleaning-service-worth-it", "weekly-apartment-cleaning-schedule", "apartment-move-out-cleaning-checklist"]
+  return ["apartment-cleaning-roommates-shared-space", "is-apartment-cleaning-service-worth-it", "weekly-apartment-cleaning-schedule"]
 }
 
 function RelatedGuides({ title, articles }: { title: string; articles: BlogArticle[] }) {
