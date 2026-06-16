@@ -1275,6 +1275,386 @@ export const blogArticles: BlogArticle[] = [
     ],
     relatedSlugs: ["apartment-turnover-cleaning-scope-property-managers", "move-in-deep-cleaning-checklist", "as-is-apartment-move-in-cleaning-documentation"],
   },
+  {
+    slug: "how-to-prepare-apartment-before-cleaner-arrives",
+    title: "How To Prepare Your Apartment Before A Cleaner Arrives",
+    meta: "Prepare for apartment cleaning by clearing clutter, handling dishes and laundry, sharing access notes, securing pets, and choosing priorities before the cleaner arrives.",
+    keywords: "prepare apartment before cleaner arrives, what to do before apartment cleaning service, apartment cleaner access notes, cleaning service preparation",
+    category: "Booking help",
+    readTime: "7 min read",
+    updated: "June 16, 2026",
+    heroImage: "/apartment-hero-new.jpg",
+    summary: "A simple pre-cleaning checklist for renters who want the cleaner's time spent on surfaces, bathrooms, floors, and detail work instead of guessing where things go.",
+    answer: "Before a cleaner arrives, pick up clutter from surfaces and floors, put dishes in the sink or dishwasher, gather laundry, secure pets, share parking and access notes, and name the top priorities. You do not need to deep clean first. The goal is to make the apartment easy to clean, not already clean.",
+    primaryLinks: [
+      { label: "Apartment cleaning service", href: "/apartment-cleaning/" },
+      { label: "Recurring apartment cleaning", href: "/recurring-apartment-cleaning/" },
+      { label: "Apartment cleaning checklist", href: "/apartment-cleaning-checklist/" },
+    ],
+    sections: [
+      {
+        title: "You do not need to clean before the cleaner",
+        paragraphs: [
+          "Many people feel awkward before a first cleaning appointment. They wonder whether the apartment should already look presentable, whether dishes are rude, or whether the cleaner will judge the mess.",
+          "The useful distinction is simple: tidying helps; pre-cleaning is not required. A cleaner can clean more thoroughly when counters, floors, sinks, and bathroom surfaces are reachable.",
+        ],
+      },
+      {
+        title: "Clear the surfaces that should be cleaned",
+        paragraphs: [
+          "If a counter, dresser, desk, table, or bathroom vanity is covered with personal items, the cleaner has to work around them or spend paid time moving things without knowing where they belong.",
+        ],
+        bullets: [
+          "Move mail, chargers, makeup, toiletries, papers, and small items into a bin or drawer.",
+          "Pick clothing, bags, shoes, toys, and boxes off the floor where possible.",
+          "Leave fragile, private, or sentimental items in a place the cleaner does not need to touch.",
+        ],
+      },
+      {
+        title: "Handle dishes, laundry, and trash enough to open the work area",
+        paragraphs: [
+          "You do not need a perfect apartment. But dishes, laundry piles, and trash can block the areas people usually want cleaned most.",
+        ],
+        bullets: [
+          "Put dishes in the dishwasher or stack them in one place if dishwashing is not part of the appointment.",
+          "Move laundry into baskets so floors and furniture are reachable.",
+          "Bag trash and recycling if you want the kitchen, entry, or bathroom reset to feel complete.",
+        ],
+      },
+      {
+        title: "Share access notes before the appointment",
+        paragraphs: [
+          "Apartment access is often the part that causes the most stress: parking, buzzers, elevators, lockboxes, doormen, leasing office rules, pets, and building entry codes.",
+          "In the western Chicago suburbs, this matters even more for apartments with controlled buildings, shared lots, winter parking rules, or limited visitor spaces.",
+        ],
+        bullets: [
+          "Building entry, unit number, parking location, elevator or stair notes, and gate or buzzer instructions.",
+          "Whether someone will be home or the cleaner should use a lockbox, smart lock, concierge, or leasing office.",
+          "Pet names, pet location, and whether a pet should stay in a closed room.",
+        ],
+      },
+      {
+        title: "Choose the top priorities",
+        paragraphs: [
+          "If everything matters equally, the cleaner has to guess. Name the areas that would make the biggest difference for you: bathroom, kitchen, floors, dust, pet hair, guest-ready reset, or move-out details.",
+        ],
+      },
+      {
+        title: "What not to do",
+        bullets: [
+          "Do not hide important instructions inside a long text message without clear priorities.",
+          "Do not leave cash, jewelry, medicine, private documents, or fragile items in the work path.",
+          "Do not assume oven, fridge, interior cabinets, heavy organizing, or laundry folding are included unless you booked them.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Should I clean before my apartment cleaner arrives?", a: "No. You should tidy enough that surfaces and floors are reachable, but you do not need to deep clean before the cleaner." },
+      { q: "Should I do dishes before a cleaner comes?", a: "If dishwashing is not part of your booked scope, put dishes in the dishwasher or stack them in one place so the sink and counters can be cleaned." },
+      { q: "Can I leave while the cleaner is in my apartment?", a: "Usually yes, if access is arranged clearly. Share entry instructions, parking notes, pet notes, and how the cleaner should lock up." },
+      { q: "What should I tell the cleaner before a first apartment cleaning?", a: "Share access details, pets, fragile items, product preferences, off-limit areas, and your top cleaning priorities." },
+    ],
+    relatedSlugs: ["weekly-apartment-cleaning-schedule", "is-apartment-cleaning-service-worth-it", "apartment-cleaning-roommates-shared-space"],
+  },
+  {
+    slug: "why-apartment-smells-bad-after-cleaning",
+    title: "Why Does My Apartment Still Smell Bad After Cleaning?",
+    meta: "If an apartment still smells after cleaning, check trash, drains, fridge, soft surfaces, pet areas, dust, moisture, vents, and hidden food before covering the odor.",
+    keywords: "apartment smells bad after cleaning, apartment odor cleaning, stale apartment smell, pet odor apartment cleaning, musty apartment smell",
+    category: "Deep cleaning",
+    readTime: "8 min read",
+    updated: "June 16, 2026",
+    heroImage: "/apartment-supplies-new.jpg",
+    summary: "A practical troubleshooting guide for renters dealing with stale, pet, kitchen, drain, bathroom, or mystery odors after the apartment already looks clean.",
+    answer: "If an apartment still smells after cleaning, the source is usually hidden: trash, drains, refrigerator drawers, pet areas, damp towels, soft furniture, carpet, dust, baseboard heaters, vents, or moisture. Do not start with fragrance. Find and remove the source, then clean the surfaces and improve airflow.",
+    primaryLinks: [
+      { label: "Deep apartment cleaning", href: "/deep-apartment-cleaning/" },
+      { label: "One-time apartment cleaning", href: "/one-time-apartment-cleaning/" },
+      { label: "Move-in cleaning", href: "/move-in-apartment-cleaning/" },
+    ],
+    sections: [
+      {
+        title: "A clean-looking apartment can still hold odor",
+        paragraphs: [
+          "Odor is frustrating because it does not always match what you can see. Counters can be wiped, floors can be mopped, and the apartment can still smell stale when you walk in.",
+          "The first move is not candles or sprays. Fragrance can hide the problem for an hour while the source keeps sitting there.",
+        ],
+      },
+      {
+        title: "Start with the easy odor sources",
+        bullets: [
+          "Trash can, recycling, food packaging, pet waste, diaper pails, old takeout containers, and forgotten pantry items.",
+          "Refrigerator drawers, freezer spills, dishwasher filter area, microwave, oven, garbage disposal, and sink drain.",
+          "Laundry baskets, damp towels, bath mats, shower curtains, dirty mop heads, and wet cleaning rags.",
+        ],
+      },
+      {
+        title: "Check soft surfaces and pet areas",
+        paragraphs: [
+          "Soft surfaces hold odor longer than hard surfaces. Carpet, rugs, couch fabric, dog beds, cat trees, throw blankets, curtains, and entry mats can keep a pet, smoke, food, or moisture smell even after the kitchen and bathroom look clean.",
+        ],
+        bullets: [
+          "Wash removable fabrics if the care label allows.",
+          "Vacuum slowly before using sprays or powders.",
+          "For pet urine, use an enzyme cleaner made for the surface and follow dwell-time instructions.",
+          "If carpet padding or subfloor is affected, normal surface cleaning may not be enough.",
+        ],
+      },
+      {
+        title: "Dust can carry smells too",
+        paragraphs: [
+          "Dust is not just visual. It can hold cooking residue, pet dander, smoke, and stale smells. If the apartment smells flat or old, dust high and low, then vacuum and mop after dust has settled.",
+        ],
+        bullets: [
+          "Vents, fan covers, blinds, window sills, baseboards, door tops, shelves, and behind furniture.",
+          "Under the bed, under couch cushions, under appliances if safely reachable, and around baseboard heaters.",
+        ],
+      },
+      {
+        title: "When the smell may not be a cleaning issue",
+        paragraphs: [
+          "Some smells need management, maintenance, or a specialist: sewer gas, active leaks, mold concerns, pest issues, wet drywall, old carpet padding, or odor from another unit.",
+          "If you rent, document the issue and contact the landlord or property manager in writing when the source seems structural or outside your unit.",
+        ],
+      },
+      {
+        title: "How a deep clean helps",
+        paragraphs: [
+          "A deep apartment clean can remove ordinary odor sources like grease film, dust, bathroom buildup, fridge residue, floor grime, pet hair, and stale surface residue. It cannot guarantee removal of odor trapped inside carpet padding, walls, vents, or building systems.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Why does my apartment smell bad even after I clean?", a: "The odor source is often hidden in drains, trash, soft fabrics, carpet, pet areas, dust, damp towels, refrigerator drawers, or moisture rather than on visible counters." },
+      { q: "Should I use candles or air freshener first?", a: "No. Ventilate and find the source first. Fragrance can cover odor temporarily but will not remove the cause." },
+      { q: "Can professional cleaning remove pet odor?", a: "It can help with pet hair, surface residue, floors, and washable areas. Severe urine odor in carpet padding or subfloor may need specialized treatment." },
+      { q: "When should I contact my landlord about apartment odor?", a: "Contact management if the smell may come from leaks, mold, sewer gas, pests, building vents, old carpet padding, or another unit." },
+    ],
+    relatedSlugs: ["pet-hair-and-pet-odor-apartment-cleaning", "deep-cleaning-apartment-for-dust-allergies", "as-is-apartment-move-in-cleaning-documentation"],
+  },
+  {
+    slug: "pet-hair-and-pet-odor-apartment-cleaning",
+    title: "Pet Hair And Pet Odor Apartment Cleaning: What Actually Helps",
+    meta: "Pet hair and pet odor cleaning in apartments works best with slow vacuuming, washable fabrics, litter or dog-bed routines, enzyme cleaners, and regular floor resets.",
+    keywords: "pet hair apartment cleaning, pet odor apartment cleaning, dog smell apartment cleaning, cat urine apartment cleaning, apartment cleaning with pets",
+    category: "Pet cleaning",
+    readTime: "8 min read",
+    updated: "June 16, 2026",
+    heroImage: "/apartment-detail-new.jpg",
+    summary: "A practical apartment cleaning guide for renters with cats or dogs who need less hair, less odor, and fewer move-out surprises.",
+    answer: "For pet hair and pet odor in an apartment, vacuum slowly and often, wash pet bedding, clean litter or feeding areas, wipe baseboards and corners, use enzyme cleaner for urine, and keep floors on a regular schedule. Odor usually comes from fabric, carpet, litter, dampness, or missed hair, not just visible dirt.",
+    primaryLinks: [
+      { label: "Recurring apartment cleaning", href: "/recurring-apartment-cleaning/" },
+      { label: "Deep apartment cleaning", href: "/deep-apartment-cleaning/" },
+      { label: "Move-out cleaning", href: "/move-out-apartment-cleaning/" },
+    ],
+    sections: [
+      {
+        title: "Pet cleaning is mostly routine, not one heroic deep clean",
+        paragraphs: [
+          "Apartments with pets can feel clean one day and furry again the next. That does not mean you are failing. Pet hair, dander, litter dust, paw dirt, and fabric odor return quickly in small spaces.",
+          "The best plan is a steady reset: floors, fabrics, pet zones, and hidden corners.",
+        ],
+      },
+      {
+        title: "Vacuum slowly and in layers",
+        paragraphs: [
+          "Fast vacuuming often leaves pet hair behind. Go slowly, overlap passes, and pay attention to edges where hair collects.",
+        ],
+        bullets: [
+          "Rugs, carpet, couch edges, under furniture, bedroom corners, entry mats, and baseboards.",
+          "Vacuum before mopping hard floors so wet hair does not smear into corners.",
+          "If allergies are a concern, use a sealed vacuum or high-quality filter when possible.",
+        ],
+      },
+      {
+        title: "Wash the things that hold smell",
+        paragraphs: [
+          "Pet smell often lives in fabrics more than on counters. Wash or rotate the items pets use most.",
+        ],
+        bullets: [
+          "Dog beds, cat blankets, couch throws, washable rugs, crate pads, entry mats, and soft toys.",
+          "Litter mats, food mats, and towels used after walks or baths.",
+          "Curtains or pillow covers if pets sleep near them and the care label allows washing.",
+        ],
+      },
+      {
+        title: "Use enzyme cleaner for urine and accidents",
+        paragraphs: [
+          "Regular all-purpose cleaner may make a surface look better while odor remains. For urine or pet accidents, use an enzyme cleaner made for that type of soil and follow the label closely.",
+          "Test products on a small area first, especially on wood, stone, older floors, or delicate fabric.",
+        ],
+      },
+      {
+        title: "Pet move-out cleaning needs extra attention",
+        paragraphs: [
+          "If you are moving out with pets, focus on hair and odor before the final walkthrough. Check baseboards, carpet edges, closet floors, vents, door frames, balcony or patio areas, and anywhere a litter box or dog bed sat for months.",
+        ],
+      },
+      {
+        title: "When recurring cleaning makes sense",
+        paragraphs: [
+          "Recurring apartment cleaning is useful when pet hair returns faster than you can keep up with it, especially in smaller apartments where the same living room, bedroom, and entry floor carry most of the pet traffic.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "How often should I clean an apartment with pets?", a: "Most pet apartments need quick floor or litter-area maintenance several times a week, a weekly main clean, and periodic deeper work for fabrics, baseboards, and pet zones." },
+      { q: "What removes pet odor from an apartment?", a: "Start with the source: pet bedding, litter areas, carpet, rugs, accidents, damp fabrics, and hair buildup. Use enzyme cleaner for urine and wash fabrics when possible." },
+      { q: "Can a cleaner handle pet hair?", a: "Yes, a cleaner can help with floors, dusting, baseboards, and surface pet hair. Heavy embedded hair, urine odor, or carpet padding issues may need extra time or specialized treatment." },
+      { q: "Should I mention pets before booking apartment cleaning?", a: "Yes. Share pet type, shedding level, access notes, whether the pet will be home, and any accident or odor concerns." },
+    ],
+    relatedSlugs: ["why-apartment-smells-bad-after-cleaning", "weekly-apartment-cleaning-schedule", "landlord-cleaning-fee-after-move-out"],
+  },
+  {
+    slug: "overwhelmed-apartment-cleaning-where-to-start",
+    title: "Overwhelmed By A Messy Apartment? Where To Start When Cleaning Feels Impossible",
+    meta: "When apartment cleaning feels overwhelming, start with trash, dishes, laundry, one clear surface, bathroom basics, and a small reset instead of trying to fix everything at once.",
+    keywords: "overwhelmed apartment cleaning, messy apartment where to start, depression apartment cleaning, apartment cleaning help, one-time apartment cleaning",
+    category: "Reset cleaning",
+    readTime: "8 min read",
+    updated: "June 16, 2026",
+    heroImage: "/apartment-hero-new.jpg",
+    summary: "A non-judgmental reset plan for renters whose apartment has fallen behind and who need a first step that does not require fixing everything today.",
+    answer: "When cleaning feels impossible, start with the items that create the most relief: trash, dishes, laundry, bathroom basics, and one clear surface. Do not begin with deep cleaning. Make the apartment safer and easier to move through first, then decide whether to continue, pause, or bring in help.",
+    primaryLinks: [
+      { label: "One-time apartment cleaning", href: "/one-time-apartment-cleaning/" },
+      { label: "Deep apartment cleaning", href: "/deep-apartment-cleaning/" },
+      { label: "Apartment cleaning checklist", href: "/apartment-cleaning-checklist/" },
+    ],
+    sections: [
+      {
+        title: "Start smaller than your shame wants you to",
+        paragraphs: [
+          "A messy apartment can feel like a character judgment when it is really a practical problem: too much stuff, too little energy, too many decisions, and not enough clear starting points.",
+          "This guide is not medical advice and it is not a moral lecture. It is a way to get the room moving again.",
+        ],
+      },
+      {
+        title: "Step 1: trash first",
+        paragraphs: [
+          "Trash gives the fastest visible change because you do not have to organize it, wash it, or find a home for it. You only have to remove it.",
+        ],
+        bullets: [
+          "Food containers, wrappers, bottles, paper trash, old bags, bathroom trash, and obvious floor trash.",
+          "Use one bag for trash and one bag or bin for recycling if that makes sense.",
+          "Take full bags out before starting another complicated task.",
+        ],
+      },
+      {
+        title: "Step 2: dishes and food",
+        paragraphs: [
+          "Food and dishes are high priority because they affect smell, pests, and how the kitchen feels. Do not aim for a perfect kitchen first. Aim for no loose food and a usable sink.",
+        ],
+        bullets: [
+          "Throw away spoiled food.",
+          "Put dishes in one place, then wash one load or load the dishwasher.",
+          "Wipe the counter area you need for the next meal.",
+        ],
+      },
+      {
+        title: "Step 3: laundry into containers",
+        paragraphs: [
+          "Laundry does not need to be solved all at once. First, contain it. Dirty clothes in one basket, clean clothes in another, bedding in one pile if it needs washing.",
+        ],
+      },
+      {
+        title: "Step 4: bathroom basics",
+        bullets: [
+          "Toilet, sink, mirror, trash, towel reset, and floor around the toilet.",
+          "If the shower feels too much, leave it for the next round or book extra help.",
+        ],
+      },
+      {
+        title: "When a one-time cleaner helps",
+        paragraphs: [
+          "A one-time apartment clean can help when the apartment is past the point where a normal weekly routine feels realistic. Be honest about clutter, dishes, trash, pets, and condition so the cleaner can quote the right amount of time.",
+          "In the Chicago suburbs, this can be especially useful before guests, after a hard season, before moving, or when the apartment needs a reset but you do not want a recurring plan yet.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Where should I start cleaning a very messy apartment?", a: "Start with trash, then food and dishes, then laundry into containers, then bathroom basics. Deep cleaning comes after the apartment is safer and easier to move through." },
+      { q: "Should I hire a cleaner if my apartment is really messy?", a: "You can, but be honest about the condition. Heavy clutter, trash, dishes, or organizing may change the scope and time needed." },
+      { q: "What if I only have one hour?", a: "Use the hour for trash, dishes, a bathroom reset, and one clear surface. Do not try to deep clean the entire apartment." },
+      { q: "Is this mental health advice?", a: "No. This is practical cleaning guidance. If your home condition is tied to depression, anxiety, or safety, consider support from a qualified professional or trusted person." },
+    ],
+    relatedSlugs: ["how-to-prepare-apartment-before-cleaner-arrives", "is-apartment-cleaning-service-worth-it", "weekly-apartment-cleaning-schedule"],
+  },
+  {
+    slug: "deep-cleaning-apartment-for-dust-allergies",
+    title: "Deep Cleaning An Apartment For Dust And Allergies: A Practical Room-By-Room Plan",
+    meta: "Dust and allergy cleaning in apartments should focus on wet dusting, slow vacuuming, bedding, vents, floors, blinds, pet hair, and repeatable weekly routines.",
+    keywords: "apartment dust allergy cleaning, deep cleaning apartment for allergies, dust mite apartment cleaning, apartment dust cleaning plan",
+    category: "Deep cleaning",
+    readTime: "8 min read",
+    updated: "June 16, 2026",
+    heroImage: "/apartment-detail-new.jpg",
+    summary: "A practical dust-reduction cleaning plan for renters who feel worse after cleaning or cannot keep apartment dust under control.",
+    answer: "To deep clean an apartment for dust and allergies, use damp dusting instead of dry dusting, vacuum slowly with a good filter, wash bedding, clean floors and baseboards, wipe blinds and window sills, and keep pet hair under control. Work top to bottom and avoid stirring dust into the air right before sleeping.",
+    primaryLinks: [
+      { label: "Deep apartment cleaning", href: "/deep-apartment-cleaning/" },
+      { label: "Recurring apartment cleaning", href: "/recurring-apartment-cleaning/" },
+      { label: "Apartment cleaning checklist", href: "/apartment-cleaning-checklist/" },
+    ],
+    sections: [
+      {
+        title: "Dust cleaning is different from making a room look tidy",
+        paragraphs: [
+          "An apartment can look neat and still feel dusty. Dust collects in bedding, rugs, blinds, vents, baseboards, under furniture, and soft surfaces. If you have allergies, dry dusting can make the air feel worse before it feels better.",
+          "This is not medical advice. It is a practical cleaning plan for reducing ordinary dust and surface allergens in a rental apartment.",
+        ],
+      },
+      {
+        title: "Start with the bedroom",
+        paragraphs: [
+          "The bedroom matters because you spend long hours there and bedding holds dust, skin flakes, pet hair, and pollen brought in from outside.",
+        ],
+        bullets: [
+          "Wash sheets, pillowcases, blankets, and washable covers according to care labels.",
+          "Vacuum around the bed, under the bed, closet floors, baseboards, and corners.",
+          "Dust nightstands, lamps, headboards, window sills, and reachable vents with a damp cloth.",
+        ],
+      },
+      {
+        title: "Use damp dusting where possible",
+        paragraphs: [
+          "Dry dusters can push dust into the air. A slightly damp microfiber cloth usually captures more dust on shelves, ledges, baseboards, and window sills.",
+        ],
+        bullets: [
+          "Work from high surfaces down to lower surfaces.",
+          "Rinse or switch cloths when they become dirty.",
+          "Avoid soaking surfaces, especially wood, painted trim, electronics, and older finishes.",
+        ],
+      },
+      {
+        title: "Vacuum slowly, then mop hard floors",
+        paragraphs: [
+          "Vacuuming too quickly leaves dust and pet hair behind. On hard floors, vacuum first, then mop with a floor-safe product. Sweeping can push dust back into the air.",
+        ],
+      },
+      {
+        title: "Do not forget blinds, vents, and fabric edges",
+        bullets: [
+          "Blinds, window sills, window tracks, fan covers, door tops, baseboards, and HVAC return areas.",
+          "Couch edges, rug edges, curtains if washable, entry mats, pet beds, and throw blankets.",
+        ],
+      },
+      {
+        title: "Why recurring cleaning helps with dust",
+        paragraphs: [
+          "Dust is not solved once. It returns through clothing, shoes, pets, bedding, windows, vents, and daily life. A weekly or biweekly cleaning rhythm can keep dust from building into a full deep-clean project.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "What is the best way to clean dust in an apartment?", a: "Use damp microfiber cloths for surfaces, vacuum slowly with a good filter, and mop hard floors after vacuuming. Work top to bottom." },
+      { q: "Why do my allergies feel worse after cleaning?", a: "Cleaning can stir dust into the air, especially with dry dusting, sweeping, or fast vacuuming. Damp dusting and slower vacuuming can help reduce that." },
+      { q: "How often should I clean for dust allergies?", a: "Most renters benefit from weekly bedding and floor routines, plus deeper dusting of blinds, baseboards, vents, and under furniture every few weeks." },
+      { q: "Can a professional cleaner help with apartment dust?", a: "Yes. A cleaner can help with dusting, floors, baseboards, bathrooms, kitchens, and reachable surfaces, but severe allergies may also require air filtration and medical guidance." },
+    ],
+    relatedSlugs: ["why-apartment-smells-bad-after-cleaning", "pet-hair-and-pet-odor-apartment-cleaning", "weekly-apartment-cleaning-schedule"],
+  },
 ]
 
 export const footerGuideLinks = [
@@ -1285,6 +1665,9 @@ export const footerGuideLinks = [
   { label: "Move-in checklist", href: "/blog/move-in-deep-cleaning-checklist/" },
   { label: "As-is move-in", href: "/blog/as-is-apartment-move-in-cleaning-documentation/" },
   { label: "Weekly schedule", href: "/blog/weekly-apartment-cleaning-schedule/" },
+  { label: "Before cleaner arrives", href: "/blog/how-to-prepare-apartment-before-cleaner-arrives/" },
+  { label: "Apartment odor", href: "/blog/why-apartment-smells-bad-after-cleaning/" },
+  { label: "Pet hair and odor", href: "/blog/pet-hair-and-pet-odor-apartment-cleaning/" },
   { label: "Roommate cleaning", href: "/blog/apartment-cleaning-roommates-shared-space/" },
   { label: "Turnover scope", href: "/blog/apartment-turnover-cleaning-scope-property-managers/" },
 ]

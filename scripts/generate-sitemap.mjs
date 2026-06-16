@@ -72,6 +72,11 @@ const blogPosts = [
   "apartment-turnover-cleaning-scope-property-managers",
   "as-is-apartment-move-in-cleaning-documentation",
   "post-renovation-apartment-cleaning-before-move-in",
+  "how-to-prepare-apartment-before-cleaner-arrives",
+  "why-apartment-smells-bad-after-cleaning",
+  "pet-hair-and-pet-odor-apartment-cleaning",
+  "overwhelmed-apartment-cleaning-where-to-start",
+  "deep-cleaning-apartment-for-dust-allergies",
 ]
 
 const corePaths = [
