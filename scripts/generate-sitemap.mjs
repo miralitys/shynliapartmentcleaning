@@ -77,6 +77,11 @@ const blogPosts = [
   "pet-hair-and-pet-odor-apartment-cleaning",
   "overwhelmed-apartment-cleaning-where-to-start",
   "deep-cleaning-apartment-for-dust-allergies",
+  "apartment-inspection-cleaning-checklist",
+  "greasy-apartment-kitchen-cabinets-cleaning",
+  "bathroom-mold-mildew-apartment-cleaning",
+  "first-apartment-cleaning-supplies",
+  "apartment-balcony-cleaning-without-drips",
 ]
 
 const corePaths = [

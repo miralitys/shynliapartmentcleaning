@@ -1655,6 +1655,386 @@ export const blogArticles: BlogArticle[] = [
     ],
     relatedSlugs: ["why-apartment-smells-bad-after-cleaning", "pet-hair-and-pet-odor-apartment-cleaning", "weekly-apartment-cleaning-schedule"],
   },
+  {
+    slug: "apartment-inspection-cleaning-checklist",
+    title: "Apartment Inspection Cleaning Checklist: What To Clean Before A Landlord Visit",
+    meta: "Use this apartment inspection cleaning checklist before a landlord, property manager, maintenance, or routine unit visit so the apartment looks clean, safe, and cared for.",
+    keywords: "apartment inspection cleaning checklist, clean apartment before inspection, landlord inspection cleaning, maintenance visit apartment cleaning, apartment cleanliness inspection",
+    category: "Inspection cleaning",
+    readTime: "8 min read",
+    updated: "June 19, 2026",
+    heroImage: "/apartment-detail-new.jpg",
+    summary: "A practical renter checklist for routine inspections, maintenance visits, lease checks, and last-minute notices that are about cleanliness, access, and obvious issues.",
+    answer: "Before an apartment inspection, focus on trash, dishes, kitchen counters, bathroom basics, floors, odors, pet areas, cluttered access paths, and anything that could look unsafe. You do not need a showroom apartment, but the unit should look lived in responsibly and easy for maintenance or management to inspect.",
+    primaryLinks: [
+      { label: "One-time apartment cleaning", href: "/one-time-apartment-cleaning/" },
+      { label: "Apartment cleaning checklist", href: "/apartment-cleaning-checklist/" },
+      { label: "Apartment cleaning pricing", href: "/apartment-cleaning-pricing/" },
+    ],
+    sections: [
+      {
+        title: "Start with what inspectors notice first",
+        paragraphs: [
+          "A routine apartment inspection is usually not judged the same way as a move-out walkthrough. Management may be looking for safety issues, damage, leaks, pets, smoke, pests, or whether maintenance can access the areas they need.",
+          "The cleanest strategy is to remove obvious problems first: trash, food, smell, blocked access, dirty bathrooms, and neglected kitchen surfaces.",
+        ],
+      },
+      {
+        title: "Kitchen priorities",
+        bullets: [
+          "Take out trash and old food, especially anything that smells.",
+          "Wash dishes or stack them neatly so the sink and counters are usable.",
+          "Wipe counters, stovetop, sink, faucet, appliance fronts, cabinet handles, and sticky spills.",
+          "Sweep or vacuum crumbs near the stove, fridge, trash area, and dining space.",
+        ],
+      },
+      {
+        title: "Bathroom priorities",
+        paragraphs: [
+          "Bathrooms make a strong impression because they show moisture, hair, residue, and odor quickly. Aim for clean and dry rather than perfect.",
+        ],
+        bullets: [
+          "Clean the toilet, sink, faucet, mirror, tub or shower, and the floor around the toilet.",
+          "Pick up laundry, towels, hair, product bottles, and trash.",
+          "Run the fan or open a window if the room feels damp.",
+          "Document leaks, soft drywall, or recurring mildew separately instead of trying to hide them.",
+        ],
+      },
+      {
+        title: "Floors, clutter, pets, and access",
+        bullets: [
+          "Clear paths to windows, vents, sinks, water heaters, electrical panels, balcony doors, and maintenance areas.",
+          "Vacuum or sweep visible floors, entry mats, rugs, and pet zones.",
+          "Put laundry in baskets, move boxes out of walkways, and secure private items.",
+          "Clean litter areas, pet food zones, and any accident spots before the visit.",
+        ],
+      },
+      {
+        title: "What cleaning cannot fix",
+        paragraphs: [
+          "Cleaning can improve dust, crumbs, hair, odor, surface residue, and clutter. It cannot repair a broken blind, replace damaged flooring, stop a leak, or solve a pest issue by itself.",
+          "If something needs maintenance, take photos and report it in writing. A clean apartment plus clear documentation is better than scrubbing around a problem and hoping nobody notices.",
+        ],
+      },
+      {
+        title: "When to book a one-time clean",
+        paragraphs: [
+          "A one-time clean can help if the inspection notice is short, the apartment has fallen behind, guests are also coming, or the kitchen and bathroom need more detail than you have time for. In Chicago-area apartment buildings, it also helps when parking, access, and work schedules make a last-minute reset hard to manage yourself.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "How clean should my apartment be for an inspection?", a: "It should be free of obvious trash, food mess, strong odor, blocked access, dirty bathroom surfaces, and unsafe clutter. It does not have to look unused." },
+      { q: "What should I clean first before a landlord visit?", a: "Start with trash, dishes, kitchen counters, bathroom basics, floors, pet areas, and walkways. Those create the biggest visible difference quickly." },
+      { q: "Should I hide maintenance problems before an inspection?", a: "No. Clean around them if needed, but document leaks, damage, pests, recurring mildew, or broken items and report them in writing." },
+      { q: "Can a cleaner help before a routine inspection?", a: "Yes. A cleaner can reset bathrooms, kitchens, floors, dust, and visible surfaces, but repairs and lease issues still need management." },
+    ],
+    relatedSlugs: ["overwhelmed-apartment-cleaning-where-to-start", "how-to-prepare-apartment-before-cleaner-arrives", "apartment-move-out-cleaning-checklist"],
+  },
+  {
+    slug: "greasy-apartment-kitchen-cabinets-cleaning",
+    title: "Greasy Apartment Kitchen Cabinets: How To Clean Sticky Doors, Handles, And Shelves",
+    meta: "Sticky apartment kitchen cabinets usually need gentle degreasing, patient wiping, and surface-safe products. Learn what to clean and when cabinet grime needs extra help.",
+    keywords: "greasy apartment cabinets, sticky kitchen cabinets apartment, apartment kitchen cabinet cleaning, clean cabinet grease, deep apartment kitchen cleaning",
+    category: "Kitchen cleaning",
+    readTime: "8 min read",
+    updated: "June 19, 2026",
+    heroImage: "/apartment-supplies-new.jpg",
+    summary: "A surface-safe guide for renters dealing with sticky cabinet doors, greasy handles, crumbs inside shelves, old cooking film, and kitchen move-in surprises.",
+    answer: "To clean greasy apartment cabinets, start with a mild dish soap solution or surface-safe degreaser, wipe handles and high-touch doors first, work in small sections, avoid soaking painted or wood surfaces, and dry the area after cleaning. If the finish is peeling, tacky, swollen, or damaged, document it and ask management before using stronger products.",
+    primaryLinks: [
+      { label: "Deep apartment cleaning", href: "/deep-apartment-cleaning/" },
+      { label: "Move-in cleaning service", href: "/move-in-apartment-cleaning/" },
+      { label: "Apartment cleaning checklist", href: "/apartment-cleaning-checklist/" },
+    ],
+    sections: [
+      {
+        title: "Kitchen cabinets hold more residue than counters",
+        paragraphs: [
+          "Apartment cabinets collect cooking grease, hand oils, dust, food crumbs, sticky spills, and old cleaner residue. The grime is often worst near handles, above the stove, under the sink, and on lower cabinet edges.",
+          "Before you scrub hard, identify the surface. Painted cabinets, laminate, wood veneer, and older finishes can react differently to water and degreaser.",
+        ],
+      },
+      {
+        title: "Start gentle and test first",
+        bullets: [
+          "Test the cleaner on a small hidden area before wiping the whole door.",
+          "Use warm water with a few drops of dish soap for ordinary grease.",
+          "Use a surface-safe degreaser only if soap is not enough.",
+          "Avoid soaking seams, hinges, particleboard edges, peeling paint, and unfinished wood.",
+        ],
+      },
+      {
+        title: "Clean in the right order",
+        paragraphs: [
+          "Work top to bottom and outside to inside. Cabinet exteriors often need grease removal, while interiors usually need crumbs, dust, and shelf residue handled.",
+        ],
+        bullets: [
+          "Handles, pulls, and the area around them.",
+          "Cabinet doors near the stove, microwave, trash can, and sink.",
+          "Interior shelves, drawer corners, pantry shelves, and under-sink cabinet floors.",
+          "Dry with a clean cloth so moisture does not sit on the finish.",
+        ],
+      },
+      {
+        title: "Move-in and move-out cabinet cleaning are different",
+        paragraphs: [
+          "For move-in, focus on making storage areas clean enough for dishes, food, and towels before unpacking. For move-out, focus on empty shelves, crumbs, spills, fingerprints, and visible residue that could be flagged during inspection.",
+        ],
+      },
+      {
+        title: "When cabinet grime is not just cleaning",
+        paragraphs: [
+          "If cabinet paint is sticky because it was painted incorrectly, if veneer is swollen, if shelves smell strongly of old food or smoke, or if there is pest evidence, cleaning may not solve the whole issue. Take photos and contact the property manager before using harsh products.",
+        ],
+      },
+      {
+        title: "How professional cleaning helps",
+        paragraphs: [
+          "Deep apartment cleaning can handle ordinary kitchen grease, handles, cabinet fronts, accessible shelf residue, and floor edges. For heavy buildup, ask whether interior cabinets, oven detail, fridge detail, or move-in cleaning are included in the scope.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "What is the safest first cleaner for greasy apartment cabinets?", a: "Warm water with a small amount of dish soap is usually the safest first step. Test a hidden area and avoid soaking the surface." },
+      { q: "Should cabinet interiors be included in apartment cleaning?", a: "They may be included for move-in, move-out, or deep cleaning, but they are often an add-on for standard cleaning. Ask before booking." },
+      { q: "Why are my painted cabinets sticky?", a: "They may have grease, cleaner residue, old hand oils, or a finish problem. If the paint itself feels tacky or damaged, document it and ask management." },
+      { q: "Can a cleaner remove years of kitchen grease?", a: "Often a cleaner can improve ordinary grease buildup, but heavy residue, damaged finishes, or unsafe products may require extra time or property management approval." },
+    ],
+    relatedSlugs: ["move-in-deep-cleaning-checklist", "apartment-inspection-cleaning-checklist", "post-renovation-apartment-cleaning-before-move-in"],
+  },
+  {
+    slug: "bathroom-mold-mildew-apartment-cleaning",
+    title: "Bathroom Mold And Mildew In Apartments: What Cleaning Can Fix And When To Ask Maintenance",
+    meta: "Apartment bathroom mildew may be cleanable on surface grout and tile, but recurring mold, caulk staining, leaks, and ventilation problems should be documented for maintenance.",
+    keywords: "apartment bathroom mold cleaning, mildew in shower caulk apartment, bathroom mildew apartment, apartment shower cleaning, when to ask maintenance for mold",
+    category: "Bathroom cleaning",
+    readTime: "8 min read",
+    updated: "June 19, 2026",
+    heroImage: "/apartment-detail-new.jpg",
+    summary: "A practical cleaning boundary guide for renters dealing with shower mildew, stained caulk, bathroom odor, damp corners, and repeat moisture problems.",
+    answer: "Surface mildew on tile, grout, shower doors, and bathroom surfaces can often be cleaned with the right product and ventilation. Dark staining inside old caulk, recurring mold after cleaning, soft walls, leaks, or poor ventilation should be documented and reported to maintenance. This guide is practical cleaning guidance, not health or remediation advice.",
+    primaryLinks: [
+      { label: "Deep apartment cleaning", href: "/deep-apartment-cleaning/" },
+      { label: "One-time apartment cleaning", href: "/one-time-apartment-cleaning/" },
+      { label: "Cleaning FAQ", href: "/faq/" },
+    ],
+    sections: [
+      {
+        title: "Separate surface mildew from maintenance issues",
+        paragraphs: [
+          "Bathrooms are small, damp, and used daily, so mildew can show up on grout, shower liners, tile edges, and caulk. Some of that is normal cleaning work. Some of it is a sign that the bathroom needs maintenance.",
+          "A cleaner can remove ordinary soap film, surface mildew, mineral residue, hair, and bathroom buildup. A cleaner should not be asked to diagnose or remediate serious mold problems.",
+        ],
+      },
+      {
+        title: "What cleaning can usually help",
+        bullets: [
+          "Soap scum on shower walls, doors, tubs, and fixtures.",
+          "Surface mildew on tile, grout, shower liners, and reachable bathroom corners.",
+          "Dust and lint on the fan cover, baseboards, ledges, and vanity areas.",
+          "Odor from trash, towels, bath mats, drain residue, and damp surfaces.",
+        ],
+      },
+      {
+        title: "When to ask maintenance",
+        bullets: [
+          "Black or dark staining appears inside or behind caulk and keeps returning.",
+          "The wall, ceiling, vanity, or floor feels soft, swollen, or wet.",
+          "There is a leak, dripping fixture, standing water, or poor drainage.",
+          "The bathroom fan does not work or the room stays damp long after showers.",
+          "You see growth spreading beyond normal shower surfaces.",
+        ],
+      },
+      {
+        title: "Clean without damaging apartment finishes",
+        paragraphs: [
+          "Use products that match the surface and follow the label. Strong chemicals, abrasive pads, or mixing products can damage finishes and create safety problems. Never mix bleach with ammonia, vinegar, or other cleaners.",
+        ],
+        bullets: [
+          "Ventilate the bathroom while cleaning.",
+          "Let products sit only as directed, then rinse or wipe as the label says.",
+          "Dry surfaces after cleaning so moisture does not sit in corners.",
+          "Test delicate stone, old grout, metal fixtures, and painted surfaces first.",
+        ],
+      },
+      {
+        title: "How to prevent fast return",
+        bullets: [
+          "Run the fan during and after showers if it works.",
+          "Leave the curtain or shower door open enough for airflow.",
+          "Wash or replace a mildewed shower liner when cleaning no longer helps.",
+          "Keep bath mats and towels dry instead of leaving them bunched on the floor.",
+        ],
+      },
+      {
+        title: "Where a deep clean fits",
+        paragraphs: [
+          "A deep apartment bathroom clean can reset soap scum, tile, fixtures, floors, vanity areas, fan covers, and visible buildup. If staining returns quickly or appears structural, document it and contact the landlord or property manager.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Can a cleaner remove mold from apartment shower caulk?", a: "A cleaner may improve surface staining, but mold embedded behind old caulk often needs maintenance, re-caulking, or a specialist depending on the situation." },
+      { q: "Is bathroom mildew always a landlord issue?", a: "Not always. Surface mildew from normal moisture can be cleaning-related. Recurring growth, leaks, damaged materials, and ventilation problems should be reported." },
+      { q: "What should I document before cleaning bathroom mold or mildew?", a: "Take photos of the area, note whether it returns after cleaning, and document leaks, fan problems, soft walls, or standing water." },
+      { q: "Is this health or legal advice?", a: "No. This is practical apartment cleaning guidance. For health, legal, or remediation concerns, contact qualified professionals or your property manager." },
+    ],
+    relatedSlugs: ["why-apartment-smells-bad-after-cleaning", "deep-cleaning-apartment-for-dust-allergies", "as-is-apartment-move-in-cleaning-documentation"],
+  },
+  {
+    slug: "first-apartment-cleaning-supplies",
+    title: "First Apartment Cleaning Supplies: What You Actually Need In A Small Space",
+    meta: "A first apartment does not need a closet full of products. Start with simple cleaning supplies for kitchen, bathroom, floors, dust, trash, laundry, and small-space storage.",
+    keywords: "first apartment cleaning supplies, apartment cleaning supplies checklist, small apartment cleaning tools, cleaning products for renters, apartment cleaning starter kit",
+    category: "First apartment",
+    readTime: "7 min read",
+    updated: "June 19, 2026",
+    heroImage: "/apartment-supplies-new.jpg",
+    summary: "A realistic starter list for renters who want enough supplies to keep a small apartment clean without buying five versions of the same product.",
+    answer: "For a first apartment, start with an all-purpose cleaner, dish soap, bathroom cleaner, glass cleaner if needed, microfiber cloths, scrub sponge, toilet brush, broom or vacuum, mop or flat mop, trash bags, gloves, and laundry basics. Add specialty products only when your surfaces, pets, or lease actually require them.",
+    primaryLinks: [
+      { label: "Recurring apartment cleaning", href: "/recurring-apartment-cleaning/" },
+      { label: "Apartment cleaning checklist", href: "/apartment-cleaning-checklist/" },
+      { label: "Apartment cleaning pricing", href: "/apartment-cleaning-pricing/" },
+    ],
+    sections: [
+      {
+        title: "You need fewer products than social media suggests",
+        paragraphs: [
+          "A first apartment can make cleaning feel more complicated than it is. Most renters do not need a cabinet full of specialty bottles. They need reliable basics, a place to store them, and a routine simple enough to repeat.",
+          "Start with what your actual apartment has: floor type, bathroom surfaces, kitchen finishes, pets, storage space, and building rules.",
+        ],
+      },
+      {
+        title: "The basic starter kit",
+        bullets: [
+          "All-purpose cleaner for counters, doors, handles, and washable surfaces.",
+          "Dish soap for dishes and many mild degreasing jobs.",
+          "Bathroom cleaner for toilet exterior, sink, tub, shower, and tile as allowed by the label.",
+          "Microfiber cloths, paper towels if you use them, non-scratch sponge, and a small scrub brush.",
+          "Toilet brush, trash bags, gloves, and laundry detergent.",
+          "Vacuum or broom, plus a mop or flat mop that fits your floor type.",
+        ],
+      },
+      {
+        title: "Small-space tools that earn their storage spot",
+        paragraphs: [
+          "In a small apartment, the best tool is the one you can store and actually use. Oversized buckets, duplicate sprays, and specialty gadgets often become clutter.",
+        ],
+        bullets: [
+          "A compact vacuum or broom that fits a closet or entry corner.",
+          "A flat mop with washable pads if storage is tight.",
+          "A caddy or bin for bottles, cloths, gloves, and sponges.",
+          "A small dustpan and brush for kitchen crumbs and entry dirt.",
+        ],
+      },
+      {
+        title: "Products to buy only when needed",
+        bullets: [
+          "Stone cleaner if you have natural stone counters or floors.",
+          "Stainless steel cleaner if appliance fronts streak badly.",
+          "Enzyme cleaner if you have pets or accident odor.",
+          "Glass cleaner if mirrors and windows need more than a damp cloth.",
+          "Specialty floor cleaner if your floor type requires it.",
+        ],
+      },
+      {
+        title: "Where to store cleaning supplies",
+        paragraphs: [
+          "Keep supplies close to where they are used: bathroom basics under the sink if safe, kitchen products in a caddy, and floor tools near the entry or closet. If you have children, pets, roommates, or guests, store products securely according to labels.",
+        ],
+      },
+      {
+        title: "When supplies are not the real problem",
+        paragraphs: [
+          "If the apartment is already behind, buying more products may not solve it. Start with trash, dishes, laundry, bathroom basics, and floors. A one-time or recurring cleaning service can help reset the apartment so your small starter kit is enough for maintenance.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "What cleaning supplies do I need for my first apartment?", a: "Start with all-purpose cleaner, dish soap, bathroom cleaner, cloths, sponge, toilet brush, trash bags, gloves, vacuum or broom, mop, and laundry detergent." },
+      { q: "Do I need separate cleaners for every room?", a: "Usually no. A few surface-safe basics cover most apartment cleaning. Add specialty products only for specific surfaces, pets, or stains." },
+      { q: "What should I avoid buying first?", a: "Avoid duplicate sprays, oversized tools you cannot store, harsh products for surfaces you do not understand, and single-use gadgets that solve rare problems." },
+      { q: "Can I book cleaning if I do not own supplies?", a: "Yes. Shynli Apartment Cleaning brings supplies for booked services, but you can share product preferences or surface concerns before the appointment." },
+    ],
+    relatedSlugs: ["weekly-apartment-cleaning-schedule", "how-to-prepare-apartment-before-cleaner-arrives", "overwhelmed-apartment-cleaning-where-to-start"],
+  },
+  {
+    slug: "apartment-balcony-cleaning-without-drips",
+    title: "Apartment Balcony Cleaning: How To Clean A Patio Or Balcony Without Annoying Neighbors",
+    meta: "Clean an apartment balcony or patio without sending dirty water below by using dry pickup first, small amounts of water, spot cleaning, and building-rule awareness.",
+    keywords: "apartment balcony cleaning, clean balcony without dripping, apartment patio cleaning, balcony cleaning etiquette, bird droppings balcony cleaning",
+    category: "Balcony cleaning",
+    readTime: "7 min read",
+    updated: "June 19, 2026",
+    heroImage: "/apartment-hero-new.jpg",
+    summary: "A neighbor-aware balcony cleaning guide for renters dealing with dust, leaves, patio grime, railings, mats, and mess that should not drip onto another unit.",
+    answer: "To clean an apartment balcony without annoying neighbors, remove dry debris first, sweep or vacuum if safe, spot clean with small amounts of water, keep runoff contained, avoid pushing dirty water through railings or slats, and check building rules before using hoses, pressure washers, or strong chemicals.",
+    primaryLinks: [
+      { label: "One-time apartment cleaning", href: "/one-time-apartment-cleaning/" },
+      { label: "Deep apartment cleaning", href: "/deep-apartment-cleaning/" },
+      { label: "Apartment cleaning checklist", href: "/apartment-cleaning-checklist/" },
+    ],
+    sections: [
+      {
+        title: "Balcony cleaning is partly etiquette",
+        paragraphs: [
+          "Balconies and patios are awkward because they feel like your space but often affect neighbors below, shared walls, drainage, and building rules. The goal is not only to clean the surface. It is to avoid sending dust, dirty water, debris, or product runoff into someone else's area.",
+          "Before you start, check your lease or resident portal for balcony rules, especially around hoses, pressure washing, chemicals, furniture, planters, and drainage.",
+        ],
+      },
+      {
+        title: "Remove dry debris first",
+        bullets: [
+          "Pick up leaves, paper, wrappers, plant debris, and loose trash by hand or with a dustpan.",
+          "Sweep inward instead of pushing debris through railings or balcony gaps.",
+          "Use a handheld vacuum only if the surface is dry and the appliance is safe for that material.",
+          "Bag debris before wiping or mopping so it does not turn into mud.",
+        ],
+      },
+      {
+        title: "Use less water than you think",
+        paragraphs: [
+          "The easiest way to upset neighbors is to rinse a balcony as if it were a driveway. In apartments, controlled spot cleaning is usually safer than flooding the floor.",
+        ],
+        bullets: [
+          "Use a damp cloth, small bucket, or spray bottle for railings, ledges, and furniture.",
+          "Mop small floor sections and wring the mop well.",
+          "Keep dirty water away from edges, slats, drains that spill below, and shared walkways.",
+          "Dry areas with a towel if runoff could drip onto another balcony.",
+        ],
+      },
+      {
+        title: "Bird droppings and heavy soil need extra care",
+        paragraphs: [
+          "Wear gloves, avoid dry scraping that sends dust into the air, and follow local and building guidance for heavy bird droppings or nesting debris. If the mess is extensive, ask management or a qualified service what is allowed.",
+        ],
+      },
+      {
+        title: "What cleaners may or may not include",
+        paragraphs: [
+          "Balcony or patio cleaning is often treated differently from interior apartment cleaning because it may involve exterior surfaces, building rules, weather, drainage, and safety. If you want it cleaned, ask whether balcony sweeping, patio furniture wiping, railing detail, or exterior glass are included or available as add-ons.",
+        ],
+      },
+      {
+        title: "A simple balcony reset",
+        bullets: [
+          "Bring loose items inside, bag trash, and remove dry debris.",
+          "Wipe railings, door handles, patio table, chairs, and ledges.",
+          "Spot clean stains instead of rinsing the whole floor.",
+          "Clean the sliding door track from inside if it is part of your apartment cleaning scope.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Can I wash my apartment balcony with a hose?", a: "Only if your building allows it and runoff will not affect neighbors or shared areas. Many apartments restrict hoses and pressure washing." },
+      { q: "How do I clean a balcony without water dripping below?", a: "Pick up dry debris first, use a damp mop or cloth, work in small sections, wring tools well, and keep water away from edges and slats." },
+      { q: "Do apartment cleaners clean balconies?", a: "Sometimes, but balcony or patio cleaning is often an add-on or excluded service. Ask before booking because exterior rules and safety can change the scope." },
+      { q: "What should I do about heavy bird droppings?", a: "Use caution, wear gloves, avoid spreading dust, and ask management or a qualified service if the mess is extensive or connected to nesting." },
+    ],
+    relatedSlugs: ["apartment-inspection-cleaning-checklist", "pet-hair-and-pet-odor-apartment-cleaning", "how-to-prepare-apartment-before-cleaner-arrives"],
+  },
 ]
 
 export const footerGuideLinks = [
@@ -1662,12 +2042,17 @@ export const footerGuideLinks = [
   { label: "Move-out checklist", href: "/blog/apartment-move-out-cleaning-checklist/" },
   { label: "Cleaning fee help", href: "/blog/landlord-cleaning-fee-after-move-out/" },
   { label: "Professional cleaners", href: "/blog/do-you-need-professional-cleaners-before-moving-out/" },
+  { label: "Inspection cleaning", href: "/blog/apartment-inspection-cleaning-checklist/" },
   { label: "Move-in checklist", href: "/blog/move-in-deep-cleaning-checklist/" },
+  { label: "Greasy cabinets", href: "/blog/greasy-apartment-kitchen-cabinets-cleaning/" },
+  { label: "Bathroom mildew", href: "/blog/bathroom-mold-mildew-apartment-cleaning/" },
   { label: "As-is move-in", href: "/blog/as-is-apartment-move-in-cleaning-documentation/" },
   { label: "Weekly schedule", href: "/blog/weekly-apartment-cleaning-schedule/" },
+  { label: "First apartment supplies", href: "/blog/first-apartment-cleaning-supplies/" },
   { label: "Before cleaner arrives", href: "/blog/how-to-prepare-apartment-before-cleaner-arrives/" },
   { label: "Apartment odor", href: "/blog/why-apartment-smells-bad-after-cleaning/" },
   { label: "Pet hair and odor", href: "/blog/pet-hair-and-pet-odor-apartment-cleaning/" },
+  { label: "Balcony cleaning", href: "/blog/apartment-balcony-cleaning-without-drips/" },
   { label: "Roommate cleaning", href: "/blog/apartment-cleaning-roommates-shared-space/" },
   { label: "Turnover scope", href: "/blog/apartment-turnover-cleaning-scope-property-managers/" },
 ]

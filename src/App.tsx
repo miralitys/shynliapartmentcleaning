@@ -377,7 +377,9 @@ function pageSchema(pathname: string, route?: SeoRoute) {
       ? "2026-06-05"
       : article.updated === "June 14, 2026"
         ? "2026-06-14"
-        : "2026-06-16"
+        : article.updated === "June 16, 2026"
+          ? "2026-06-16"
+          : "2026-06-19"
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -499,7 +501,7 @@ function App({ initialPath }: AppProps = {}) {
       <Faq />
       <RelatedGuides
         title="Apartment cleaning guides for common renter questions."
-        articles={getArticlesBySlugs(["how-to-prepare-apartment-before-cleaner-arrives", "why-apartment-smells-bad-after-cleaning", "pet-hair-and-pet-odor-apartment-cleaning"])}
+        articles={getArticlesBySlugs(["apartment-inspection-cleaning-checklist", "first-apartment-cleaning-supplies", "why-apartment-smells-bad-after-cleaning"])}
       />
       <FinalCta />
       <Footer />
@@ -810,7 +812,7 @@ function Checklist() {
           <div className="max-w-3xl">
             <Badge className="rounded-full bg-[#62ffd5] px-4 py-2 text-[#101820]">Room-by-room checklist</Badge>
             <h2 className="font-display mt-5 text-4xl font-black leading-tight tracking-normal sm:text-6xl">
-              Built for apartments, not generic houses.
+              Built for apartment life, shared buildings, and move deadlines.
             </h2>
           </div>
           <p className="max-w-md text-lg leading-8 text-white/72">
@@ -1173,10 +1175,10 @@ function LowIntentRoutePage({ city, page }: { city: (typeof cities)[number]; pag
       <RelatedGuides
         title={`Guides that support ${page.shortName.toLowerCase()} planning.`}
         articles={getArticlesBySlugs(page.slug === "tenant-move-out-cleaning"
-          ? ["pet-hair-and-pet-odor-apartment-cleaning", "landlord-cleaning-fee-after-move-out", "apartment-move-out-cleaning-checklist"]
+          ? ["apartment-inspection-cleaning-checklist", "landlord-cleaning-fee-after-move-out", "apartment-move-out-cleaning-checklist"]
           : page.slug === "apartment-cleaning-prices"
-            ? ["how-to-prepare-apartment-before-cleaner-arrives", "pet-hair-and-pet-odor-apartment-cleaning", "is-apartment-cleaning-service-worth-it"]
-            : ["apartment-turnover-cleaning-scope-property-managers", "post-renovation-apartment-cleaning-before-move-in", "why-apartment-smells-bad-after-cleaning"])}
+            ? ["first-apartment-cleaning-supplies", "how-to-prepare-apartment-before-cleaner-arrives", "is-apartment-cleaning-service-worth-it"]
+            : ["apartment-turnover-cleaning-scope-property-managers", "greasy-apartment-kitchen-cabinets-cleaning", "bathroom-mold-mildew-apartment-cleaning"])}
       />
       <section className="bg-white py-18 sm:py-24">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr]">
@@ -1186,7 +1188,7 @@ function LowIntentRoutePage({ city, page }: { city: (typeof cities)[number]; pag
               A focused page for the details that change the job.
             </h2>
             <p className="mt-5 text-lg leading-8 text-[#52616b]">
-              This is not a generic cleaning quote. It connects the city, the apartment type, and the reason you are booking so the scope is easier to understand before anyone arrives.
+              The quote connects the city, the apartment type, and the reason you are booking so the scope is easier to understand before anyone arrives.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -1302,7 +1304,7 @@ function PricingPage() {
       </section>
       <RelatedGuides
         title="Price and value guides before you book."
-        articles={getArticlesBySlugs(["is-apartment-cleaning-service-worth-it", "how-to-prepare-apartment-before-cleaner-arrives", "pet-hair-and-pet-odor-apartment-cleaning"])}
+        articles={getArticlesBySlugs(["is-apartment-cleaning-service-worth-it", "first-apartment-cleaning-supplies", "how-to-prepare-apartment-before-cleaner-arrives"])}
       />
       <SeoCta title="Build your apartment cleaning estimate." />
     </SeoShell>
@@ -1350,7 +1352,7 @@ function ChecklistPage() {
       </section>
       <RelatedGuides
         title="Checklist guides for move-in, move-out, and weekly upkeep."
-        articles={getArticlesBySlugs(["why-apartment-smells-bad-after-cleaning", "deep-cleaning-apartment-for-dust-allergies", "pet-hair-and-pet-odor-apartment-cleaning"])}
+        articles={getArticlesBySlugs(["apartment-inspection-cleaning-checklist", "greasy-apartment-kitchen-cabinets-cleaning", "bathroom-mold-mildew-apartment-cleaning"])}
       />
       <SeoCta title="Choose the checklist that fits your apartment." />
     </SeoShell>
@@ -1408,7 +1410,7 @@ function ServiceAreasPage() {
               ["Access before arrival", "Lockbox, smart lock, concierge, leasing office, elevator, driveway, and parking notes can be added before booking."],
               ["Service by scenario", "Choose standard, deep, move-in, move-out, pricing, tenant move-out, or turnover pages based on why the apartment needs cleaning."],
               ["Nearby city paths", "Local pages link into nearby suburbs and service-specific options so customers can move naturally through the site."],
-              ["Estimate-first booking", "Every page points back to a clear estimate path instead of leaving the visitor with generic service copy."],
+              ["Estimate-first booking", "Every page points back to a clear estimate path so visitors are not left guessing what the service includes."],
             ].map(([title, text]) => (
               <div key={title} className="rounded-[1.35rem] border border-[#d2e3e4] bg-white p-6">
                 <Check className="size-5 text-[#00a885]" />
@@ -1455,7 +1457,7 @@ function FaqPage() {
       </section>
       <RelatedGuides
         title="More detailed answers to common apartment cleaning questions."
-        articles={getArticlesBySlugs(["how-to-prepare-apartment-before-cleaner-arrives", "why-apartment-smells-bad-after-cleaning", "overwhelmed-apartment-cleaning-where-to-start"])}
+        articles={getArticlesBySlugs(["apartment-inspection-cleaning-checklist", "bathroom-mold-mildew-apartment-cleaning", "overwhelmed-apartment-cleaning-where-to-start"])}
       />
       <SeoCta title="Ready to turn the answers into a price?" />
     </SeoShell>
@@ -1642,21 +1644,21 @@ function getArticlesBySlugs(slugs: string[]) {
 
 function guideSlugsForService(serviceSlug: string) {
   if (serviceSlug === "move-out-apartment-cleaning") {
-    return ["pet-hair-and-pet-odor-apartment-cleaning", "landlord-cleaning-fee-after-move-out", "apartment-move-out-cleaning-checklist"]
+    return ["apartment-inspection-cleaning-checklist", "landlord-cleaning-fee-after-move-out", "apartment-move-out-cleaning-checklist"]
   }
   if (serviceSlug === "move-in-apartment-cleaning") {
-    return ["why-apartment-smells-bad-after-cleaning", "as-is-apartment-move-in-cleaning-documentation", "move-in-deep-cleaning-checklist"]
+    return ["greasy-apartment-kitchen-cabinets-cleaning", "bathroom-mold-mildew-apartment-cleaning", "move-in-deep-cleaning-checklist"]
   }
   if (serviceSlug === "deep-apartment-cleaning") {
-    return ["why-apartment-smells-bad-after-cleaning", "deep-cleaning-apartment-for-dust-allergies", "overwhelmed-apartment-cleaning-where-to-start"]
+    return ["bathroom-mold-mildew-apartment-cleaning", "greasy-apartment-kitchen-cabinets-cleaning", "deep-cleaning-apartment-for-dust-allergies"]
   }
   if (serviceSlug === "recurring-apartment-cleaning") {
-    return ["how-to-prepare-apartment-before-cleaner-arrives", "pet-hair-and-pet-odor-apartment-cleaning", "weekly-apartment-cleaning-schedule"]
+    return ["first-apartment-cleaning-supplies", "apartment-inspection-cleaning-checklist", "weekly-apartment-cleaning-schedule"]
   }
   if (serviceSlug === "one-time-apartment-cleaning") {
-    return ["overwhelmed-apartment-cleaning-where-to-start", "how-to-prepare-apartment-before-cleaner-arrives", "why-apartment-smells-bad-after-cleaning"]
+    return ["apartment-inspection-cleaning-checklist", "overwhelmed-apartment-cleaning-where-to-start", "apartment-balcony-cleaning-without-drips"]
   }
-  return ["how-to-prepare-apartment-before-cleaner-arrives", "pet-hair-and-pet-odor-apartment-cleaning", "is-apartment-cleaning-service-worth-it"]
+  return ["apartment-inspection-cleaning-checklist", "first-apartment-cleaning-supplies", "is-apartment-cleaning-service-worth-it"]
 }
 
 function RelatedGuides({ title, articles }: { title: string; articles: BlogArticle[] }) {
