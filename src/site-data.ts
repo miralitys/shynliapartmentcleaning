@@ -2035,6 +2035,362 @@ export const blogArticles: BlogArticle[] = [
     ],
     relatedSlugs: ["apartment-inspection-cleaning-checklist", "pet-hair-and-pet-odor-apartment-cleaning", "how-to-prepare-apartment-before-cleaner-arrives"],
   },
+  {
+    slug: "fruit-flies-gnats-drain-flies-apartment-cleaning",
+    title: "Fruit Flies, Gnats, And Drain Flies In An Apartment: What To Clean First",
+    meta: "Fruit flies and gnats in an apartment usually need source removal first: trash, drains, standing water, produce, sink areas, and cleaning routines before sprays.",
+    keywords: "fruit flies in apartment, gnats in apartment, drain flies apartment cleaning, apartment pest cleaning, clean drains fruit flies",
+    category: "Kitchen and odor",
+    readTime: "8 min read",
+    updated: "June 23, 2026",
+    heroImage: "/apartment-detail-new.jpg",
+    summary: "A calm apartment guide for figuring out what to clean first when tiny flies keep showing up around sinks, trash, produce, bathrooms, or damp areas.",
+    answer: "When fruit flies, gnats, or drain flies show up in an apartment, clean the source before relying on traps. Start with trash, recycling, food scraps, produce, sink strainers, drains, garbage disposal edges, damp towels, mop buckets, pet bowls, and any standing water. If flies keep returning after the apartment is clean, ask property management about plumbing, neighboring units, or pest-control support.",
+    primaryLinks: [
+      { label: "Deep apartment cleaning", href: "/deep-apartment-cleaning/" },
+      { label: "Apartment cleaning checklist", href: "/apartment-cleaning-checklist/" },
+      { label: "Apartment odor guide", href: "/blog/why-apartment-smells-bad-after-cleaning/" },
+    ],
+    sections: [
+      {
+        title: "Tiny flies are usually a source problem",
+        paragraphs: [
+          "In apartments, small flies are frustrating because the source can be a small missed area, a damp drain, a neighbor's unit, a trash room, or a building issue. Cleaning will not solve every pest problem, but it should be the first step because it removes the food, moisture, and film that keep flies coming back.",
+          "The best approach is simple: remove food and moisture, clean the sticky areas, watch where the insects return, and involve property management when the source may be outside your apartment.",
+        ],
+      },
+      {
+        title: "Start with food, trash, and recycling",
+        bullets: [
+          "Take out trash, recycling, and compost instead of just tying the bag.",
+          "Wash the inside and outside of trash cans, especially the lid, rim, and floor beneath them.",
+          "Remove overripe fruit, open snack bags, sticky bottles, and forgotten takeout containers.",
+          "Rinse cans and bottles before they sit in recycling.",
+          "Wipe pantry shelves where sugar, cereal, flour, or pet food may have spilled.",
+        ],
+      },
+      {
+        title: "Clean sinks and drains without mixing products",
+        paragraphs: [
+          "A sink can look clean while the strainer, disposal splash guard, drain opening, or overflow area still holds residue. Scrub reachable parts with dish soap and hot water, then rinse well. If you use a drain product, follow the label and do not mix chemicals.",
+        ],
+        bullets: [
+          "Remove and scrub sink strainers.",
+          "Clean around the drain lip and faucet base.",
+          "Wipe under dish racks and drying mats.",
+          "Empty standing water from cups, vases, mop buckets, and plant saucers.",
+          "Wash damp towels, sponges, and cleaning cloths instead of leaving them in the sink.",
+        ],
+      },
+      {
+        title: "Check bathroom and laundry moisture",
+        paragraphs: [
+          "Gnats and drain flies are not always a kitchen problem. Bathrooms, laundry closets, wet bath mats, slow drains, and damp corners can keep moisture in the apartment. Clean reachable drain areas, dry floors, and report slow drains or leaks.",
+        ],
+      },
+      {
+        title: "When cleaning is not enough",
+        paragraphs: [
+          "If flies return within a day or two after trash, drains, damp items, and food sources are handled, the problem may be connected to plumbing, a neighboring unit, a shared trash area, or building pest activity. Take photos, note where you see the insects, and contact property management or pest control.",
+        ],
+      },
+      {
+        title: "How a cleaner can help",
+        paragraphs: [
+          "A professional apartment cleaning can reset kitchens, bathrooms, floors, baseboards, trash areas, and reachable sink zones so you are not trying to troubleshoot through buildup. It is especially useful before guests, after a busy month, or when you need a clean baseline before asking maintenance to investigate.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "What should I clean first if I have fruit flies in my apartment?", a: "Start with trash, recycling, overripe produce, sink strainers, drain openings, sticky counters, dish areas, damp towels, and standing water." },
+      { q: "Are drain flies a cleaning problem or a maintenance problem?", a: "They can be both. Clean reachable drain areas first, but ask maintenance if the drain is slow, smells, leaks, or the flies keep returning." },
+      { q: "Can apartment cleaning get rid of gnats?", a: "Cleaning can remove attractants and help you find the source. A larger infestation, building source, or plumbing issue may still need pest control or property management." },
+      { q: "Should I mix vinegar, bleach, or drain chemicals?", a: "No. Do not mix cleaning chemicals. Follow product labels and use one method at a time with ventilation." },
+    ],
+    relatedSlugs: ["why-apartment-smells-bad-after-cleaning", "deep-cleaning-apartment-for-dust-allergies", "overwhelmed-apartment-cleaning-where-to-start"],
+  },
+  {
+    slug: "apartment-air-vent-and-bathroom-fan-cleaning",
+    title: "Apartment Air Vent And Bathroom Fan Cleaning: Dust, Smell, And Maintenance Boundaries",
+    meta: "Learn how to clean reachable apartment vent covers and bathroom fan grilles, when dust is a cleaning issue, and when HVAC or maintenance should be involved.",
+    keywords: "apartment air vent cleaning, bathroom fan dust apartment, dusty vents apartment, clean vent cover apartment, apartment HVAC dust",
+    category: "Dust and maintenance",
+    readTime: "7 min read",
+    updated: "June 23, 2026",
+    heroImage: "/apartment-hero-new.jpg",
+    summary: "A practical guide for renters who see dust on vents, bathroom fan grilles, or return covers and want to know what is safe to clean themselves.",
+    answer: "In an apartment, you can usually clean reachable vent covers, return grilles, and bathroom fan covers from the outside with a vacuum brush, microfiber cloth, and mild cleaner. Do not reach into ducts, remove wired fan parts, or open HVAC equipment. If there is heavy dust inside, mold-like growth, weak airflow, burning smells, leaks, or a noisy fan, ask maintenance.",
+    primaryLinks: [
+      { label: "Deep apartment cleaning", href: "/deep-apartment-cleaning/" },
+      { label: "Apartment cleaning checklist", href: "/apartment-cleaning-checklist/" },
+      { label: "Apartment cleaning FAQ", href: "/faq/" },
+    ],
+    sections: [
+      {
+        title: "Clean the parts you can safely reach",
+        paragraphs: [
+          "Apartment vents collect dust quickly, especially near bathrooms, kitchens, pets, windows, and return air covers. The renter-safe part is the visible cover or grille. The building-safe part is the duct, fan motor, HVAC equipment, and anything connected to wiring.",
+        ],
+      },
+      {
+        title: "A safe vent-cover cleaning routine",
+        bullets: [
+          "Turn off the fan or HVAC if it is easy and allowed.",
+          "Use a vacuum brush attachment to remove loose dust from the outside of the cover.",
+          "Wipe the cover with a slightly damp microfiber cloth.",
+          "Use mild soap for fingerprints or residue, then dry the area.",
+          "Keep water away from electrical components and ceiling openings.",
+        ],
+      },
+      {
+        title: "Bathroom fan grilles need gentle handling",
+        paragraphs: [
+          "A bathroom fan can hold dust, lint, and humidity residue. Clean the visible grille first. If it pulls down with spring clips and your lease or building rules allow it, clean only the removable cover and put it back carefully. If anything feels stuck, wired, loose, or damaged, stop and ask maintenance.",
+        ],
+      },
+      {
+        title: "Dust may be coming from more than the vent",
+        paragraphs: [
+          "If dust returns quickly, look at nearby surfaces too: window tracks, blinds, ceiling corners, baseboards, under beds, pet areas, laundry lint, and cluttered shelves. Deep cleaning those areas often reduces the visible dust on vent covers.",
+        ],
+      },
+      {
+        title: "When to involve maintenance",
+        bullets: [
+          "Heavy debris inside the duct or fan opening.",
+          "Mold-like spots, water stains, or a damp smell around the vent.",
+          "Weak airflow, rattling, grinding, or a fan that does not turn on.",
+          "Burning, electrical, or gas-like smells.",
+          "A filter, duct, or HVAC part you are not allowed to access.",
+        ],
+      },
+      {
+        title: "What to ask before booking a cleaner",
+        paragraphs: [
+          "Ask whether dusting includes reachable vent covers, bathroom fan grilles, ceiling corners, baseboards, and high surfaces. A cleaner can handle visible dust and nearby surfaces, but building systems and internal duct cleaning should stay with maintenance or qualified HVAC service.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Can I clean apartment air vents myself?", a: "You can usually clean the outside of reachable vent covers with a vacuum brush and damp cloth. Do not reach into ducts or open HVAC equipment." },
+      { q: "Do cleaners clean bathroom fan covers?", a: "Many cleaners can dust and wipe reachable bathroom fan grilles. Removable covers, electrical parts, or internal fan cleaning may be excluded or handled by maintenance." },
+      { q: "Why is my apartment dusty even after cleaning?", a: "Dust can come from vents, windows, fabrics, pets, laundry lint, clutter, old filters, or building airflow. Clean visible sources and ask maintenance if airflow or filtration seems off." },
+      { q: "What if I see mold-like spots on a vent?", a: "Do not scrub inside the system. Document it and contact property management or maintenance so they can inspect the source." },
+    ],
+    relatedSlugs: ["deep-cleaning-apartment-for-dust-allergies", "bathroom-mold-mildew-apartment-cleaning", "move-in-deep-cleaning-checklist"],
+  },
+  {
+    slug: "apartment-stove-drip-pans-and-range-hood-cleaning",
+    title: "Apartment Stove, Drip Pans, And Range Hood Cleaning: What Renters Should Know",
+    meta: "A renter-friendly guide to cleaning apartment stovetops, drip pans, burner grates, range hoods, and grease without damaging surfaces or missing move-out details.",
+    keywords: "apartment stove cleaning, clean drip pans apartment, range hood cleaning apartment, greasy stovetop cleaning, rental kitchen cleaning",
+    category: "Kitchen cleaning",
+    readTime: "8 min read",
+    updated: "June 23, 2026",
+    heroImage: "/apartment-detail-new.jpg",
+    summary: "A detailed renter guide for grimy stovetops, drip pans, burner grates, knobs, range hood filters, and the kitchen details that matter before move-out.",
+    answer: "To clean an apartment stove, remove loose crumbs first, match the cleaner to the surface, clean knobs and burner areas, soak removable drip pans or grates when allowed, degrease the range hood exterior, and check whether the hood filter can be safely removed. Avoid scraping, flooding controls, or using harsh products on surfaces you are not sure about. If parts are damaged, missing, electrical, or heavily burned, ask maintenance.",
+    primaryLinks: [
+      { label: "Move-out apartment cleaning", href: "/move-out-apartment-cleaning/" },
+      { label: "Deep apartment cleaning", href: "/deep-apartment-cleaning/" },
+      { label: "Apartment cleaning checklist", href: "/apartment-cleaning-checklist/" },
+    ],
+    sections: [
+      {
+        title: "Kitchen appliances get judged closely",
+        paragraphs: [
+          "A stove can make an otherwise clean apartment feel unfinished. Grease, crumbs, burned spills, sticky knobs, and a dusty range hood are easy to miss during normal weekly cleaning but obvious during a move-out walkthrough or deep clean.",
+        ],
+      },
+      {
+        title: "Start with the surface type",
+        bullets: [
+          "Glass cooktops need non-scratch pads and surface-safe cleaner.",
+          "Coil burners usually have removable drip pans, but renters should avoid forcing parts.",
+          "Gas grates and burner caps may be removable, but ports and igniters need gentle handling.",
+          "Stainless and painted surfaces can scratch or discolor if cleaned with the wrong product.",
+        ],
+      },
+      {
+        title: "A practical stove cleaning order",
+        bullets: [
+          "Remove loose crumbs and dry debris first.",
+          "Wipe knobs, front panels, and side edges where hands touch.",
+          "Soak removable drip pans or grates only if the appliance manual or building rules allow it.",
+          "Clean the stovetop in small sections so residue does not smear.",
+          "Dry the surface before replacing parts.",
+        ],
+      },
+      {
+        title: "Do not ignore the range hood",
+        paragraphs: [
+          "The range hood catches grease mist and dust. Wipe the exterior, underside, buttons, light cover, and nearby backsplash. If the filter is removable and meant to be cleaned, wash it according to instructions. If it is damaged, missing, sticky beyond normal cleaning, or connected in a way you do not understand, ask maintenance.",
+        ],
+      },
+      {
+        title: "Move-out details renters forget",
+        bullets: [
+          "Crumbs along the stove sides and floor edge.",
+          "Grease on the wall or cabinet area around the stove.",
+          "Sticky knobs and control labels.",
+          "Burned drip pans that may need replacement instead of more scrubbing.",
+          "The floor under and around the appliance when it can be reached safely.",
+        ],
+      },
+      {
+        title: "When to book help",
+        paragraphs: [
+          "Book a deep or move-out clean when the kitchen needs more than a wipe-down, when grease has spread to surrounding surfaces, or when you need the apartment ready for a final walkthrough without spending your moving day scrubbing appliances.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Can cleaners clean apartment drip pans?", a: "Often yes, if the drip pans are removable and safe to clean. Badly burned or damaged pans may need replacement or maintenance approval." },
+      { q: "Do move-out cleaners clean the range hood?", a: "Move-out cleaning can include the exterior and reachable underside of the range hood. Filters or internal parts may depend on the service scope and appliance condition." },
+      { q: "How do I avoid damaging a rental stove?", a: "Use surface-safe products, avoid metal scraping, keep water away from controls, and do not force removable parts." },
+      { q: "What if the stove was dirty when I moved in?", a: "Document it with photos, report it early, and keep the record. For future move-in cleaning, handle appliance details before unpacking the kitchen." },
+    ],
+    relatedSlugs: ["greasy-apartment-kitchen-cabinets-cleaning", "apartment-move-out-cleaning-checklist", "apartment-inspection-cleaning-checklist"],
+  },
+  {
+    slug: "apartment-laundry-area-cleaning-washer-dryer-lint",
+    title: "Apartment Laundry Area Cleaning: Washer, Dryer, Lint, And Shared Laundry Boundaries",
+    meta: "Apartment laundry cleaning should focus on lint, detergent residue, door seals, floor edges, and safe reporting when shared or in-unit machines are dirty.",
+    keywords: "apartment laundry area cleaning, washer dryer cleaning apartment, dryer lint apartment, shared laundry cleaning, rental washer smells",
+    category: "Laundry area",
+    readTime: "7 min read",
+    updated: "June 23, 2026",
+    heroImage: "/apartment-supplies-new.jpg",
+    summary: "A renter-focused guide to keeping in-unit laundry closets and shared laundry touchpoints cleaner without taking on maintenance work that belongs to the building.",
+    answer: "Apartment laundry cleaning should focus on what you can safely reach: lint screens, washer door seals, detergent trays, machine exteriors, folding surfaces, floor edges, and spills. Do not disassemble machines, clean internal dryer vents, or open appliance panels. Heavy lint buildup, burning smells, drainage problems, broken doors, or dirty shared machines should be reported to property management.",
+    primaryLinks: [
+      { label: "Apartment cleaning service", href: "/apartment-cleaning/" },
+      { label: "Move-in apartment cleaning", href: "/move-in-apartment-cleaning/" },
+      { label: "Apartment cleaning checklist", href: "/apartment-cleaning-checklist/" },
+    ],
+    sections: [
+      {
+        title: "Laundry areas collect more than lint",
+        paragraphs: [
+          "Laundry spaces are small, damp, and easy to ignore. Detergent drips, fabric softener residue, lint, pet hair, dust, damp towels, and floor debris can build up around the washer and dryer even when the rest of the apartment looks clean.",
+        ],
+      },
+      {
+        title: "What renters can usually clean",
+        bullets: [
+          "Empty the dryer lint screen after each load.",
+          "Wipe the washer door seal, door glass, lid, and handle.",
+          "Clean detergent drips from trays, shelves, and machine fronts.",
+          "Sweep or vacuum floor edges around the laundry area.",
+          "Wipe folding counters, shared handles, buttons, and nearby shelves.",
+          "Dry wet mats, towels, and laundry baskets instead of leaving moisture trapped.",
+        ],
+      },
+      {
+        title: "What belongs to maintenance",
+        paragraphs: [
+          "Internal dryer vents, appliance panels, wiring, gas lines, drainage issues, and heavy lint behind machines are not normal renter cleaning tasks. If you smell burning, see water, notice poor drying, or find lint collecting where you cannot safely reach, document it and contact maintenance.",
+        ],
+      },
+      {
+        title: "Shared laundry rooms need realistic boundaries",
+        paragraphs: [
+          "In shared laundry, you may be able to wipe the surface before using it, remove your own lint, and avoid leaving spills behind. You should not be responsible for deep cleaning building machines, other residents' messes, or unsafe appliance conditions. Report repeated problems with photos and dates.",
+        ],
+      },
+      {
+        title: "Move-in and move-out laundry details",
+        bullets: [
+          "At move-in, check machine smell, door seals, lint screens, floors, and detergent trays before doing your first load.",
+          "At move-out, remove lint, wipe exteriors, clean reachable floor edges, and take photos if machines were already damaged or dirty.",
+          "For a deep clean, ask whether the laundry closet floor, reachable machine exterior, shelves, and surrounding baseboards are included.",
+        ],
+      },
+      {
+        title: "Why laundry areas affect apartment smell",
+        paragraphs: [
+          "A sour washer seal, damp towel, pet blanket, or lint-filled corner can make an apartment smell unclean even after the kitchen and bathroom are done. Laundry detail is worth checking when odor seems to come back quickly.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Do apartment cleaners clean washers and dryers?", a: "Cleaners may wipe reachable machine exteriors, door seals, detergent areas, lint screens, shelves, and floors. Internal appliance or vent cleaning is usually maintenance work." },
+      { q: "Who cleans a shared apartment laundry room?", a: "Shared laundry rooms are usually a building responsibility. Residents should clean up after themselves and report repeated mess, broken machines, or unsafe conditions." },
+      { q: "Is dryer lint a cleaning issue or a safety issue?", a: "Both. Emptying the lint screen is routine cleaning, but heavy lint inside vents or behind machines should be reported because it can affect drying and safety." },
+      { q: "Why does my rental washer smell?", a: "Common causes include moisture, detergent buildup, a dirty door seal, slow drainage, or previous use. Clean reachable areas and contact maintenance if the smell persists." },
+    ],
+    relatedSlugs: ["why-apartment-smells-bad-after-cleaning", "move-in-deep-cleaning-checklist", "apartment-inspection-cleaning-checklist"],
+  },
+  {
+    slug: "cleaning-apartment-before-guests-small-space",
+    title: "Cleaning An Apartment Before Guests: What Matters Most In A Small Space",
+    meta: "When guests are coming, focus apartment cleaning on bathrooms, kitchen surfaces, floors, entry, odors, pet areas, dishes, trash, and the spaces people actually use.",
+    keywords: "clean apartment before guests, guest ready apartment cleaning, small apartment cleaning before visitors, apartment cleaning checklist guests, one-time apartment cleaning",
+    category: "One-time cleaning",
+    readTime: "7 min read",
+    updated: "June 23, 2026",
+    heroImage: "/apartment-hero-new.jpg",
+    summary: "A priority-based apartment cleaning guide for people who have guests coming and need the place to feel clean without pretending every closet must be perfect.",
+    answer: "Before guests come over, clean the areas people will see, touch, and smell first: entry, bathroom, kitchen counters, sink, dishes, trash, floors, seating, pet areas, and clutter on visible surfaces. In a small apartment, odor, bathroom detail, and clear walking space matter more than reorganizing private storage.",
+    primaryLinks: [
+      { label: "One-time apartment cleaning", href: "/one-time-apartment-cleaning/" },
+      { label: "Recurring apartment cleaning", href: "/recurring-apartment-cleaning/" },
+      { label: "Apartment cleaning checklist", href: "/apartment-cleaning-checklist/" },
+    ],
+    sections: [
+      {
+        title: "Guests notice touchpoints, smell, and clutter first",
+        paragraphs: [
+          "A small apartment does not give mess many places to hide. That can feel stressful, but it also makes the plan clearer. You do not need a museum-level clean before people arrive. You need the bathroom, kitchen, floors, seating, and entry to feel handled.",
+        ],
+      },
+      {
+        title: "The first 30 minutes",
+        bullets: [
+          "Take out trash and recycling.",
+          "Clear dishes from the sink and wipe the sink area.",
+          "Put obvious clutter into one contained basket or closed room.",
+          "Open a window briefly if weather and building rules allow it.",
+          "Wipe kitchen counters, table surfaces, and visible spills.",
+          "Reset sofa cushions, chairs, and the entry area.",
+        ],
+      },
+      {
+        title: "The bathroom matters most",
+        paragraphs: [
+          "If you only have time for one detailed room, choose the bathroom. Clean the toilet, sink, mirror, faucet, counter, floor around the toilet, trash, hand towel, and any visible hair or product residue. Guests may not remember your baseboards, but they will remember whether the bathroom felt clean.",
+        ],
+      },
+      {
+        title: "Kitchen priorities before visitors",
+        bullets: [
+          "Remove food scraps, sticky spots, and full trash.",
+          "Wipe counters, stove surface, microwave handle, fridge handle, and table.",
+          "Sweep or vacuum crumbs near the kitchen and dining area.",
+          "Handle lingering smells from sink drains, garbage disposal, pet bowls, or old food.",
+        ],
+      },
+      {
+        title: "Pets and small-space odor",
+        paragraphs: [
+          "Pet hair, litter areas, food bowls, blankets, and entry rugs can make a clean apartment still feel off. Vacuum visible hair, wash or fold pet blankets, refresh litter areas, and wipe the floor around bowls before guests arrive.",
+        ],
+      },
+      {
+        title: "When a one-time clean is worth it",
+        paragraphs: [
+          "A one-time apartment cleaning is helpful before overnight guests, family visits, parties, listing photos, or any week when you need the apartment guest-ready but do not have the time or energy to reset it yourself. It can also become the baseline for a simple recurring schedule.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "What should I clean first before guests come to my apartment?", a: "Start with trash, dishes, bathroom, kitchen surfaces, floors, entry, seating, and odor sources. Those areas shape the guest experience fastest." },
+      { q: "How do I make a small apartment feel clean quickly?", a: "Clear visible surfaces, contain clutter, clean the bathroom, wipe the kitchen, remove trash, vacuum or sweep main paths, and deal with odors." },
+      { q: "Should I deep clean before guests?", a: "Not always. If guests are coming soon, focus on visible and shared areas first. Deep cleaning is better when there is buildup, dust, pet hair, or overnight visitors." },
+      { q: "Can I book a one-time clean before visitors?", a: "Yes. One-time apartment cleaning is a good fit before family visits, parties, overnight guests, or any week when you need a reset without starting recurring service." },
+    ],
+    relatedSlugs: ["overwhelmed-apartment-cleaning-where-to-start", "pet-hair-and-pet-odor-apartment-cleaning", "why-apartment-smells-bad-after-cleaning"],
+  },
 ]
 
 export const footerGuideLinks = [
@@ -2052,6 +2408,11 @@ export const footerGuideLinks = [
   { label: "Before cleaner arrives", href: "/blog/how-to-prepare-apartment-before-cleaner-arrives/" },
   { label: "Apartment odor", href: "/blog/why-apartment-smells-bad-after-cleaning/" },
   { label: "Pet hair and odor", href: "/blog/pet-hair-and-pet-odor-apartment-cleaning/" },
+  { label: "Fruit flies and gnats", href: "/blog/fruit-flies-gnats-drain-flies-apartment-cleaning/" },
+  { label: "Vent and fan dust", href: "/blog/apartment-air-vent-and-bathroom-fan-cleaning/" },
+  { label: "Stove and range hood", href: "/blog/apartment-stove-drip-pans-and-range-hood-cleaning/" },
+  { label: "Laundry area", href: "/blog/apartment-laundry-area-cleaning-washer-dryer-lint/" },
+  { label: "Before guests", href: "/blog/cleaning-apartment-before-guests-small-space/" },
   { label: "Balcony cleaning", href: "/blog/apartment-balcony-cleaning-without-drips/" },
   { label: "Roommate cleaning", href: "/blog/apartment-cleaning-roommates-shared-space/" },
   { label: "Turnover scope", href: "/blog/apartment-turnover-cleaning-scope-property-managers/" },

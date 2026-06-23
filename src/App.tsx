@@ -288,7 +288,7 @@ function pageDescription(route?: SeoRoute, legalPage?: (typeof legalPages)[keyof
   if (route.type === "city") return `Apartment cleaning in ${route.city.name} with vetted cleaners, supplies included, clear estimates, recurring, deep, move-in, and move-out options.`
   if (route.type === "cityService") return route.service.meta(route.city.name)
   if (route.type === "lowIntent") return route.page.meta(route.city.name)
-  if (route.type === "blogIndex") return "Read practical apartment cleaning guides for move-out, move-in, weekly cleaning, pricing, and when hiring a cleaner is worth it."
+  if (route.type === "blogIndex") return "Read practical apartment cleaning guides for move-out, move-in, weekly cleaning, odors, pests, dust, appliances, laundry areas, pricing, and one-time cleaning."
   if (route.type === "blogArticle") return route.article.meta
   if (route.type === "pricing") return "See apartment cleaning pricing by clean type, apartment size, bathrooms, pets, add-ons, and move-in or move-out needs."
   if (route.type === "checklist") return "Review the apartment cleaning checklist for kitchens, bathrooms, living areas, bedrooms, floors, supplies, and move-out details."
@@ -298,7 +298,7 @@ function pageDescription(route?: SeoRoute, legalPage?: (typeof legalPages)[keyof
 
 function pageKeywords(route?: SeoRoute) {
   if (route?.type === "blogArticle") return route.article.keywords
-  if (route?.type === "blogIndex") return "apartment cleaning guides, apartment cleaning articles, move-out cleaning, move-in cleaning, recurring apartment cleaning"
+  if (route?.type === "blogIndex") return "apartment cleaning guides, apartment cleaning articles, move-out cleaning, move-in cleaning, apartment deep cleaning, one-time apartment cleaning"
   return undefined
 }
 
@@ -379,7 +379,9 @@ function pageSchema(pathname: string, route?: SeoRoute) {
         ? "2026-06-14"
         : article.updated === "June 16, 2026"
           ? "2026-06-16"
-          : "2026-06-19"
+          : article.updated === "June 19, 2026"
+            ? "2026-06-19"
+            : "2026-06-23"
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -501,7 +503,7 @@ function App({ initialPath }: AppProps = {}) {
       <Faq />
       <RelatedGuides
         title="Apartment cleaning guides for common renter questions."
-        articles={getArticlesBySlugs(["apartment-inspection-cleaning-checklist", "first-apartment-cleaning-supplies", "why-apartment-smells-bad-after-cleaning"])}
+        articles={getArticlesBySlugs(["cleaning-apartment-before-guests-small-space", "fruit-flies-gnats-drain-flies-apartment-cleaning", "apartment-air-vent-and-bathroom-fan-cleaning"])}
       />
       <FinalCta />
       <Footer />
@@ -1175,10 +1177,10 @@ function LowIntentRoutePage({ city, page }: { city: (typeof cities)[number]; pag
       <RelatedGuides
         title={`Guides that support ${page.shortName.toLowerCase()} planning.`}
         articles={getArticlesBySlugs(page.slug === "tenant-move-out-cleaning"
-          ? ["apartment-inspection-cleaning-checklist", "landlord-cleaning-fee-after-move-out", "apartment-move-out-cleaning-checklist"]
+          ? ["apartment-stove-drip-pans-and-range-hood-cleaning", "apartment-laundry-area-cleaning-washer-dryer-lint", "apartment-inspection-cleaning-checklist"]
           : page.slug === "apartment-cleaning-prices"
-            ? ["first-apartment-cleaning-supplies", "how-to-prepare-apartment-before-cleaner-arrives", "is-apartment-cleaning-service-worth-it"]
-            : ["apartment-turnover-cleaning-scope-property-managers", "greasy-apartment-kitchen-cabinets-cleaning", "bathroom-mold-mildew-apartment-cleaning"])}
+            ? ["cleaning-apartment-before-guests-small-space", "apartment-laundry-area-cleaning-washer-dryer-lint", "is-apartment-cleaning-service-worth-it"]
+            : ["apartment-turnover-cleaning-scope-property-managers", "apartment-stove-drip-pans-and-range-hood-cleaning", "apartment-air-vent-and-bathroom-fan-cleaning"])}
       />
       <section className="bg-white py-18 sm:py-24">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr]">
@@ -1304,7 +1306,7 @@ function PricingPage() {
       </section>
       <RelatedGuides
         title="Price and value guides before you book."
-        articles={getArticlesBySlugs(["is-apartment-cleaning-service-worth-it", "first-apartment-cleaning-supplies", "how-to-prepare-apartment-before-cleaner-arrives"])}
+        articles={getArticlesBySlugs(["is-apartment-cleaning-service-worth-it", "cleaning-apartment-before-guests-small-space", "apartment-laundry-area-cleaning-washer-dryer-lint"])}
       />
       <SeoCta title="Build your apartment cleaning estimate." />
     </SeoShell>
@@ -1352,7 +1354,7 @@ function ChecklistPage() {
       </section>
       <RelatedGuides
         title="Checklist guides for move-in, move-out, and weekly upkeep."
-        articles={getArticlesBySlugs(["apartment-inspection-cleaning-checklist", "greasy-apartment-kitchen-cabinets-cleaning", "bathroom-mold-mildew-apartment-cleaning"])}
+        articles={getArticlesBySlugs(["apartment-stove-drip-pans-and-range-hood-cleaning", "apartment-air-vent-and-bathroom-fan-cleaning", "fruit-flies-gnats-drain-flies-apartment-cleaning"])}
       />
       <SeoCta title="Choose the checklist that fits your apartment." />
     </SeoShell>
@@ -1457,7 +1459,7 @@ function FaqPage() {
       </section>
       <RelatedGuides
         title="More detailed answers to common apartment cleaning questions."
-        articles={getArticlesBySlugs(["apartment-inspection-cleaning-checklist", "bathroom-mold-mildew-apartment-cleaning", "overwhelmed-apartment-cleaning-where-to-start"])}
+        articles={getArticlesBySlugs(["fruit-flies-gnats-drain-flies-apartment-cleaning", "apartment-air-vent-and-bathroom-fan-cleaning", "apartment-laundry-area-cleaning-washer-dryer-lint"])}
       />
       <SeoCta title="Ready to turn the answers into a price?" />
     </SeoShell>
@@ -1473,7 +1475,7 @@ function BlogIndexPage() {
       <SeoHero
         badge="Apartment cleaning guides"
         title="Practical answers before you book, move, or clean."
-        text="Read renter-focused guides about move-out cleaning, move-in deep cleaning, weekly routines, pricing, and when professional apartment cleaning is worth it."
+        text="Read renter-focused guides about move-out cleaning, move-in deep cleaning, weekly routines, odors, dust, pests, appliances, laundry areas, pricing, and when professional apartment cleaning is worth it."
         image="/apartment-hero-new.jpg"
         primaryHref={quoteUrl}
         secondaryHref="/apartment-cleaning-checklist/"
@@ -1644,21 +1646,24 @@ function getArticlesBySlugs(slugs: string[]) {
 
 function guideSlugsForService(serviceSlug: string) {
   if (serviceSlug === "move-out-apartment-cleaning") {
-    return ["apartment-inspection-cleaning-checklist", "landlord-cleaning-fee-after-move-out", "apartment-move-out-cleaning-checklist"]
+    return ["apartment-stove-drip-pans-and-range-hood-cleaning", "apartment-laundry-area-cleaning-washer-dryer-lint", "apartment-inspection-cleaning-checklist"]
   }
   if (serviceSlug === "move-in-apartment-cleaning") {
-    return ["greasy-apartment-kitchen-cabinets-cleaning", "bathroom-mold-mildew-apartment-cleaning", "move-in-deep-cleaning-checklist"]
+    return ["apartment-air-vent-and-bathroom-fan-cleaning", "apartment-laundry-area-cleaning-washer-dryer-lint", "move-in-deep-cleaning-checklist"]
   }
   if (serviceSlug === "deep-apartment-cleaning") {
-    return ["bathroom-mold-mildew-apartment-cleaning", "greasy-apartment-kitchen-cabinets-cleaning", "deep-cleaning-apartment-for-dust-allergies"]
+    return ["apartment-air-vent-and-bathroom-fan-cleaning", "apartment-stove-drip-pans-and-range-hood-cleaning", "fruit-flies-gnats-drain-flies-apartment-cleaning"]
   }
   if (serviceSlug === "recurring-apartment-cleaning") {
-    return ["first-apartment-cleaning-supplies", "apartment-inspection-cleaning-checklist", "weekly-apartment-cleaning-schedule"]
+    return ["cleaning-apartment-before-guests-small-space", "fruit-flies-gnats-drain-flies-apartment-cleaning", "weekly-apartment-cleaning-schedule"]
   }
   if (serviceSlug === "one-time-apartment-cleaning") {
-    return ["apartment-inspection-cleaning-checklist", "overwhelmed-apartment-cleaning-where-to-start", "apartment-balcony-cleaning-without-drips"]
+    return ["cleaning-apartment-before-guests-small-space", "overwhelmed-apartment-cleaning-where-to-start", "fruit-flies-gnats-drain-flies-apartment-cleaning"]
   }
-  return ["apartment-inspection-cleaning-checklist", "first-apartment-cleaning-supplies", "is-apartment-cleaning-service-worth-it"]
+  if (serviceSlug === "condo-cleaning" || serviceSlug === "townhouse-cleaning") {
+    return ["cleaning-apartment-before-guests-small-space", "apartment-air-vent-and-bathroom-fan-cleaning", "apartment-laundry-area-cleaning-washer-dryer-lint"]
+  }
+  return ["cleaning-apartment-before-guests-small-space", "fruit-flies-gnats-drain-flies-apartment-cleaning", "is-apartment-cleaning-service-worth-it"]
 }
 
 function RelatedGuides({ title, articles }: { title: string; articles: BlogArticle[] }) {

@@ -82,6 +82,11 @@ const blogPosts = [
   "bathroom-mold-mildew-apartment-cleaning",
   "first-apartment-cleaning-supplies",
   "apartment-balcony-cleaning-without-drips",
+  "fruit-flies-gnats-drain-flies-apartment-cleaning",
+  "apartment-air-vent-and-bathroom-fan-cleaning",
+  "apartment-stove-drip-pans-and-range-hood-cleaning",
+  "apartment-laundry-area-cleaning-washer-dryer-lint",
+  "cleaning-apartment-before-guests-small-space",
 ]
 
 const corePaths = [
