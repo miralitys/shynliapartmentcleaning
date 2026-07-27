@@ -498,10 +498,20 @@ export const lowIntentPages: LowIntentPage[] = [
   },
 ]
 
+/**
+ * Кусочек текста в закрывающем абзаце секции: либо строка, либо ссылка.
+ * Нужен, чтобы поставить контекстную ссылку ТАМ, ГДЕ ЧИТАТЕЛЬ УЖЕ СОГЛАСИЛСЯ,
+ * а не только в блоке primaryLinks наверху статьи, который он проскакивает
+ * до того, как заинтересовался.
+ */
+export type BlogInlinePart = string | { label: string; href: string }
+
 export type BlogArticleSection = {
   title: string
   paragraphs?: string[]
   bullets?: string[]
+  /** Закрывающий абзац секции со ссылкой по смыслу. Рендерится после bullets. */
+  closing?: BlogInlinePart[]
 }
 
 export type BlogArticle = {
@@ -648,6 +658,13 @@ export const blogArticles: BlogArticle[] = [
           "The oven, fridge, bathroom, or floors need detailed work.",
           "You have pets, odor, heavy dust, or inspection anxiety.",
         ],
+        closing: [
+          "If that sounds like your move, this is what ",
+          { label: "move-out apartment cleaning", href: "/move-out-apartment-cleaning/" },
+          " is for: the oven, the fridge, the bathroom, the floors, and a receipt you can hand to the landlord. ",
+          { label: "Pricing is here", href: "/apartment-cleaning-pricing/" },
+          " if you want the number before you decide.",
+        ],
       },
       {
         title: "What a cleaner cannot promise",
@@ -733,6 +750,10 @@ export const blogArticles: BlogArticle[] = [
       {
         title: "When to hire move-in cleaning",
         paragraphs: ["Move-in cleaning is worth it when you have a short moving window, the apartment was not cleaned well, the kitchen or bathroom feels neglected, or you want the apartment cleaned before furniture blocks access."],
+        closing: [
+          { label: "Move-in apartment cleaning", href: "/move-in-apartment-cleaning/" },
+          " is built for that window: floors, closets, and cabinet interiors are only reachable before the furniture arrives.",
+        ],
       },
     ],
     faqs: [
@@ -950,7 +971,14 @@ export const blogArticles: BlogArticle[] = [
         title: "How professional move-out cleaning helps",
         paragraphs: [
           "A professional move-out clean cannot promise that every fee will disappear. A cleaner cannot fix damage, repaint walls, replace carpet, or override lease terms.",
-          "What it can do is reduce the chance of ordinary cleaning misses and give you a receipt showing that the apartment was handled. That is especially useful in the western Chicago suburbs when your move-out window is tight and you cannot return for another round after the inspection.",
+          "What it can do is reduce the chance of ordinary cleaning misses and give you a receipt showing that the apartment was handled. That is especially useful when your move-out window is tight and you cannot return for another round after the inspection.",
+        ],
+        closing: [
+          "The receipt is the part most renters skip, and it is the part that turns \"I cleaned it\" into something you can attach to an email. ",
+          { label: "Move-out apartment cleaning", href: "/move-out-apartment-cleaning/" },
+          " comes with one, across the ",
+          { label: "western Chicago suburbs", href: "/service-areas/" },
+          ".",
         ],
       },
       {

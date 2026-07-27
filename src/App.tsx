@@ -1608,6 +1608,23 @@ function BlogArticlePage({ article }: { article: BlogArticle }) {
                       ))}
                     </ul>
                   ) : null}
+                  {section.closing ? (
+                    <p className="mt-5 text-lg leading-8 text-[#52616b]">
+                      {section.closing.map((part, index) =>
+                        typeof part === "string" ? (
+                          <span key={index}>{part}</span>
+                        ) : (
+                          <a
+                            key={index}
+                            href={part.href}
+                            className="font-semibold text-[#00806a] underline decoration-[#00a885]/40 underline-offset-4 hover:decoration-[#00a885]"
+                          >
+                            {part.label}
+                          </a>
+                        ),
+                      )}
+                    </p>
+                  ) : null}
                 </section>
               ))}
             </div>
