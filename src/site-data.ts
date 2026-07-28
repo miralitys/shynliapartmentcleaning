@@ -8,6 +8,7 @@ export const siteUrl = "https://shynliapartmentcleaning.com"
  * До 2026-07-27 в подвале и в разметке стоял номер (630) 555-0142,
  * это зарезервированный вымышленный номер, дозвониться по нему нельзя.
  */
+export const businessEmail = "info@shynli.com"
 export const businessPhoneDisplay = "(630) 812-7077"
 export const businessPhoneHref = "tel:+16308127077"
 export const businessPhoneSchema = "+1-630-812-7077"

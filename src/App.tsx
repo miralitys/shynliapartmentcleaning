@@ -26,6 +26,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import {
+  businessEmail,
   businessPhoneDisplay,
   businessPhoneHref,
   businessPhoneSchema,
@@ -2042,9 +2043,9 @@ function Footer() {
               <Phone className="size-4" />
               {businessPhoneDisplay}
             </a>
-            <a href="mailto:hello@shynliapartmentcleaning.com" className="flex items-center gap-3 transition-colors hover:text-[#62ffd5]">
+            <a href={`mailto:${businessEmail}`} className="flex items-center gap-3 transition-colors hover:text-[#62ffd5]">
               <Mail className="size-4" />
-              hello@shynliapartmentcleaning.com
+              {businessEmail}
             </a>
             <a href="/service-areas/" className="flex items-center gap-3 transition-colors hover:text-[#62ffd5]">
               <MapPin className="size-4" />
