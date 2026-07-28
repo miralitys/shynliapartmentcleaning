@@ -26,6 +26,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import {
+  businessPhoneDisplay,
+  businessPhoneHref,
+  businessPhoneSchema,
   cities,
   cityGroups,
   cityServices,
@@ -36,6 +39,9 @@ import {
   getCity,
   getNearbyCities,
   getService,
+  googleRatingValue,
+  googleReviewCount,
+  googleReviewsUrl,
   lowIntentPages,
   normalizePath,
   services,
@@ -345,7 +351,7 @@ function localBusinessSchema(pathname: string) {
     name: "Shynli Apartment Cleaning",
     url: `${siteUrl}${pathname}`,
     image: `${siteUrl}/apartment-hero-new.jpg`,
-    telephone: "+1-630-555-0142",
+    telephone: businessPhoneSchema,
     areaServed: cities.map((city) => city.name),
     priceRange: "$$",
     address: {
@@ -2032,9 +2038,9 @@ function Footer() {
         <div>
           <h3 className="text-sm font-black uppercase tracking-[0.18em] text-white/72">Contact</h3>
           <div className="mt-5 grid gap-3 text-sm font-semibold text-white/72">
-            <a href="tel:+16305550142" className="flex items-center gap-3 transition-colors hover:text-[#62ffd5]">
+            <a href={businessPhoneHref} className="flex items-center gap-3 transition-colors hover:text-[#62ffd5]">
               <Phone className="size-4" />
-              (630) 555-0142
+              {businessPhoneDisplay}
             </a>
             <a href="mailto:hello@shynliapartmentcleaning.com" className="flex items-center gap-3 transition-colors hover:text-[#62ffd5]">
               <Mail className="size-4" />
@@ -2043,6 +2049,15 @@ function Footer() {
             <a href="/service-areas/" className="flex items-center gap-3 transition-colors hover:text-[#62ffd5]">
               <MapPin className="size-4" />
               Western suburbs
+            </a>
+            <a
+              href={googleReviewsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 transition-colors hover:text-[#62ffd5]"
+            >
+              <Star className="size-4" />
+              {googleRatingValue} from {googleReviewCount} Google reviews
             </a>
           </div>
           <Button asChild className="mt-6 rounded-full bg-[#62ffd5] px-6 font-black text-[#101820] hover:bg-white">

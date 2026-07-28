@@ -3,6 +3,19 @@ import { Building2, CalendarDays, ClipboardCheck, DoorOpen, Home, KeyRound, Spar
 
 export const siteUrl = "https://shynliapartmentcleaning.com"
 
+/**
+ * Контакты и профиль Google. Одно место на весь сайт.
+ * До 2026-07-27 в подвале и в разметке стоял номер (630) 555-0142,
+ * это зарезервированный вымышленный номер, дозвониться по нему нельзя.
+ */
+export const businessPhoneDisplay = "(630) 812-7077"
+export const businessPhoneHref = "tel:+16308127077"
+export const businessPhoneSchema = "+1-630-812-7077"
+export const googleRatingValue = "5.0"
+export const googleReviewCount = "44"
+export const googleReviewsUrl = "https://www.google.com/maps/place/?q=place_id:ChIJw5zPGN2Y-GMRTHBrFh1rKYE"
+export const googleWriteReviewUrl = "https://search.google.com/local/writereview?placeid=ChIJw5zPGN2Y-GMRTHBrFh1rKYE"
+
 export const cityGroups = [
   {
     label: "A-D",
