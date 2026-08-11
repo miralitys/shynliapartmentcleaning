@@ -34,6 +34,12 @@ import {
   cityGroups,
   cityServices,
   blogArticles,
+  featuredArticleSlug,
+  formatArticleDate,
+  getArticle,
+  getArticlesBySlugs,
+  topicLabels,
+  topicOrder,
   footerGuideLinks,
   footerServiceAreas,
   footerServiceLinks,
@@ -251,7 +257,7 @@ function resolveSeoRoute(pathname: string): SeoRoute | undefined {
 
   const blogMatch = pathname.match(/^\/blog\/([^/]+)\/$/)
   if (blogMatch) {
-    const article = blogArticles.find((item) => item.slug === blogMatch[1])
+    const article = getArticle(blogMatch[1])
     if (article) return { type: "blogArticle", article }
   }
 
@@ -379,16 +385,7 @@ function pageSchema(pathname: string, route?: SeoRoute) {
 
   const article = route.article
   const articleUrl = `${siteUrl}/blog/${article.slug}/`
-  const articleDate =
-    article.updated === "June 5, 2026"
-      ? "2026-06-05"
-      : article.updated === "June 14, 2026"
-        ? "2026-06-14"
-        : article.updated === "June 16, 2026"
-          ? "2026-06-16"
-          : article.updated === "June 19, 2026"
-            ? "2026-06-19"
-            : "2026-06-23"
+  const articleDate = article.date
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -1474,8 +1471,14 @@ function FaqPage() {
 }
 
 function BlogIndexPage() {
-  const featured = blogArticles[0]
-  const rest = blogArticles.slice(1)
+  const featured = getArticle(featuredArticleSlug) ?? blogArticles[0]
+  const latest = blogArticles.filter((article) => article.slug !== featured.slug).slice(0, 8)
+  const byTopic = topicOrder
+    .map((topic) => ({
+      topic,
+      articles: blogArticles.filter((article) => article.topic === topic),
+    }))
+    .filter((group) => group.articles.length > 0)
 
   return (
     <SeoShell>
@@ -1500,8 +1503,38 @@ function BlogIndexPage() {
             </span>
           </a>
           <div className="grid gap-4">
-            {rest.map((article) => (
+            {latest.map((article) => (
               <ArticleListLink key={article.slug} article={article} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white pb-18 sm:pb-24">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <h2 className="font-display text-3xl font-black leading-tight tracking-normal text-[#142027] sm:text-4xl">
+            All apartment cleaning guides
+          </h2>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-[#52616b]">
+            Every guide on the site, grouped by what you are dealing with right now.
+          </p>
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {byTopic.map((group) => (
+              <div key={group.topic}>
+                <h3 className="text-sm font-black uppercase tracking-[0.18em] text-[#a53625]">{topicLabels[group.topic]}</h3>
+                <ul className="mt-4 grid gap-2.5">
+                  {group.articles.map((article) => (
+                    <li key={article.slug}>
+                      <a
+                        href={`/blog/${article.slug}/`}
+                        className="text-base font-semibold leading-7 text-[#40505a] underline decoration-[#c6d6d8] underline-offset-4 hover:text-[#142027] hover:decoration-[#00a885]"
+                      >
+                        {article.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
         </div>
@@ -1539,9 +1572,7 @@ function BlogIndexPage() {
 }
 
 function BlogArticlePage({ article }: { article: BlogArticle }) {
-  const relatedArticles = article.relatedSlugs
-    .map((slug) => blogArticles.find((item) => item.slug === slug))
-    .filter((item): item is BlogArticle => Boolean(item))
+  const relatedArticles = getArticlesBySlugs(article.relatedSlugs)
 
   return (
     <SeoShell>
@@ -1564,7 +1595,7 @@ function BlogArticlePage({ article }: { article: BlogArticle }) {
             <div className="mt-5 flex flex-wrap gap-2">
               <Badge className="rounded-full border-white/20 bg-white/10 px-4 py-2 text-white hover:bg-white/10">{article.category}</Badge>
               <Badge className="rounded-full border-white/20 bg-white/10 px-4 py-2 text-white hover:bg-white/10">{article.readTime}</Badge>
-              <Badge className="rounded-full border-white/20 bg-white/10 px-4 py-2 text-white hover:bg-white/10">Updated {article.updated}</Badge>
+              <Badge className="rounded-full border-white/20 bg-white/10 px-4 py-2 text-white hover:bg-white/10">Updated {formatArticleDate(article.date)}</Badge>
             </div>
             <h1 className="font-display mt-6 text-4xl font-black leading-[1.02] tracking-normal sm:text-6xl lg:text-7xl">{article.title}</h1>
             <p className="mt-6 max-w-3xl text-lg font-semibold leading-8 text-white/76">{article.summary}</p>
@@ -1660,12 +1691,6 @@ function ArticleListLink({ article }: { article: BlogArticle }) {
       </span>
     </a>
   )
-}
-
-function getArticlesBySlugs(slugs: string[]) {
-  return slugs
-    .map((slug) => blogArticles.find((article) => article.slug === slug))
-    .filter((article): article is BlogArticle => Boolean(article))
 }
 
 function guideSlugsForService(serviceSlug: string) {

@@ -1,4 +1,4 @@
-import { writeFileSync } from "node:fs"
+import { readdirSync, writeFileSync } from "node:fs"
 import { join } from "node:path"
 
 const siteUrl = "https://shynliapartmentcleaning.com"
@@ -61,33 +61,17 @@ const lowIntentPages = [
   "apartment-turnover-cleaning",
 ]
 
-const blogPosts = [
-  "apartment-move-out-cleaning-checklist",
-  "do-you-need-professional-cleaners-before-moving-out",
-  "move-in-deep-cleaning-checklist",
-  "weekly-apartment-cleaning-schedule",
-  "is-apartment-cleaning-service-worth-it",
-  "landlord-cleaning-fee-after-move-out",
-  "apartment-cleaning-roommates-shared-space",
-  "apartment-turnover-cleaning-scope-property-managers",
-  "as-is-apartment-move-in-cleaning-documentation",
-  "post-renovation-apartment-cleaning-before-move-in",
-  "how-to-prepare-apartment-before-cleaner-arrives",
-  "why-apartment-smells-bad-after-cleaning",
-  "pet-hair-and-pet-odor-apartment-cleaning",
-  "overwhelmed-apartment-cleaning-where-to-start",
-  "deep-cleaning-apartment-for-dust-allergies",
-  "apartment-inspection-cleaning-checklist",
-  "greasy-apartment-kitchen-cabinets-cleaning",
-  "bathroom-mold-mildew-apartment-cleaning",
-  "first-apartment-cleaning-supplies",
-  "apartment-balcony-cleaning-without-drips",
-  "fruit-flies-gnats-drain-flies-apartment-cleaning",
-  "apartment-air-vent-and-bathroom-fan-cleaning",
-  "apartment-stove-drip-pans-and-range-hood-cleaning",
-  "apartment-laundry-area-cleaning-washer-dryer-lint",
-  "cleaning-apartment-before-guests-small-space",
-]
+// Слаги статей берутся из файлов в src/content/articles.
+// Отдельного списка нет специально: статический HTML генерируется по этому sitemap,
+// и забытая регистрация означала бы страницу с контентом главной по адресу статьи.
+const blogPosts = readdirSync(join(process.cwd(), 'src', 'content', 'articles'))
+  .filter((file) => file.endsWith('.ts') && file !== 'index.ts')
+  .map((file) => file.replace(/\.ts$/, ''))
+  .sort()
+
+if (blogPosts.length === 0) {
+  throw new Error('Не найдено ни одной статьи в src/content/articles.')
+}
 
 const corePaths = [
   "/",
