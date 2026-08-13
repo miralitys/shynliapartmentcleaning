@@ -1,4 +1,4 @@
-import { readdirSync, writeFileSync } from "node:fs"
+import { readFileSync, readdirSync, writeFileSync } from "node:fs"
 import { join } from "node:path"
 
 const siteUrl = "https://shynliapartmentcleaning.com"
@@ -64,13 +64,46 @@ const lowIntentPages = [
 // Слаги статей берутся из файлов в src/content/articles.
 // Отдельного списка нет специально: статический HTML генерируется по этому sitemap,
 // и забытая регистрация означала бы страницу с контентом главной по адресу статьи.
-const blogPosts = readdirSync(join(process.cwd(), 'src', 'content', 'articles'))
+const articlesDir = join(process.cwd(), 'src', 'content', 'articles')
+
+const blogPosts = readdirSync(articlesDir)
   .filter((file) => file.endsWith('.ts') && file !== 'index.ts')
   .map((file) => file.replace(/\.ts$/, ''))
   .sort()
 
 if (blogPosts.length === 0) {
   throw new Error('Не найдено ни одной статьи в src/content/articles.')
+}
+
+// lastmod статьи берётся из её собственной даты, а не из даты сборки.
+// Иначе каждый деплой помечает свежими все URL сразу, и сигнал «что именно изменилось» пропадает.
+const articleDates = new Map(
+  blogPosts.map((slug) => {
+    const source = readFileSync(join(articlesDir, `${slug}.ts`), 'utf8')
+    const match = source.match(/^\s*date: "(\d{4}-\d{2}-\d{2})",$/m)
+
+    if (!match) {
+      throw new Error(`У статьи ${slug} не найдена дата в формате YYYY-MM-DD.`)
+    }
+
+    return [`/blog/${slug}/`, match[1]]
+  }),
+)
+
+const newestArticleDate = [...articleDates.values()].sort().at(-1)
+
+// Дата последнего изменения шаблонов услуг, городов и юридических страниц.
+// Бампать руками, когда меняется их вёрстка или текст, а не при каждой публикации статьи.
+const templateDate = "2026-07-27"
+
+function lastmodFor(path) {
+  const articleDate = articleDates.get(path)
+  if (articleDate) return articleDate
+
+  // Главная и хаб блога действительно меняются с каждой новой статьёй.
+  if (path === "/" || path === "/blog/") return newestArticleDate
+
+  return templateDate
 }
 
 const corePaths = [
@@ -101,14 +134,13 @@ const paths = [
   ...cities.flatMap((city) => lowIntentPages.map((page) => `/service-areas/${city}/${page}/`)),
 ]
 
-const today = new Date().toISOString().slice(0, 10)
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${paths
   .map(
     (path) => `  <url>
     <loc>${siteUrl}${path}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${lastmodFor(path)}</lastmod>
     <changefreq>${path === "/" ? "weekly" : "monthly"}</changefreq>
     <priority>${path === "/" ? "1.0" : path.split("/").length <= 3 ? "0.8" : "0.7"}</priority>
   </url>`,
