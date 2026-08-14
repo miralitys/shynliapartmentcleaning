@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://shynliapartmentcleaning.com/</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -98,7 +98,7 @@
   </url>
   <url>
     <loc>https://shynliapartmentcleaning.com/blog/</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -129,6 +129,12 @@
   <url>
     <loc>https://shynliapartmentcleaning.com/blog/apartment-cleaning-roommates-shared-space/</loc>
     <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shynliapartmentcleaning.com/blog/apartment-deep-cleaning-after-being-sick/</loc>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -229,6 +235,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://shynliapartmentcleaning.com/blog/disinfecting-new-apartment-what-matters/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://shynliapartmentcleaning.com/blog/do-you-need-professional-cleaners-before-moving-out/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -277,6 +289,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://shynliapartmentcleaning.com/blog/kitchen-cabinets-before-unpacking-dishes/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://shynliapartmentcleaning.com/blog/landlord-cleaning-fee-after-move-out/</loc>
     <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -285,6 +303,18 @@
   <url>
     <loc>https://shynliapartmentcleaning.com/blog/move-in-deep-cleaning-checklist/</loc>
     <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shynliapartmentcleaning.com/blog/move-out-cleaning-week-timeline/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shynliapartmentcleaning.com/blog/nail-holes-wall-marks-apartment-move-out/</loc>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
