@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://shynliapartmentcleaning.com/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -98,7 +98,7 @@
   </url>
   <url>
     <loc>https://shynliapartmentcleaning.com/blog/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -111,6 +111,12 @@
   <url>
     <loc>https://shynliapartmentcleaning.com/blog/apartment-balcony-cleaning-without-drips/</loc>
     <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shynliapartmentcleaning.com/blog/apartment-baseboards-and-trim-cleaning/</loc>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -217,6 +223,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://shynliapartmentcleaning.com/blog/cleaning-apartment-when-you-work-from-home/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://shynliapartmentcleaning.com/blog/cooking-smells-small-apartment/</loc>
     <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -301,6 +313,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://shynliapartmentcleaning.com/blog/microwave-interior-cleaning-without-chemicals/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://shynliapartmentcleaning.com/blog/move-in-deep-cleaning-checklist/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -349,8 +367,20 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://shynliapartmentcleaning.com/blog/refrigerator-coils-seals-and-drip-pan/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://shynliapartmentcleaning.com/blog/shower-door-hard-water-film-apartment/</loc>
     <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shynliapartmentcleaning.com/blog/two-people-different-cleaning-standards/</loc>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
