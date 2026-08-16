@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://shynliapartmentcleaning.com/</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -98,7 +98,7 @@
   </url>
   <url>
     <loc>https://shynliapartmentcleaning.com/blog/</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -283,6 +283,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://shynliapartmentcleaning.com/blog/hourly-vs-flat-rate-apartment-cleaning/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://shynliapartmentcleaning.com/blog/how-often-apartment-needs-deep-cleaning/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -327,6 +333,12 @@
   <url>
     <loc>https://shynliapartmentcleaning.com/blog/move-out-cleaning-week-timeline/</loc>
     <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shynliapartmentcleaning.com/blog/musty-smell-in-apartment-closet/</loc>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -379,6 +391,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://shynliapartmentcleaning.com/blog/smell-coming-from-apartment-drain/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shynliapartmentcleaning.com/blog/toilet-ring-and-under-rim-buildup/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://shynliapartmentcleaning.com/blog/two-people-different-cleaning-standards/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -399,6 +423,12 @@
   <url>
     <loc>https://shynliapartmentcleaning.com/blog/why-apartment-smells-bad-after-cleaning/</loc>
     <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shynliapartmentcleaning.com/blog/writing-a-cleaning-scope-for-vendors/</loc>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
