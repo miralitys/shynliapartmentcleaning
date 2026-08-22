@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://shynliapartmentcleaning.com/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -98,7 +98,7 @@
   </url>
   <url>
     <loc>https://shynliapartmentcleaning.com/blog/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -255,6 +255,18 @@
   <url>
     <loc>https://shynliapartmentcleaning.com/blog/cleaning-a-new-apartment-with-a-baby-coming/</loc>
     <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shynliapartmentcleaning.com/blog/cleaning-a-unit-that-sat-empty/</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shynliapartmentcleaning.com/blog/cleaning-add-ons-worth-paying-for/</loc>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -475,6 +487,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://shynliapartmentcleaning.com/blog/pantry-moths-in-an-apartment/</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://shynliapartmentcleaning.com/blog/pet-hair-and-pet-odor-apartment-cleaning/</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -495,6 +513,12 @@
   <url>
     <loc>https://shynliapartmentcleaning.com/blog/refrigerator-defrost-before-handing-keys/</loc>
     <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shynliapartmentcleaning.com/blog/roaches-in-an-apartment-building/</loc>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -555,6 +579,12 @@
   <url>
     <loc>https://shynliapartmentcleaning.com/blog/what-broom-clean-actually-means/</loc>
     <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shynliapartmentcleaning.com/blog/what-earns-a-place-on-a-bathroom-counter/</loc>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
