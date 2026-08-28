@@ -76,7 +76,7 @@ export const article: BlogArticle = {
         "Vent covers, sills, and the surfaces that hold that film sit inside ",
         { label: "deep apartment cleaning", href: "/deep-apartment-cleaning/" },
         ", and the ",
-        { label: "guide to street dust and grit", href: "/blog/why-apartment-looks-dusty-again/" },
+        { label: "guide to why dust keeps coming back", href: "/blog/why-apartment-looks-dusty-again/" },
         " covers the same deposit from the road side.",
       ],
     },
