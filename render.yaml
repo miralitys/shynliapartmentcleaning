@@ -4,6 +4,10 @@ services:
     runtime: static
     buildCommand: npm ci && npm run seo:sitemap && npm run build
     staticPublishPath: ./dist
+    headers:
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex
     routes:
       - type: rewrite
         source: /*

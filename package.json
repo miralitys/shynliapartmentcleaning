@@ -10,7 +10,9 @@
     "build": "tsc -b && vite build && vite build --ssr src/entry-server.tsx --outDir dist/server --emptyOutDir false",
     "postbuild": "node scripts/generate-static-routes.mjs",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:redirects": "node --test tests/redirects.test.mjs",
+    "audit:redirects": "node scripts/audit-redirects.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",

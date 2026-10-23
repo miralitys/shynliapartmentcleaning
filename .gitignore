@@ -2,3 +2,6 @@ dist
 node_modules
 *.local
 
+
+# Migration verification artifacts
+reports/
