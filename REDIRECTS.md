@@ -41,6 +41,6 @@ The mapping code remains version `2026-10-23.1` and is unchanged.
 Original `src/`, `public/` and committed `dist/` files are unchanged. Previous
 source revision: `01038bfbc88b3279f0c87f19394629d72cfe84c4`. To restore this Static Site, remove the external
 rewrite, restore its prior route rules, set Publish Directory to `dist`, restore
-Build Command to `npm ci && npm run seo:sitemap && npm run build`, and deploy the retained
+Build Command to `npm ci && npm run build`, and deploy the retained
 revision. Its retained noindex header can be removed when restoring public
 content. DNS, custom-domain bindings and the main website are unchanged.
