@@ -26,3 +26,21 @@ The retained static origin continues publishing `dist` with `X-Robots-Tag: noind
 5. Verify the old pages return 200.
 
 The pre-migration source revision is `8f09040044c8c0a8a781fc369e1487fc0bc1ea73`. Shared Node handlers for shynli.com and Airbnb remain independent. `APARTMENT_REDIRECT_ENABLED=false` disables the apartment handler, but restoring old content requires reattaching the retained Static Site.
+
+Onrender migration configuration version `2026-10-23.2`
+
+`https://shynliapartmentcleaning.onrender.com` now uses the same mapping as its public domain.
+Render publishes the `redirect-origin` directory with a deployment marker only, built with
+`node scripts/prepare-onrender-redirect.mjs`. Its `/*` rule internally rewrites
+to `https://shynlicom.onrender.com/__apartment_redirect/*`. The existing Node handler returns a server-side
+301 directly to the final main-site URL. The internal rewrite adds no client
+redirect hop. The sole new diagnostic file `/__shynli_redirect_version.txt`
+answers 200 with noindex; all former website paths use the redirect handler. Query parameters are preserved by Render and the Node handler.
+The mapping code remains version `2026-10-23.1` and is unchanged.
+
+Original `src/`, `public/` and committed `dist/` files are unchanged. Previous
+source revision: `01038bfbc88b3279f0c87f19394629d72cfe84c4`. To restore this Static Site, remove the external
+rewrite, restore its prior route rules, set Publish Directory to `dist`, restore
+Build Command to `npm ci && npm run seo:sitemap && npm run build`, and deploy the retained
+revision. Its retained noindex header can be removed when restoring public
+content. DNS, custom-domain bindings and the main website are unchanged.
